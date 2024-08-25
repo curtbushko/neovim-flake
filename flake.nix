@@ -1,7 +1,8 @@
 {
-  description = "Jake Hamilton's Neovim configuration";
+  description = "Curt Bushko's Neovim configuration";
 
   inputs = {
+
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
 
     nixvim = {
@@ -20,10 +21,6 @@
     };
   };
 
-  # TODO: a todo
-  # NOTE: a note
-  # WARN: a warning
-  # HACK: a hack
   outputs =
     inputs:
     inputs.snowfall-lib.mkFlake {
@@ -32,7 +29,7 @@
       src = ./.;
 
       snowfall = {
-        namespace = "plusultra";
+        namespace = "curtbushko";
       };
 
       channels-config.allowUnfree = true;

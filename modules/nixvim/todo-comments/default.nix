@@ -30,7 +30,7 @@
       };
       TODO = {
         icon = " ";
-        color = "todo";
+        color = "default";
       };
       HACK = {
         icon = " ";
@@ -71,12 +71,11 @@
       };
     };
 
-    colors = with lib.plusultra.theme.nord; {
+    colors = with lib.curtbushko.theme.nord; {
       error = [ nord11 ];
       warning = [ nord12 ];
       info = [ nord15 ];
       hint = [ nord10 ];
-      todo = [ nord6 ];
       default = [ nord6 ];
     };
   };

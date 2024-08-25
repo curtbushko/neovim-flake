@@ -1,6 +1,6 @@
 { helpers, lib, ... }:
 let
-  theme = lib.plusultra.theme.nord;
+  theme = lib.curtbushko.theme.nord;
 in
 {
   plugins.lualine = {
