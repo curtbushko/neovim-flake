@@ -1,55 +1,70 @@
 {
-  description = "Curt Bushko's Neovim configuration";
+  description = "Curt Bushko neovim flake";
 
   inputs = {
-
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-
-    nixvim = {
-      url = "github:nix-community/nixvim";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
-    snowfall-lib = {
-      url = "github:snowfallorg/lib";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
+    nixvim.url = "github:nix-community/nixvim";
+    flake-parts.url = "github:hercules-ci/flake-parts";
     pre-commit-hooks = {
       url = "github:cachix/pre-commit-hooks.nix";
-      inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 
-  outputs =
-    inputs:
-    inputs.snowfall-lib.mkFlake {
-      inherit inputs;
+  outputs = {
+    nixpkgs,
+    nixvim,
+    flake-parts,
+    pre-commit-hooks,
+    ...
+  } @ inputs:
+    flake-parts.lib.mkFlake {inherit inputs;} {
+      systems = [
+        "x86_64-linux"
+        "aarch64-linux"
+        "x86_64-darwin"
+        "aarch64-darwin"
+      ];
 
-      src = ./.;
-
-      snowfall = {
-        namespace = "curtbushko";
-      };
-
-      channels-config.allowUnfree = true;
-
-      alias.packages.default = "neovim";
-
-      overlays = with inputs; [ nixvim.overlays.default ];
-
-      outputs-builder = channels: {
-        formatter = channels.nixpkgs.nixfmt-rfc-style;
-
-        checks.pre-commit-check = inputs.pre-commit-hooks.lib.${channels.nixpkgs.system}.run {
-          src = ./.;
-          hooks = {
-            nixfmt = {
-              enable = true;
-              entry = "${channels.nixpkgs.nixfmt-rfc-style}/bin/nixfmt";
-              extraPackages = [ channels.nixpkgs.nixfmt-rfc-style ];
+      perSystem = {
+        lib,
+        pkgs,
+        self',
+        system,
+        ...
+      }: let
+        nixvimLib = nixvim.lib.${system};
+        nixvim' = nixvim.legacyPackages.${system};
+        nixvimModule = {
+          inherit pkgs;
+          module = import ./config; # import the module directly
+          # You can use `extraSpecialArgs` to pass additional arguments to your module files
+          extraSpecialArgs = {
+            # inherit (inputs) foo;
+          };
+        };
+        nvim = nixvim'.makeNixvimWithModule nixvimModule;
+      in {
+        checks = {
+          # Run `nix flake check .` to verify that your config is not broken
+          default = nixvimLib.check.mkTestDerivationFromNixvimModule nixvimModule;
+          pre-commit-check = pre-commit-hooks.lib.${system}.run {
+            src = ./.;
+            hooks = {
+              statix.enable = true;
+              alejandra.enable = true;
             };
           };
+        };
+
+        formatter = pkgs.alejandra;
+        packages = {
+          # Lets you run `nix run .` to start nixvim
+          default = nvim;
+        };
+
+        devShells = {
+          default = with pkgs;
+            mkShell {inherit (self'.checks.pre-commit-check) shellHook;};
         };
       };
     };

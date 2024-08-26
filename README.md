@@ -23,7 +23,4 @@ You can install this package imperatively with the following command.
 nix profile install github:curtbushko/neovim-flake
 ```
 
-Credits:
-
-Heavily inspired by / copied from [Jake Hamiltons Neovim Flake](https://github.com/jakehamilton/neovim)
 

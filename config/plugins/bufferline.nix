@@ -1,5 +1,5 @@
 {
-  plugins.rust-tools = {
+  plugins.bufferline = {
     enable = true;
   };
 }
