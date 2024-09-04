@@ -1,5 +1,6 @@
-
-
+- floatterm
+- lsp
+- markdown
 
   Loaded (39)
     ● alpha-nvim 0.55ms  VimEnter
@@ -24,8 +25,6 @@
     ● mini.comment 0.92ms  VeryLazy
     ● mini.icons 1.24ms 󰢱 mini.icons  which-key.nvim
     ● mini.pairs 1.07ms  VeryLazy
-    ● neodev.nvim 0.03ms  start
-    ● neovim-ayu 0.37ms  start
     ● noice.nvim 1.68ms  VeryLazy
     ● nui.nvim 0.08ms 󰢱 nui.object  noice.nvim
     ● nvim-cmp 7.33ms  LuaSnip
@@ -50,17 +49,12 @@
     ○ gitsigns.nvim  LazyFile 
     ○ glow.nvim  Glow 
     ○ gp.nvim  <leader>ogc  <leader>ogu  <leader>ogr  <leader>ox  <leader>onv  <leader>ons  <leader>ont  <leader>onp  <leader>odr  <leader>oda  <leader>os  <leader>oc  <leader>or  <leader>ot  <leader>of 
-    ○ grug-far.nvim  <leader>sr (v)  <leader>sr  GrugFar 
     ○ harpoon  <leader>hh  <leader>h1  <leader>h2  <leader>h3  <leader>h4  <leader>h5  <leader>h  <leader>hf 
     ○ indent-blankline.nvim  LazyFile 
-    ○ lazydev.nvim  LazyDev  lua 
     ○ lspconfig  LazyFile  zig  nix 
     ○ luvit-meta 
     ○ markdown-preview.nvim  <leader>cp  MarkdownPreviewToggle  MarkdownPreview  MarkdownPreviewStop 
     ○ markdown.nvim  markdown  rmd  org  norg 
-    ○ mason-lspconfig.nvim  lspconfig 
-    ○ mason-nvim-dap.nvim  DapUninstall  DapInstall 
-    ○ mason.nvim  <leader>um  Mason  nvim-dap  lspconfig  conform.nvim  mason-nvim-dap.nvim 
     ○ mini.indentscope  LazyFile 
     ○ mini.surround  gsn  gsr  gsf  gsa (v)  gsd  gsF  gsh  gsa 
     ○ neo-tree.nvim  <leader>E  <leader>ge  <leader>be  <leader>fe  <leader>fE  <leader>e  Neotree 
