@@ -20,6 +20,7 @@
     ./plugins/flash.nix
     ./plugins/friendly-snippets.nix
     ./plugins/lsp_lines.nix
+    ./plugins/lsp.nix
     ./plugins/lspkind-nvim.nix
     ./plugins/luasnip.nix
     ./plugins/mini.nix
