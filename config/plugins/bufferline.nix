@@ -1,5 +1,4 @@
 {
-  # TODO:  close and pick mini icons
   plugins.bufferline = {
     enable = true;
   };

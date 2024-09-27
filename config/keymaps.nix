@@ -1,11 +1,11 @@
 {
   keymaps = [
-    {
-      # Maps for jj to act as Esc in insert and command modes
-      key = "jj";
-      action = "<ESC>";
-      mode = ["i" "c"];
-    }
+    # {
+    #   # Maps for jj to act as Esc in insert and command modes
+    #   key = "jj";
+    #   action = "<ESC>";
+    #   mode = ["i" "c"];
+    # }
     {
       key = "<TAB>";
       action = "<CMD>BufferLineCycleNext<CR>";

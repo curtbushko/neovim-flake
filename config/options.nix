@@ -17,6 +17,7 @@
     writebackup = false;
     swapfile = false; # No swap files
     undofile = false; # No undo files
+    scrolloff = 16; # Lines of context
 
     # Misc.
     number = true; # Line numbers
@@ -24,7 +25,8 @@
     smartcase = true; # Sensitive if search has caps
     hlsearch = false; # Removes search highlight
     cmdheight = 0; # No command line height
-    laststatus = 0; # No status line
+    laststatus = 3; # No status line
     signcolumn = "yes"; # Always show sign column
+    completeopt = ["menu" "menuone" "noselect"];
   };
 }

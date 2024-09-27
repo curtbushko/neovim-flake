@@ -28,13 +28,12 @@
         }
         {
           __unkeyed-1 = "<leader>:";
-          group = "Command history";
+          group = "command history";
           icon = {
             icon = ": ";
             color = "yellow";
           };
         }
-
         {
           __unkeyed-1 = "<leader>j";
           group = "screen down";
@@ -52,11 +51,27 @@
           };
         }
         {
+          __unkeyed-1 = "<leader>a";
+          group = "avante";
+          icon = {
+            icon = "󱚞 ";
+            color = "yellow";
+          };
+        }
+        {
           __unkeyed-1 = "<leader>b";
-          group = "Buffers";
+          group = "buffers";
           icon = {
             icon = "";
             color = "cyan";
+          };
+        }
+        {
+          __unkeyed-1 = "<leader>c";
+          group = "code";
+          icon = {
+            icon = " ";
+            color = "yellow";
           };
         }
         {
@@ -69,7 +84,7 @@
         }
         {
           __unkeyed-1 = "<leader>e";
-          group = "Explorer Neotree (cwd)";
+          group = "explorer neotree (cwd)";
           icon = {
             icon = "󰙅 ";
             color = "yellow";
@@ -97,67 +112,19 @@
           };
         }
         {
-          __unkeyed-1 = "<leader>o";
-          group = "openai";
-          icon = {
-            icon = "󱚞 ";
-            color = "yellow";
-          };
-        }
-        {
-          __unkeyed-1 = "<leader>od";
-          group = "docs";
-          icon = {
-            icon = " ";
-            color = "yellow";
-          };
-        }
-        {
-          __unkeyed-1 = "<leader>og";
-          group = "go";
-          icon = {
-            icon = " ";
-            color = "yellow";
-          };
-        }
-        {
-          __unkeyed-1 = "<leader>oc";
-          group = "chat";
-          icon = {
-            icon = "󰻞 ";
-            color = "yellow";
-          };
-        }
-        {
-          __unkeyed-1 = "<leader>os";
-          group = "stop";
-          icon = {
-            icon = " ";
-            color = "yellow";
-          };
-        }
-        {
-          __unkeyed-1 = "<leader>on";
-          group = "new chat";
-          icon = {
-            icon = "󱐒 ";
-            color = "yellow";
-          };
-        }
-        {
-          __unkeyed-1 = "<leader>O";
-          group = "obsidian";
-          icon = {
-            icon = " ";
-            color = "yellow";
-          };
-        }
-        {
           __unkeyed-1 = "<leader>t";
           group = "terminal (float)";
           icon = {
             icon = " ";
             color = "yellow";
+          };
+        }
+        {
+          __unkeyed-1 = "<leader>u";
+          group = "ui";
+          icon = {
+            icon = "󰍗 ";
+            color = "orange";
           };
         }
       ];

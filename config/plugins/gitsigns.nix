@@ -1,5 +1,5 @@
 {
-  plugins.luasnip = {
+  plugins.gitsigns = {
     enable = true;
   };
 }
