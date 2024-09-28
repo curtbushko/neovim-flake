@@ -5,16 +5,11 @@
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     nixvim.url = "github:nix-community/nixvim";
     flake-parts.url = "github:hercules-ci/flake-parts";
-    pre-commit-hooks = {
-      url = "github:cachix/pre-commit-hooks.nix";
-    };
   };
 
   outputs = {
-    nixpkgs,
     nixvim,
     flake-parts,
-    pre-commit-hooks,
     ...
   } @ inputs:
     flake-parts.lib.mkFlake {inherit inputs;} {
@@ -26,9 +21,7 @@
       ];
 
       perSystem = {
-        lib,
         pkgs,
-        self',
         system,
         ...
       }: let
@@ -47,24 +40,11 @@
         checks = {
           # Run `nix flake check .` to verify that your config is not broken
           default = nixvimLib.check.mkTestDerivationFromNixvimModule nixvimModule;
-          pre-commit-check = pre-commit-hooks.lib.${system}.run {
-            src = ./.;
-            hooks = {
-              statix.enable = true;
-              alejandra.enable = true;
-            };
-          };
         };
 
-        formatter = pkgs.alejandra;
         packages = {
           # Lets you run `nix run .` to start nixvim
           default = nvim;
-        };
-
-        devShells = {
-          default = with pkgs;
-            mkShell {inherit (self'.checks.pre-commit-check) shellHook;};
         };
       };
     };

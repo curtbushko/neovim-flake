@@ -1,11 +1,4 @@
 {
-  colorschemes = {
-    tokyonight = {
-      enable = true;
-      settings.style = "night";
-    };
-  };
-
   globals = {
     mapleader = " ";
   };
@@ -14,6 +7,7 @@
     # Basics
     ./keymaps.nix
     ./options.nix
+    ./colorschemes.nix
     # Plugins
     ./plugins/alpha.nix
     ./plugins/avante.nix

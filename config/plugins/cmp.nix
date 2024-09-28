@@ -15,16 +15,19 @@
         formatting = {fields = ["abbr" "kind" "menu"];};
         sources = [
           {
-            name = "luasnip";
+            name = "nvim_lsp";
             keywordLength = 3;
           }
-          {name = "nvim_lsp";}
           {
             name = "buffer";
             keywordLength = 3;
           }
           {
             name = "path";
+            keywordLength = 3;
+          }
+          {
+            name = "luasnip";
             keywordLength = 3;
           }
         ];
@@ -54,29 +57,35 @@
     cmp-cmdline.enable = true;
     cmp-git.enable = true;
     cmp-emoji.enable = true;
-    cmp_luasnip.enable = true;
     cmp-nvim-lsp.enable = true;
     cmp-nvim-lsp-signature-help.enable = true; #shows function signature while typing
     cmp-path.enable = true;
     cmp-treesitter.enable = true;
+    cmp_luasnip.enable = true;
 
+    nvim-snippets.enable = true;
+    friendly-snippets.enable = true;
     luasnip = {
       enable = true;
       settings = {
+        lazyLoad = false;
         enable_autosnippets = true;
         store_selection_keys = "<Tab>";
-        fromVscode = [
-          # {}
-          {
-            paths = ./snippets;
-          }
-          {
-            paths = "${pkgs.vimPlugins.friendly-snippets}";
-          }
-        ];
       };
+      fromVscode = [
+        {
+          lazyLoad = false;
+        }
+        {
+          lazyLoad = false;
+          paths = "${pkgs.vimPlugins.friendly-snippets}";
+        }
+        {
+          lazyLoad = false;
+          paths = ./snippets;
+        }
+      ];
     };
-    friendly-snippets.enable = true;
   };
 
   extraConfigLua = ''

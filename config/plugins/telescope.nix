@@ -15,6 +15,7 @@
           };
         };
         sorting_strategy = "ascending";
+        winblend = 0;
       };
       mappings = {
         i = {
@@ -34,6 +35,12 @@
     };
   };
   keymaps = [
+    {
+      # Maps for jj to act as Esc in insert and command modes. Useful in telescope
+      key = "jj";
+      action = "<ESC>";
+      mode = ["i" "c"];
+    }
     {
       action = "<cmd>Telescope buffers sort_mru=true sort_lastused=true<CR>";
       key = "<leader>,";
