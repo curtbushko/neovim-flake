@@ -1,6 +1,7 @@
 {
+  clipboard.register = "unnamedplus"; # Use system clipboard
   opts = {
-    clipboard.register = "unnamedplus"; # Use system clipboard
+    clipboard = "unnamedplus";
     autowrite = true; # Enable auto write
     backup = false;
     breakindent = true; # Maintain indent when wrapping

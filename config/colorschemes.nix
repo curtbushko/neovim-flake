@@ -1,24 +1,25 @@
-{...}: let
-  fg = "#dfe9ff";
+_: let
+  #fg = "#dfe9ff";
   fg_dark = "#a9b1d6";
   fg_gutter = "#3b4261";
-  bg = "#1a1b26";
+  #bg = "#1a1b26";
   bg_dark = "#16161e";
-  yellow = "#FFEE";
+  #yellow = "#FFEE";
   green1 = "#00b0fc";
-  green2 = "#019ef3";
-  teal = "#65bf";
+  #green2 = "#019ef3";
+  #teal = "#65bf";
   blue = "#7aa2f7";
-  blue2 = "#7aa2f7";
-  git.add = "#7ea454";
+  #blue2 = "#7aa2f7";
+  #git.add = "#7ea454";
   prompt = "#2d3149";
   orange = "#ff9e64";
 in {
-
   colorschemes = {
     tokyonight = {
       enable = true;
-      settings.style = "night";
+      settings = {
+        style = "night";
+      };
     };
   };
 
