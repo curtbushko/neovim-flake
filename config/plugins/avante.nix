@@ -8,11 +8,11 @@
        require('avante').setup({
          provider = "openai",
          openai = {
-           endpoint = "http://127.0.0.1:11434/v1/",
-           model = "llama3.1:8b",
+           endpoint = "https://api.openai.com/v1";
+           model = "gpt-4o-mini",
+           timeout = 30000;
            temperature = 0,
            max_tokens = 4096,
-           ["local"] = true,
          }
        })
   '';
