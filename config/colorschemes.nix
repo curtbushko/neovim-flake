@@ -2,7 +2,7 @@ _: let
   #fg = "#dfe9ff";
   fg_dark = "#a9b1d6";
   fg_gutter = "#3b4261";
-  #bg = "#1a1b26";
+  bg = "#1a1b26";
   bg_dark = "#16161e";
   #yellow = "#FFEE";
   green1 = "#00b0fc";
@@ -24,6 +24,9 @@ in {
   };
 
   highlightOverride = {
+    BufferLineFill = {
+      bg = bg;
+    };
     FloatBorder = {
       bg = bg_dark;
       fg = green1;
