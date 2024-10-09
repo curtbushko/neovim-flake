@@ -37,6 +37,5 @@
       action = "<cmd>Arrow toggle_current_line_for_buffer<CR>";
       options = {desc = "toggle current line for buffer";};
     }
-
   ];
 }
