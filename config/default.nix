@@ -10,6 +10,7 @@
     ./colorschemes.nix
     # Plugins
     ./plugins/alpha.nix
+    ./plugins/arrow.nix
     ./plugins/avante.nix
     ./plugins/bufferline.nix
     ./plugins/cmp.nix

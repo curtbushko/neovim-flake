@@ -12,7 +12,7 @@
       spec = [
         {
           __unkeyed-1 = "<TAB>";
-          group = "Next Buffer";
+          group = "next buffer";
           icon = {
             icon = " ";
             color = "yellow";
@@ -20,7 +20,7 @@
         }
         {
           __unkeyed-1 = "<S-TAB>";
-          group = "Previous Buffer";
+          group = "previous buffer";
           icon = {
             icon = " ";
             color = "yellow";
@@ -34,6 +34,23 @@
             color = "yellow";
           };
         }
+        {
+          __unkeyed-1 = "<leader>;";
+          group = "arrow";
+          icon = {
+            icon = "󱡁 ";
+            color = "cyan";
+          };
+        }
+        {
+          __unkeyed-1 = "<leader>m";
+          group = "marks (buffer)";
+          icon = {
+            icon = "󰙒 ";
+            color = "cyan";
+          };
+        }
+
         {
           __unkeyed-1 = "<leader>j";
           group = "screen down";
@@ -124,6 +141,14 @@
           group = "ui";
           icon = {
             icon = "󰍗 ";
+            color = "orange";
+          };
+        }
+        {
+          __unkeyed-1 = "<leader>y";
+          group = "yanky";
+          icon = {
+            icon = " ";
             color = "orange";
           };
         }
