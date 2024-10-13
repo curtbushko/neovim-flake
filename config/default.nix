@@ -18,6 +18,7 @@
     ./plugins/comment.nix
     ./plugins/flash.nix
     ./plugins/gitsigns.nix
+    ./plugins/go.nix
     ./plugins/indent-blankline.nix
     ./plugins/lsp_lines.nix
     ./plugins/lsp.nix
