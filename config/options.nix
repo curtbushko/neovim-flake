@@ -32,7 +32,6 @@
     showtabline = 2; # always display tabline
     smartcase = true; # Don't ignore case with capitals
     smartindent = true; # Insert indents automatically
-    softtabstop = 4; # Cursed tab size
     splitbelow = true; # Put new windows below current
     splitright = true; # Put new windows right of current
     swapfile = false; # Disable use of swapfile for the buffer
