@@ -16,6 +16,7 @@
     incsearch = true;
     laststatus = 3; # No status line
     list = true; # Show some invisible characters (tabs...
+    listchars = "tab:» ,space: ,extends:→,precedes:←,nbsp:␣,trail:•";
     linebreak = true; # Don't cut words while wrapping
     mouse = "a"; # Enable mouse mode
     number = true; # Print line number
@@ -27,7 +28,7 @@
     sidescrolloff = 8; # Columns of context
     #signcolumn = "yes"; # Always show sign column
     shiftround = true; # Round indent
-    shiftwidth = 4; # Size of an indent
+    shiftwidth = 2; # Size of an indent
     showmode = false; # Dont show mode since we have a statusline
     showtabline = 2; # always display tabline
     smartcase = true; # Don't ignore case with capitals
@@ -35,7 +36,7 @@
     splitbelow = true; # Put new windows below current
     splitright = true; # Put new windows right of current
     swapfile = false; # Disable use of swapfile for the buffer
-    tabstop = 4; # Number of spaces tabs count for
+    tabstop = 2; # Number of spaces tabs count for
     termguicolors = true; # True color support
     textwidth = 120;
     timeoutlen = 300;
