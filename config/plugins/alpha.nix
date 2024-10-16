@@ -58,7 +58,7 @@
             };
           };
         in [
-          (mkButton "SPC f f" ":Telescope find_files <CR>" "󰙅 Find file" "String")
+          (mkButton "SPC f f" ":Telescope find_files <CR>" "󰍉 Find file" "String")
           (mkButton "SPC f r" ":Telescope oldfiles <CR>" "  Recent files" "String")
           (mkButton "SPC f g" ":Telescope live_grep <CR>" "󱎸  Grep" "String")
           (mkButton "SPC f m" ":Telescope marks <CR>" "  Marks" "String")

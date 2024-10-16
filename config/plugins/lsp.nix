@@ -24,15 +24,15 @@
       nixd.enable = true;
       pylsp.enable = true;
       pyright.enable = true;
-      rust-analyzer = {
+      rust_analyzer = {
         enable = true;
         installCargo = false;
         installRustc = false;
       };
       cmake.enable = true;
       bashls.enable = true;
-      lua-ls.enable = true;
-      nil-ls.enable = true;
+      lua_ls.enable = true;
+      nil_ls.enable = true;
       marksman.enable = true;
       terraformls.enable = true;
       yamlls.enable = true;

@@ -39,15 +39,24 @@
           group = "arrow";
           icon = {
             icon = "󱡁 ";
-            color = "cyan";
+            color = "yellow";
           };
         }
+        {
+          __unkeyed-1 = "<leader><space>";
+          group = "find files";
+          icon = {
+            icon = "󰍉 ";
+            color = "yellow";
+          };
+        }
+
         {
           __unkeyed-1 = "<leader>m";
           group = "marks (buffer)";
           icon = {
             icon = "󰙒 ";
-            color = "cyan";
+            color = "yellow";
           };
         }
 
@@ -80,7 +89,7 @@
           group = "buffers";
           icon = {
             icon = "";
-            color = "cyan";
+            color = "yellow";
           };
         }
         {

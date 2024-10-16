@@ -1,4 +1,6 @@
-{
+_: let
+  colors = import ../colors/rebel-scum.nix {};
+in {
   plugins.lualine = {
     enable = true;
     settings = {
@@ -11,6 +13,92 @@
         section_separators = {
           left = "";
           right = "";
+        };
+        theme = {
+          normal = {
+            a = {
+              bg = colors.bright_blue;
+              fg = colors.dark0;
+            };
+            b = {
+              bg = colors.bright_orange;
+              fg = colors.dark1;
+            };
+            c = {
+              bg = colors.dark0;
+              fg = colors.bright_aqua;
+            };
+          };
+          insert = {
+            a = {
+              bg = colors.bright_yellow;
+              fg = colors.dark0;
+            };
+            b = {
+              bg = colors.bright_orange;
+              fg = colors.dark1;
+            };
+            c = {
+              bg = colors.dark0;
+              fg = colors.light0;
+            };
+          };
+          visual = {
+            a = {
+              bg = colors.bright_green;
+              fg = colors.dark0;
+            };
+            b = {
+              bg = colors.bright_orange;
+              fg = colors.dark1;
+            };
+            c = {
+              bg = colors.dark0;
+              fg = colors.bright_aqua;
+            };
+          };
+          replace = {
+            a = {
+              bg = colors.bright_red;
+              fg = colors.dark0;
+            };
+            b = {
+              bg = colors.bright_orange;
+              fg = colors.dark1;
+            };
+            c = {
+              bg = colors.dark0;
+              fg = colors.bright_aqua;
+            };
+          };
+          command = {
+            a = {
+              bg = colors.bright_purple;
+              fg = colors.dark0;
+            };
+            b = {
+              bg = colors.bright_orange;
+              fg = colors.dark1;
+            };
+            c = {
+              bg = colors.dark0;
+              fg = colors.bright_aqua;
+            };
+          };
+          inactive = {
+            a = {
+              bg = colors.bright_aqua;
+              fg = colors.dark0;
+            };
+            b = {
+              bg = colors.bright_orange;
+              fg = colors.dark1;
+            };
+            c = {
+              bg = colors.dark0;
+              fg = colors.light3;
+            };
+          };
         };
       };
       sections = {

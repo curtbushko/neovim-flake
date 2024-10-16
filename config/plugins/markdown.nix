@@ -1,26 +1,45 @@
-{pkgs, ...}: {
-  extraPlugins = with pkgs.vimUtils; [
-    (buildVimPlugin {
-      pname = "render-markdown.nvim";
-      version = "v7.0.0";
-      src = pkgs.fetchFromGitHub {
-        owner = "MeanderingProgrammer";
-        repo = "render-markdown.nvim";
-        rev = "v7.0.0";
-        hash = "sha256-U1/6FLCfAkAm692nqMl1qQh6Z1og/Gqoe3NZpa5py9g=";
+{
+  plugins.render-markdown = {
+    enable = true;
+    settings = {
+      heading = {
+        icons = ["# " "󰲣 " "󰲥 " "󰲧 " "󰲩 " "󰲫 "];
+        backgrounds = ["RenderMarkdownBg"];
+        foregrounds = [
+          "RenderMarkdownH1"
+          "RenderMarkdownH2"
+          "RenderMarkdownH3"
+          "RenderMarkdownH4"
+          "RenderMarkdownH5"
+          "RenderMarkdownH6"
+        ];
       };
-    })
-  ];
-
-  extraConfigLua = ''
-    require("render-markdown").setup({
-      file_types = { "markdown", "Avante" },
       checkbox = {
+        unchecked = {highlight = "RenderMarkdownTodo";};
+        checked = {highlight = "RenderMarkdownTodo";};
         custom = {
-          todo = { raw = "[-]", rendered = "󰥔 ", highlight = "RenderMarkdownTodo" },
-          todo = { raw = "[>]", rendered = "󱞬 ", highlight = "RenderMarkdownTodo" },
-        },
-      },
-    })
-  '';
+          todo = {
+            raw = "[>]";
+            rendered = "󱞬 ";
+            highlight = "RenderMarkdownTodo";
+          };
+          pending = {
+            raw = "[-]";
+            rendered = "󰥔 ";
+            highlight = "RenderMarkdownTodo";
+          };
+          important = {
+            raw = "[!]";
+            rendered = " ";
+            highlight = "RenderMarkdownWarning";
+          };
+          cancel = {
+            raw = "[/]";
+            rendered = "󱋬 ";
+            highlight = "RenderMarkdownTodo";
+          };
+        };
+      };
+    };
+  };
 }

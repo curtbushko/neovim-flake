@@ -4,7 +4,6 @@
       enable = true;
       autoEnableSources = true;
       settings = {
-        preselect = "None";
         experimental.ghost_text = true;
         performance = {
           debounce = 60;
@@ -131,7 +130,7 @@
             Codeium = "",
             TabNine = "",
         }
-    local cmp = require 'cmp'
+    --local cmp = require 'cmp'
 
     -- Use buffer source for `/` (if you enabled `native_menu`, this won't work anymore).
     cmp.setup.cmdline({'/', "?" }, {

@@ -1,0 +1,34 @@
+_: {
+  dark0 = "#06101E";
+  dark1 = "#031B26";
+  dark2 = "#052839";
+  dark3 = "#06364B";
+  dark4 = "#08435E";
+  light0 = "#E2D9C5";
+  light1 = "#dbe0cd";
+  light2 = "#fffaaf";
+  light3 = "#fff8d4";
+  light4 = "#fff8e3";
+  bright_red = "#ff2d00";
+  neutral_red = "#ff4934";
+  faded_red = "#ff6a5e";
+  bright_green = "#38ffc4";
+  neutral_green = "#0efff1";
+  faded_green = "#71fcff";
+  bright_blue = "#0eeaff";
+  neutral_blue = "#71e8ff";
+  faded_blue = "#a6e6ff";
+  bright_yellow = "#ffff9d";
+  neutral_yellow = "#fffaaf";
+  faded_yellow = "#fff8d4";
+  bright_purple = "#9575cd";
+  neutral_purple= "#6294df";
+  faded_purple = "#3babd6";
+  bright_aqua =  "#5feedf";
+  neutral_aqua = "#91f0c6";
+  faded_aqua = "#bbefb8";
+  bright_orange = "#ff5722";
+  neutral_orange = "#ff6747";
+  faded_orange = "#ff7e6b";
+  gray = "#22536F";
+}
