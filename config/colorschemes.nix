@@ -1,1252 +1,2377 @@
 _: let
+    # colors = import ../config/colors/tokyo-night-neon.nix {};
   colors = import ../config/colors/rebel-scum.nix {};
 in {
   colorschemes = {
     base16 = {
       enable = true;
       colorscheme = {
-        base00 = colors.dark0;
-        base01 = colors.neutral_red;
-        base02 = colors.neutral_green;
-        base03 = colors.neutral_yellow;
-        base04 = colors.neutral_blue;
-        base05 = colors.neutral_purple;
-        base06 = colors.neutral_aqua;
-        base07 = colors.light4;
-        base08 = colors.gray;
-        base09 = colors.bright_red;
-        base0A = colors.bright_green;
-        base0B = colors.bright_yellow;
-        base0C = colors.bright_blue;
-        base0D = colors.bright_purple;
-        base0E = colors.bright_aqua;
-        base0F = colors.light1;
+        base00 = colors.bg;
+        base01 = colors.red;
+        base02 = colors.green;
+        base03 = colors.yellow;
+        base04 = colors.blue;
+        base05 = colors.purple;
+        base06 = colors.cyan;
+        base07 = colors.fg;
+        base08 = colors.fg_dark;
+        base09 = colors.red1;
+        base0A = colors.green1;
+        base0B = colors.yellow;
+        base0C = colors.blue0;
+        base0D = colors.purple;
+        base0E = colors.teal;
+        base0F = colors.blue0;
       };
     };
   };
 
   highlight = {
-    StyleFg0 = {fg = colors.light0;};
-    StyleFg1 = {fg = colors.light1;};
-    StyleFg2 = {fg = colors.light2;};
-    StyleFg3 = {fg = colors.light3;};
-    StyleFg4 = {fg = colors.light4;};
-    StyleGray = {fg = colors.gray;};
-    StyleBg0 = {fg = colors.dark0;};
-    StyleBg1 = {fg = colors.dark1;};
-    StyleBg2 = {fg = colors.dark2;};
-    StyleBg3 = {fg = colors.dark3;};
-    StyleBg4 = {fg = colors.dark4;};
-    StyleRed = {fg = colors.bright_red;};
-    StyleRedBold = {
-      fg = colors.bright_red;
-      bold = true;
-    };
-    StyleGreen = {fg = colors.bright_green;};
-    StyleGreenBold = {
-      fg = colors.bright_green;
-      bold = true;
-    };
-    StyleYellow = {fg = colors.bright_yellow;};
-    StyleYellowBold = {
-      fg = colors.bright_yellow;
-      bold = true;
-    };
-    StyleBlue = {fg = colors.bright_blue;};
-    StyleBlueBold = {
-      fg = colors.bright_blue;
-      bold = true;
-    };
-    StylePurple = {fg = colors.bright_purple;};
-    StylePurpleBold = {
-      fg = colors.bright_purple;
-      bold = true;
-    };
-    StyleAqua = {fg = colors.bright_aqua;};
-    StyleNeutralAqua = {fg = colors.neutral_aqua;};
-    StyleAquaBold = {
-      fg = colors.bright_aqua;
-      bold = true;
-    };
-    StyleOrange = {fg = colors.bright_orange;};
-    StyleOrangeBold = {
-      fg = colors.bright_orange;
-      bold = true;
-    };
-    StyleRedSign = {
-      fg = colors.bright_red;
-      reverse = true;
-    };
-    StyleGreenSign = {
-      fg = colors.bright_green;
-      reverse = true;
-    };
-    StyleYellowSign = {
-      fg = colors.bright_yellow;
-      reverse = true;
-    };
-    StyleBlueSign = {
-      fg = colors.bright_blue;
-      reverse = true;
-    };
-    StylePurpleSign = {
-      fg = colors.bright_purple;
-      reverse = true;
-    };
-    StyleAquaSign = {
-      fg = colors.bright_aqua;
-      reverse = true;
-    };
-    StyleOrangeSign = {
-      fg = colors.bright_orange;
-      reverse = true;
-    };
-    StyleRedUnderline = {
-      undercurl = true;
-      sp = colors.bright_red;
-    };
-    StyleGreenUnderline = {
-      undercurl = true;
-      sp = colors.bright_green;
-    };
-    StyleYellowUnderline = {
-      undercurl = true;
-      sp = colors.bright_yellow;
-    };
-    StyleBlueUnderline = {
-      undercurl = true;
-      sp = colors.bright_blue;
-    };
-    StylePurpleUnderline = {
-      undercurl = true;
-      sp = colors.bright_purple;
-    };
-    StyleAquaUnderline = {
-      undercurl = true;
-      sp = colors.bright_aqua;
-    };
-    StyleOrangeUnderline = {
-      undercurl = true;
-      sp = colors.bright_orange;
-    };
-    IblIndent.fg = colors.gray;
-    IblWhitespace.fg = colors.gray;
-  };
-
-  highlightOverride = {
-    # BufferLineFill = {
-    #   bg = colors.dark0;
-    # };
-    FloatBorder = {
-      bg = colors.dark0;
-      fg = colors.neutral_green;
-    };
-    NoicePopupBorder = {
-      fg = colors.neutral_orange;
-    };
-    NoicePopupmenuBorder = {
-      fg = colors.neutral_orange;
-    };
-    NoiceCmdlinePopupBorder = {
-      fg = colors.neutral_orange;
-    };
-    NoiceCmdlineIcon = {
-      fg = colors.neutral_blue;
-    };
-    Normal = {
-      fg = colors.light1;
-      bg = colors.dark0;
-    };
-    NormalFloat = {
-      fg = colors.light1;
-      bg = colors.dark0;
-    };
-    NormalNC = {
-      fg = colors.light0;
-      bg = colors.dark1;
-    };
-    CursorLine = {bg = colors.dark1;};
-    CursorColumn = {link = "CursorLine";};
-    TabLineFill = {
-      fg = colors.dark4;
-      bg = colors.dark1;
-      reverse = true;
-    };
-    TabLineSel = {
-      fg = colors.bright_green;
-      bg = colors.dark1;
-      reverse = true;
-    };
-    TabLine = {link = "TabLineFill";};
-    MatchParen = {
-      bg = colors.dark3;
-      bold = true;
-    };
-    ColorColumn = {bg = colors.dark1;};
-    Conceal = {fg = colors.bright_blue;};
-    CursorLineNr = {
-      fg = colors.bright_yellow;
-      bg = colors.dark1;
-    };
-    CursorLineBG = {bg = colors.dark1;};
-    SagaVirtLine = {fg = colors.gray;};
-    NonText = {link = "StyleBg2";};
-    SpecialKey = {link = "StyleFg4";};
-    Visual = {
-      bg = colors.dark3;
-      reverse = true;
-    };
-    VisualNOS = {link = "Visual";};
-    Search = {
-  fg = colors.light1;
-      bg = colors.dark0;
-
-      # fg = colors.bright_blue;
-      # bg = colors.dark0;
-      # reverse = true;
-    };
-    IncSearch = {
-      fg = colors.bright_orange;
-      bg = colors.dark0;
-      reverse = true;
-    };
-    CurSearch = {link = "IncSearch";};
-    QuickFixLine = {link = "StylePurple";};
-    Underlined = {
-      fg = colors.bright_blue;
-      underline = true;
-    };
-    StatusLine = {
-      fg = colors.dark2;
-      bg = colors.light1;
-      reverse = true;
-    };
-    StatusLineNC = {
-      fg = colors.dark1;
-      bg = colors.light4;
-      reverse = true;
-    };
-    WinBar = {fg = colors.light4;};
-    WinBarNC = {fg = colors.light3;};
-    WinSeparator = {
-      fg = colors.dark3;
-      bg = colors.dark0;
-    };
-    WildMenu = {
-      fg = colors.bright_blue;
-      bg = colors.dark2;
-      bold = true;
-    };
-    Directory = {link = "StyleBlueBold";};
-    Title = {link = "StyleBlueBold";};
-    ErrorMsg = {
-      fg = colors.dark0;
-      bg = colors.bright_red;
-      bold = true;
-    };
-    MoreMsg = {link = "StyleYellowBold";};
-    ModeMsg = {link = "StyleYellowBold";};
-    Question = {link = "StyleOrangeBold";};
-    WarningMsg = {link = "StyleRedBold";};
-    LineNr = {fg = colors.dark4;};
-    SignColumn = {bg = colors.dark0;};
-    Folded = {
-      fg = colors.gray;
-      bg = colors.dark1;
-      italic = true;
-    };
-    FoldColumn = {
-      fg = colors.gray;
-      bg = colors.dark1;
-    };
-    Cursor = {reverse = true;};
-    vCursor = {link = "Cursor";};
-    iCursor = {link = "Cursor";};
-    lCursor = {link = "Cursor";};
-    Special = {link = "StyleOrange";};
-    Comment = {
-      fg = colors.gray;
-      italic = true;
-    };
-    Todo = {
-      fg = colors.dark0;
-      bg = colors.bright_yellow;
-      bold = true;
-      italic = true;
-    };
-    Done = {
-      fg = colors.bright_orange;
-      bold = true;
-      italic = true;
-    };
-    Error = {
-      fg = colors.bright_red;
-      bold = true;
-      reverse = true;
-    };
-    Statement = {link = "StyleRed";};
-    Conditional = {link = "StyleBlue";};
-    Repeat = {link = "StyleRed";};
-    Label = {link = "StyleRed";};
-    Exception = {link = "StyleRed";};
-    Operator = {
-      fg = colors.bright_orange;
-      italic = true;
-    };
-    Keyword = {link = "StyleGreenBold";};
-    Identifier = {link = "StyleNeutralAqua";};
-    Function = {link = "StyleBlueBold";};
-    PreProc = {link = "StyleAqua";};
-    Include = {link = "StyleAqua";};
-    Define = {link = "StyleBlueBold";};
-    Macro = {link = "StyleAqua";};
-    PreCondit = {link = "StyleAqua";};
-    Constant = {link = "StyleOrange";};
-    Shortcut = {link = "StyleBlue";};
-    Character = {link = "StylePurple";};
-    String = {
-      fg = colors.bright_green;
-      italic = true;
-    };
-    Boolean = {link = "StylePurpleBold";};
-    Number = {link = "StylePurple";};
-    Float = {link = "StylePurple";};
-    Type = {link = "StyleYellow";};
-    StorageClass = {link = "StyleOrange";};
-    Structure = {link = "StyleAqua";};
-    Typedef = {link = "StyleYellow";};
-    Pmenu = {
-      fg = colors.light1;
-      bg = colors.dark2;
-    };
-    PmenuSel = {
-      fg = colors.dark2;
-      bg = colors.bright_blue;
-      bold = true;
-    };
-    PmenuSbar = {bg = colors.dark2;};
-    PmenuThumb = {bg = colors.dark4;};
-    DiffDelete = {fg = colors.dark1; bg = colors.faded_red;};
-    DiffAdd = {fg = colors.dark1; bg = colors.faded_green;};
-    DiffChange = {fg = colors.dark1; bg = colors.faded_aqua;};
-    DiffText = {
-      bg = colors.bright_yellow;
-      fg = colors.dark0;
-    };
-    SpellCap = {link = "StyleBlueUnderline";};
-    SpellBad = {link = "StyleRedUnderline";};
-    SpellLocal = {link = "StyleAquaUnderline";};
-    SpellRare = {link = "StylePurpleUnderline";};
-    Whitespace = {fg = colors.dark2;};
-    Delimiter = {link = "StyleOrange";};
-    EndOfBuffer = {link = "NonText";};
-    DiagnosticError = {link = "StyleRed";};
-    DiagnosticSignError = {link = "StyleRedSign";};
-    DiagnosticUnderlineError = {link = "StyleRedUnderline";};
-    DiagnosticWarn = {link = "StyleYellow";};
-    DiagnosticSignWarn = {link = "StyleYellowSign";};
-    DiagnosticUnderlineWarn = {link = "StyleYellowUnderline";};
-    DiagnosticInfo = {link = "StyleGreen";};
-    DiagnosticSignInfo = {link = "StyleBlueSign";};
-    DiagnosticUnderlineInfo = {link = "StyleBlueUnderline";};
-    DiagnosticHint = {link = "StyleAqua";};
-    DiagnosticSignHint = {link = "StyleAquaSign";};
-    DiagnosticUnderlineHint = {link = "StyleAquaUnderline";};
-    DiagnosticFloatingError = {link = "StyleRed";};
-    DiagnosticFloatingWarn = {link = "StyleOrange";};
-    DiagnosticFloatingInfo = {link = "StyleBlue";};
-    DiagnosticFloatingHint = {link = "StyleAqua";};
-    DiagnosticVirtualTextError = {link = "StyleRed";};
-    DiagnosticVirtualTextWarn = {link = "StyleYellow";};
-    DiagnosticVirtualTextInfo = {link = "StyleBlue";};
-    DiagnosticVirtualTextHint = {link = "StyleAqua";};
-    DiagnosticOk = {link = "StyleGreenSign";};
-    LspReferenceRead = {link = "StyleYellowBold";};
-    LspReferenceText = {link = "StyleYellowBold";};
-    LspReferenceWrite = {link = "StyleOrangeBold";};
-    LspCodeLens = {link = "StyleGray";};
-    LspSignatureActiveParameter = {link = "Search";};
-    gitcommitSelectedFile = {link = "StyleGreen";};
-    gitcommitDiscardedFile = {link = "StyleRed";};
-    GitSignsAdd = {link = "StyleGreen";};
-    GitSignsChange = {link = "StyleAqua";};
-    GitSignsDelete = {link = "StyleRed";};
-    NvimTreeSymlink = {fg = colors.neutral_aqua;};
-    NvimTreeRootFolder = {
-      fg = colors.neutral_purple;
-      bold = true;
-    };
-    NvimTreeFolderIcon = {
-      fg = colors.neutral_blue;
-      bold = true;
-    };
-    NvimTreeFileIcon = {fg = colors.light2;};
-    NvimTreeExecFile = {
-      fg = colors.neutral_green;
-      bold = true;
-    };
-    NvimTreeOpenedFile = {
-      fg = colors.bright_red;
-      bold = true;
-    };
-    NvimTreeSpecialFile = {
-      fg = colors.neutral_yellow;
-      bold = true;
-      underline = true;
-    };
-    NvimTreeImageFile = {fg = colors.neutral_purple;};
-    NvimTreeIndentMarker = {fg = colors.dark3;};
-    NvimTreeGitDirty = {fg = colors.neutral_yellow;};
-    NvimTreeGitStaged = {fg = colors.neutral_yellow;};
-    NvimTreeGitMerge = {fg = colors.neutral_purple;};
-    NvimTreeGitRenamed = {fg = colors.neutral_purple;};
-    NvimTreeGitNew = {fg = colors.neutral_yellow;};
-    NvimTreeGitDeleted = {fg = colors.neutral_red;};
-    NvimTreeWindowPicker = {bg = colors.bright_aqua;};
-    debugPC = {link = "DiffAdd";};
-    debugBreakpoint = {link = "StyleRedSign";};
-    StartifyBracket = {link = "StyleFg3";};
-    StartifyFile = {link = "StyleFg1";};
-    StartifyNumber = {link = "StyleBlue";};
-    StartifyPath = {link = "StyleGray";};
-    StartifySlash = {link = "StyleGray";};
-    StartifySection = {link = "StyleYellow";};
-    StartifySpecial = {link = "StyleBg2";};
-    StartifyHeader = {link = "StyleOrange";};
-    StartifyFooter = {link = "StyleBg2";};
-    StartifyVar = {link = "StartifyPath";};
-    StartifySelect = {link = "Title";};
-    DirvishPathTail = {link = "StyleAqua";};
-    DirvishArg = {link = "StyleYellow";};
-    netrwDir = {link = "StyleAqua";};
-    netrwClassify = {link = "StyleAqua";};
-    netrwLink = {link = "StyleGray";};
-    netrwSymLink = {link = "StyleFg1";};
-    netrwExe = {link = "StyleYellow";};
-    netrwComment = {link = "StyleGray";};
-    netrwList = {link = "StyleBlue";};
-    netrwHelpCmd = {link = "StyleAqua";};
-    netrwCmdSep = {link = "StyleFg3";};
-    netrwVersion = {link = "StyleGreen";};
-    NERDTreeDir = {link = "StyleAqua";};
-    NERDTreeDirSlash = {link = "StyleAqua";};
-    NERDTreeOpenable = {link = "StyleOrange";};
-    NERDTreeClosable = {link = "StyleOrange";};
-    NERDTreeFile = {link = "StyleFg1";};
-    NERDTreeExecFile = {link = "StyleYellow";};
-    NERDTreeUp = {link = "StyleGray";};
-    NERDTreeCWD = {link = "StyleGreen";};
-    NERDTreeHelp = {link = "StyleFg1";};
-    NERDTreeToggleOn = {link = "StyleGreen";};
-    NERDTreeToggleOff = {link = "StyleRed";};
-    CocErrorSign = {link = "StyleRedSign";};
-    CocWarningSign = {link = "StyleOrangeSign";};
-    CocInfoSign = {link = "StyleBlueSign";};
-    CocHintSign = {link = "StyleAquaSign";};
-    CocErrorFloat = {link = "StyleRed";};
-    CocWarningFloat = {link = "StyleOrange";};
-    CocInfoFloat = {link = "StyleBlue";};
-    CocHintFloat = {link = "StyleAqua";};
-    CocDiagnosticsError = {link = "StyleRed";};
-    CocDiagnosticsWarning = {link = "StyleOrange";};
-    CocDiagnosticsInfo = {link = "StyleBlue";};
-    CocDiagnosticsHint = {link = "StyleAqua";};
-    CocSelectedText = {link = "StyleRed";};
-    CocMenuSel = {link = "PmenuSel";};
-    CocCodeLens = {link = "StyleGray";};
-    CocErrorHighlight = {link = "StyleRedUnderline";};
-    CocWarningHighlight = {link = "StyleOrangeUnderline";};
-    CocInfoHighlight = {link = "StyleBlueUnderline";};
-    CocHintHighlight = {link = "StyleAquaUnderline";};
-    TelescopePromptCounter = {fg = colors.bright_red;};
-    TelescopeNormal = {
-      bg = colors.dark0;
-      fg = colors.light0;
-    };
-    TelescopeBorder = {
-      bg = colors.dark0;
-      fg = colors.dark0;
-    };
-    TelescopePrompt = {
-      bg = colors.dark4;
-      fg = colors.light0;
-    };
-    TelescopePromptNormal = {
-      bg = colors.dark4;
-      fg = colors.light0;
-    };
-    TelescopePromptBorder = {
-      bg = colors.dark4;
-      fg = colors.dark4;
-    };
-    TelescopePromptTitle = {
-      bg = colors.dark4;
-      fg = colors.bright_orange;
-    };
-    TelescopePromptPrefix = {link = "StyleRed";};
-    TelescopePreviewTitle = {
-      bg = colors.dark0;
-      fg = colors.bright_orange;
-    };
-    TelescopeResultsTitle = {
-      bg = colors.dark0;
-      fg = colors.bright_orange;
-    };
-    TelescopeResultsBorder = {
-      bg = colors.dark0;
-      fg = colors.dark0;
-    };
-    TelescopeSelection = {
-      bg = colors.dark4;
-      fg = colors.light1;
-    };
-    TelescopeSelectionCaret = {link = "StyleRed";};
-
-    TelescopeMultiSelection = {link = "StyleGray";};
-    TelescopeMatching = {link = "StyleBlue";};
-    CmpItemAbbr = {link = "StyleFg0";};
-    CmpItemAbbrDeprecated = {link = "StyleFg1";};
-    CmpItemAbbrMatch = {link = "StyleBlueBold";};
-    CmpItemAbbrMatchFuzzy = {link = "StyleBlueUnderline";};
-    CmpItemMenu = {link = "StyleGray";};
-    CmpItemKindText = {link = "StyleOrange";};
-    CmpItemKindVariable = {link = "StyleOrange";};
-    CmpItemKindMethod = {link = "StyleBlue";};
-    CmpItemKindFunction = {link = "StyleBlue";};
-    CmpItemKindConstructor = {link = "StyleYellow";};
-    CmpItemKindUnit = {link = "StyleBlue";};
-    CmpItemKindField = {link = "StyleBlue";};
-    CmpItemKindClass = {link = "StyleYellow";};
-    CmpItemKindInterface = {link = "StyleYellow";};
-    CmpItemKindModule = {link = "StyleBlue";};
-    CmpItemKindProperty = {link = "StyleBlue";};
-    CmpItemKindValue = {link = "StyleOrange";};
-    CmpItemKindEnum = {link = "StyleYellow";};
-    CmpItemKindOperator = {link = "StyleYellow";};
-    CmpItemKindKeyword = {link = "StylePurple";};
-    CmpItemKindEvent = {link = "StylePurple";};
-    CmpItemKindReference = {link = "StylePurple";};
-    CmpItemKindColor = {link = "StylePurple";};
-    CmpItemKindSnippet = {link = "StyleGreen";};
-    CmpItemKindFile = {link = "StyleBlue";};
-    CmpItemKindFolder = {link = "StyleBlue";};
-    CmpItemKindEnumMember = {link = "StyleAqua";};
-    CmpItemKindConstant = {link = "StyleOrange";};
-    CmpItemKindStruct = {link = "StyleYellow";};
-    CmpItemKindTypeParameter = {link = "StyleYellow";};
-    diffAdded = {link = "DiffAdd";};
-    diffRemoved = {link = "DiffDelete";};
-    diffChanged = {link = "DiffChange";};
-    diffFile = {link = "StyleOrange";};
-    diffNewFile = {link = "StyleYellow";};
-    diffOldFile = {link = "StyleOrange";};
-    diffLine = {link = "StyleBlue";};
-    diffIndexLine = {link = "diffChanged";};
-    NavicIconsFile = {link = "StyleBlue";};
-    NavicIconsModule = {link = "StyleOrange";};
-    NavicIconsNamespace = {link = "StyleBlue";};
-    NavicIconsPackage = {link = "StyleAqua";};
-    NavicIconsClass = {link = "StyleYellow";};
-    NavicIconsMethod = {link = "StyleBlue";};
-    NavicIconsProperty = {link = "StyleAqua";};
-    NavicIconsField = {link = "StylePurple";};
-    NavicIconsConstructor = {link = "StyleBlue";};
-    NavicIconsEnum = {link = "StylePurple";};
-    NavicIconsInterface = {link = "StyleGreen";};
-    NavicIconsFunction = {link = "StyleBlue";};
-    NavicIconsVariable = {link = "StylePurple";};
-    NavicIconsConstant = {link = "StyleOrange";};
-    NavicIconsString = {link = "StyleGreen";};
-    NavicIconsNumber = {link = "StyleOrange";};
-    NavicIconsBoolean = {link = "StyleOrange";};
-    NavicIconsArray = {link = "StyleOrange";};
-    NavicIconsObject = {link = "StyleOrange";};
-    NavicIconsKey = {link = "StyleAqua";};
-    NavicIconsNull = {link = "StyleOrange";};
-    NavicIconsEnumMember = {link = "StyleYellow";};
-    NavicIconsStruct = {link = "StylePurple";};
-    NavicIconsEvent = {link = "StyleYellow";};
-    NavicIconsOperator = {link = "StyleRed";};
-    NavicIconsTypeParameter = {link = "StyleRed";};
-    NavicText = {link = "StyleWhite";};
-    NavicSeparator = {link = "StyleWhite";};
-    htmlTag = {link = "StyleAquaBold";};
-    htmlEndTag = {link = "StyleAquaBold";};
-    htmlTagName = {link = "StyleBlue";};
-    htmlArg = {link = "StyleOrange";};
-    htmlTagN = {link = "StyleFg1";};
-    htmlSpecialTagName = {link = "StyleBlue";};
-    htmlLink = {
-      fg = colors.light4;
-      underline = true;
-    };
-    htmlSpecialChar = {link = "StyleRed";};
-    htmlBold = {
-      fg = colors.light0;
-      bg = colors.dark0;
-      bold = true;
-    };
-    htmlBoldUnderline = {
-      fg = colors.light0;
-      bg = colors.dark0;
-      bold = true;
-      underline = true;
-    };
-    htmlBoldItalic = {
-      fg = colors.light0;
-      bg = colors.dark0;
-      bold = true;
-      italic = true;
-    };
-    htmlBoldUnderlineItalic = {
-      fg = colors.light0;
-      bg = colors.dark0;
-      bold = true;
-      italic = true;
-      underline = true;
-    };
-    htmlUnderline = {
-      fg = colors.light0;
-      bg = colors.dark0;
-      underline = true;
-    };
-    htmlUnderlineItalic = {
-      fg = colors.light0;
-      bg = colors.dark0;
-      italic = true;
-      underline = true;
-    };
-    htmlItalic = {
-      fg = colors.light0;
-      bg = colors.dark0;
-      italic = true;
-    };
-    xmlTag = {link = "StyleAquaBold";};
-    xmlEndTag = {link = "StyleAquaBold";};
-    xmlTagName = {link = "StyleBlue";};
-    xmlEqual = {link = "StyleBlue";};
-    docbkKeyword = {link = "StyleAquaBold";};
-    xmlDocTypeDecl = {link = "StyleGray";};
-    xmlDocTypeKeyword = {link = "StylePurple";};
-    xmlCdataStart = {link = "StyleGray";};
-    xmlCdataCdata = {link = "StylePurple";};
-    dtdFunction = {link = "StyleGray";};
-    dtdTagName = {link = "StylePurple";};
-    xmlAttrib = {link = "StyleOrange";};
-    xmlProcessingDelim = {link = "StyleGray";};
-    dtdParamEntityPunct = {link = "StyleGray";};
-    dtdParamEntityDPunct = {link = "StyleGray";};
-    xmlAttribPunct = {link = "StyleGray";};
-    xmlEntity = {link = "StyleRed";};
-    xmlEntityPunct = {link = "StyleRed";};
-    clojureKeyword = {link = "StyleBlue";};
-    clojureCond = {link = "StyleOrange";};
-    clojureSpecial = {link = "StyleOrange";};
-    clojureDefine = {link = "StyleOrange";};
-    clojureFunc = {link = "StyleYellow";};
-    clojureRepeat = {link = "StyleYellow";};
-    clojureCharacter = {link = "StyleAqua";};
-    clojureStringEscape = {link = "StyleAqua";};
-    clojureException = {link = "StyleRed";};
-    clojureRegexp = {link = "StyleAqua";};
-    clojureRegexpEscape = {link = "StyleAqua";};
-    clojureRegexpCharClass = {
-      fg = colors.light3;
-      bold = true;
-    };
-    clojureRegexpMod = {link = "clojureRegexpCharClass";};
-    clojureRegexpQuantifier = {link = "clojureRegexpCharClass";};
-    clojureParen = {link = "StyleFg3";};
-    clojureAnonArg = {link = "StyleYellow";};
-    clojureVariable = {link = "StyleBlue";};
-    clojureMacro = {link = "StyleOrange";};
-    clojureMeta = {link = "StyleYellow";};
-    clojureDeref = {link = "StyleYellow";};
-    clojureQuote = {link = "StyleYellow";};
-    clojureUnquote = {link = "StyleYellow";};
-    cOperator = {link = "StylePurple";};
-    cppOperator = {link = "StylePurple";};
-    cStructure = {link = "StyleOrange";};
-    pythonBuiltin = {link = "StyleOrange";};
-    pythonBuiltinObj = {link = "StyleOrange";};
-    pythonBuiltinFunc = {link = "StyleOrange";};
-    pythonFunction = {link = "StyleAqua";};
-    pythonDecorator = {link = "StyleRed";};
-    pythonInclude = {link = "StyleBlue";};
-    pythonImport = {link = "StyleBlue";};
-    pythonRun = {link = "StyleBlue";};
-    pythonCoding = {link = "StyleBlue";};
-    pythonOperator = {link = "StyleRed";};
-    pythonException = {link = "StyleRed";};
-    pythonExceptions = {link = "StylePurple";};
-    pythonBoolean = {link = "StylePurple";};
-    pythonDot = {link = "StyleFg3";};
-    pythonConditional = {link = "StyleRed";};
-    pythonRepeat = {link = "StyleRed";};
-    pythonDottedName = {link = "StyleGreenBold";};
-    cssBraces = {link = "StyleBlue";};
-    cssFunctionName = {link = "StyleYellow";};
-    cssIdentifier = {link = "StyleOrange";};
-    cssClassName = {link = "StyleGreen";};
-    cssColor = {link = "StyleBlue";};
-    cssSelectorOp = {link = "StyleBlue";};
-    cssSelectorOp2 = {link = "StyleBlue";};
-    cssImportant = {link = "StyleGreen";};
-    cssVendor = {link = "StyleFg1";};
-    cssTextProp = {link = "StyleAqua";};
-    cssAnimationProp = {link = "StyleAqua";};
-    cssUIProp = {link = "StyleYellow";};
-    cssTransformProp = {link = "StyleAqua";};
-    cssTransitionProp = {link = "StyleAqua";};
-    cssPrintProp = {link = "StyleAqua";};
-    cssPositioningProp = {link = "StyleYellow";};
-    cssBoxProp = {link = "StyleAqua";};
-    cssFontDescriptorProp = {link = "StyleAqua";};
-    cssFlexibleBoxProp = {link = "StyleAqua";};
-    cssBorderOutlineProp = {link = "StyleAqua";};
-    cssBackgroundProp = {link = "StyleAqua";};
-    cssMarginProp = {link = "StyleAqua";};
-    cssListProp = {link = "StyleAqua";};
-    cssTableProp = {link = "StyleAqua";};
-    cssFontProp = {link = "StyleAqua";};
-    cssPaddingProp = {link = "StyleAqua";};
-    cssDimensionProp = {link = "StyleAqua";};
-    cssRenderProp = {link = "StyleAqua";};
-    cssColorProp = {link = "StyleAqua";};
-    cssGeneratedContentProp = {link = "StyleAqua";};
-    javaScriptBraces = {link = "StyleFg1";};
-    javaScriptFunction = {link = "StyleAqua";};
-    javaScriptIdentifier = {link = "StyleRed";};
-    javaScriptMember = {link = "StyleBlue";};
-    javaScriptNumber = {link = "StylePurple";};
-    javaScriptNull = {link = "StylePurple";};
-    javaScriptParens = {link = "StyleFg3";};
-    typescriptReserved = {link = "StyleAqua";};
-    typescriptLabel = {link = "StyleAqua";};
-    typescriptFuncKeyword = {link = "StyleAqua";};
-    typescriptIdentifier = {link = "StyleOrange";};
-    typescriptBraces = {link = "StyleFg1";};
-    typescriptEndColons = {link = "StyleFg1";};
-    typescriptDOMObjects = {link = "StyleFg1";};
-    typescriptAjaxMethods = {link = "StyleFg1";};
-    typescriptLogicSymbols = {link = "StyleFg1";};
-    typescriptDocSeeTag = {link = "Comment";};
-    typescriptDocParam = {link = "Comment";};
-    typescriptDocTags = {link = "vimCommentTitle";};
-    typescriptGlobalObjects = {link = "StyleFg1";};
-    typescriptParens = {link = "StyleFg3";};
-    typescriptOpSymbols = {link = "StyleFg3";};
-    typescriptHtmlElemProperties = {link = "StyleFg1";};
-    typescriptNull = {link = "StylePurple";};
-    typescriptInterpolationDelimiter = {link = "StyleAqua";};
-    purescriptModuleKeyword = {link = "StyleAqua";};
-    purescriptModuleName = {link = "StyleFg1";};
-    purescriptWhere = {link = "StyleAqua";};
-    purescriptDelimiter = {link = "StyleFg4;";};
-    purescriptType = {link = "StyleFg1";};
-    purescriptImportKeyword = {link = "StyleAqua";};
-    purescriptHidingKeyword = {link = "StyleAqua";};
-    purescriptAsKeyword = {link = "StyleAqua";};
-    purescriptStructure = {link = "StyleAqua";};
-    purescriptOperator = {link = "StyleBlue";};
-    purescriptTypeVar = {link = "StyleFg1";};
-    purescriptConstructor = {link = "StyleFg1";};
-    purescriptFunction = {link = "StyleFg1";};
-    purescriptConditional = {link = "StyleOrange";};
-    purescriptBacktick = {link = "StyleOrange";};
-    coffeeExtendedOp = {link = "StyleFg3";};
-    coffeeSpecialOp = {link = "StyleFg3";};
-    coffeeCurly = {link = "StyleOrange";};
-    coffeeParen = {link = "StyleFg3";};
-    coffeeBracket = {link = "StyleOrange";};
-    rubyStringDelimiter = {link = "StyleGreen";};
-    rubyInterpolationDelimiter = {link = "StyleAqua";};
-    rubyDefinedOperator = {link = "rubyKeyword";};
-    objcTypeModifier = {link = "StyleRed";};
-    objcDirective = {link = "StyleBlue";};
-    goDirective = {link = "StyleAqua";};
-    goConstants = {link = "StylePurple";};
-    goDeclaration = {link = "StyleRed";};
-    goDeclType = {link = "StyleBlue";};
-    goBuiltins = {link = "StyleOrange";};
-    luaIn = {link = "StyleRed";};
-    luaFunction = {link = "StyleAqua";};
-    luaTable = {link = "StyleOrange";};
-    moonSpecialOp = {link = "StyleFg3";};
-    moonExtendedOp = {link = "StyleFg3";};
-    moonFunction = {link = "StyleFg3";};
-    moonObject = {link = "StyleYellow";};
-    javaAnnotation = {link = "StyleBlue";};
-    javaDocTags = {link = "StyleAqua";};
-    javaCommentTitle = {link = "vimCommentTitle";};
-    javaParen = {link = "StyleFg3";};
-    javaParen1 = {link = "StyleFg3";};
-    javaParen2 = {link = "StyleFg3";};
-    javaParen3 = {link = "StyleFg3";};
-    javaParen4 = {link = "StyleFg3";};
-    javaParen5 = {link = "StyleFg3";};
-    javaOperator = {link = "StyleOrange";};
-    javaVarArg = {link = "StyleGreen";};
-    elixirDocString = {link = "Comment";};
-    elixirStringDelimiter = {link = "StyleGreen";};
-    elixirInterpolationDelimiter = {link = "StyleAqua";};
-    elixirModuleDeclaration = {link = "StyleYellow";};
-    scalaNameDefinition = {link = "StyleFg1";};
-    scalaCaseFollowing = {link = "StyleFg1";};
-    scalaCapitalWord = {link = "StyleFg1";};
-    scalaTypeExtension = {link = "StyleFg1";};
-    scalaKeyword = {link = "StyleRed";};
-    scalaKeywordModifier = {link = "StyleRed";};
-    scalaSpecial = {link = "StyleAqua";};
-    scalaOperator = {link = "StyleFg1";};
-    scalaTypeDeclaration = {link = "StyleYellow";};
-    scalaTypeTypePostDeclaration = {link = "StyleYellow";};
-    scalaInstanceDeclaration = {link = "StyleFg1";};
-    scalaInterpolation = {link = "StyleAqua";};
-    markdownItalic = {
-      fg = colors.light3;
-      italic = true;
-    };
-    markdownBold = {
-      fg = colors.light3;
-      bold = true;
-    };
-    markdownBoldItalic = {
-      fg = colors.light3;
-      bold = true;
-      italic = true;
-    };
-    markdownH1 = {link = "StyleBlueBold";};
-    markdownH2 = {link = "StyleOrangeBold";};
-    markdownH3 = {link = "StyleYellowBold";};
-    markdownH4 = {link = "StyleYellowBold";};
-    markdownH5 = {link = "StyleYellow";};
-    markdownH6 = {link = "StyleYellow";};
-    markdownCode = {link = "StyleAqua";};
-    markdownCodeBlock = {link = "StyleAqua";};
-    markdownCodeDelimiter = {link = "StyleAqua";};
-    markdownBlockquote = {link = "StyleGray";};
-    markdownListMarker = {link = "StyleGray";};
-    markdownOrderedListMarker = {link = "StyleGray";};
-    markdownRule = {link = "StyleGray";};
-    markdownHeadingRule = {link = "StyleGray";};
-    markdownUrlDelimiter = {link = "StyleFg3";};
-    markdownLinkDelimiter = {link = "StyleFg3";};
-    markdownLinkTextDelimiter = {link = "StyleFg3";};
-    markdownHeadingDelimiter = {link = "StyleOrange";};
-    markdownUrl = {link = "StylePurple";};
-    markdownUrlTitleDelimiter = {link = "StyleGreen";};
-    markdownLinkText = {
-      fg = colors.gray;
-      underline = true;
-    };
-    markdownIdDeclaration = {link = "markdownLinkText";};
-    RenderMarkdownH1 = {
-      fg = colors.bright_blue;
-      bg = colors.dark0;
-    };
-    RenderMarkdownH2 = {
-      fg = colors.bright_orange;
-      bg = colors.dark0;
-    };
-    RenderMarkdownH3 = {
-      fg = colors.bright_green;
-      bg = colors.dark0;
-    };
-    RenderMarkdownH4 = {
-      fg = colors.bright_aqua;
-      bg = colors.dark0;
-    };
-    RenderMarkdownH5 = {
-      fg = colors.bright_blue;
-      bg = colors.dark0;
-    };
-    RenderMarkdownH6 = {
-      fg = colors.bright_orange;
-      bg = colors.dark0;
-    };
-    RenderMarkdownCode = {
-      fg = colors.light0;
-      bg = colors.dark1;
-    };
-    haskellType = {link = "StyleBlue";};
-    haskellIdentifier = {link = "StyleAqua";};
-    haskellSeparator = {link = "StyleFg4";};
-    haskellDelimiter = {link = "StyleOrange";};
-    haskellOperators = {link = "StylePurple";};
-    haskellBacktick = {link = "StyleOrange";};
-    haskellStatement = {link = "StylePurple";};
-    haskellConditional = {link = "StylePurple";};
-    haskellLet = {link = "StyleRed";};
-    haskellDefault = {link = "StyleRed";};
-    haskellWhere = {link = "StyleRed";};
-    haskellBottom = {link = "StyleRedBold";};
-    haskellImportKeywords = {link = "StylePurpleBold";};
-    haskellDeclKeyword = {link = "StyleOrange";};
-    haskellDecl = {link = "StyleOrange";};
-    haskellDeriving = {link = "StylePurple";};
-    haskellAssocType = {link = "StyleAqua";};
-    haskellNumber = {link = "StyleAqua";};
-    haskellPragma = {link = "StyleRedBold";};
-    haskellTH = {link = "StyleAquaBold";};
-    haskellForeignKeywords = {link = "StyleGreen";};
-    haskellKeyword = {link = "StyleRed";};
-    haskellFloat = {link = "StyleAqua";};
-    haskellInfix = {link = "StylePurple";};
-    haskellQuote = {link = "StyleGreenBold";};
-    haskellShebang = {link = "StyleYellowBold";};
-    haskellLiquid = {link = "StylePurpleBold";};
-    haskellQuasiQuoted = {link = "StyleBlueBold";};
-    haskellRecursiveDo = {link = "StylePurple";};
-    haskellQuotedType = {link = "StyleRed";};
-    haskellPreProc = {link = "StyleFg4";};
-    haskellTypeRoles = {link = "StyleRedBold";};
-    haskellTypeForall = {link = "StyleRed";};
-    haskellPatternKeyword = {link = "StyleBlue";};
-    jsonKeyword = {link = "StyleGreen";};
-    jsonQuote = {link = "StyleGreen";};
-    jsonBraces = {link = "StyleFg1";};
-    jsonString = {link = "StyleFg1";};
-    mailQuoted1 = {link = "StyleAqua";};
-    mailQuoted2 = {link = "StylePurple";};
-    mailQuoted3 = {link = "StyleYellow";};
-    mailQuoted4 = {link = "StyleGreen";};
-    mailQuoted5 = {link = "StyleRed";};
-    mailQuoted6 = {link = "StyleOrange";};
-    mailSignature = {link = "Comment";};
-    csBraces = {link = "StyleFg1";};
-    csEndColon = {link = "StyleFg1";};
-    csLogicSymbols = {link = "StyleFg1";};
-    csParens = {link = "StyleFg3";};
-    csOpSymbols = {link = "StyleFg3";};
-    csInterpolationDelimiter = {link = "StyleFg3";};
-    csInterpolationAlignDel = {link = "StyleAquaBold";};
-    csInterpolationFormat = {link = "StyleAqua";};
-    csInterpolationFormatDel = {link = "StyleAquaBold";};
-    rustSigil = {link = "StyleOrange";};
-    rustEscape = {link = "StyleAqua";};
-    rustStringContinuation = {link = "StyleAqua";};
-    rustEnum = {link = "StyleAqua";};
-    rustStructure = {link = "StyleAqua";};
-    rustModPathSep = {link = "StyleFg2";};
-    rustCommentLineDoc = {link = "Comment";};
-    rustDefault = {link = "StyleAqua";};
-    ocamlOperator = {link = "StyleFg1";};
-    ocamlKeyChar = {link = "StyleOrange";};
-    ocamlArrow = {link = "StyleOrange";};
-    ocamlInfixOpKeyword = {link = "StyleRed";};
-    ocamlConstructor = {link = "StyleOrange";};
-    LspSagaCodeActionTitle = {link = "Title";};
-    LspSagaCodeActionBorder = {link = "StyleFg1";};
-    LspSagaCodeActionContent = {
-      fg = colors.bright_green;
-      bold = true;
-    };
-    LspSagaLspFinderBorder = {link = "StyleFg1";};
-    LspSagaAutoPreview = {link = "StyleOrange";};
-    TargetWord = {
-      fg = colors.bright_blue;
-      bold = true;
-    };
-    FinderSeparator = {link = "StyleAqua";};
-    FidgetTask = {fg = colors.gray;};
-    LspSagaDefPreviewBorder = {link = "StyleBlue";};
-    LspSagaHoverBorder = {link = "StyleOrange";};
-    LspSagaRenameBorder = {link = "StyleBlue";};
-    LspSagaDiagnosticSource = {link = "StyleOrange";};
-    LspSagaDiagnosticBorder = {link = "StylePurple";};
-    LspSagaDiagnosticHeader = {link = "StyleGreen";};
-    LspSagaSignatureHelpBorder = {link = "StyleGreen";};
-    SagaShadow = {link = "StyleBg0";};
-    DashboardShortCut = {link = "StyleBlue";};
-    DashboardHeader = {link = "StyleAqua";};
-    DashboardCenter = {link = "StyleYellow";};
-    DashboardFooter = {
-      fg = colors.bright_purple;
-      italic = true;
-    };
-    MasonHighlight = {link = "StyleAqua";};
-    MasonHighlightBlock = {
-      fg = colors.dark0;
-      bg = colors.bright_blue;
-    };
-    MasonHighlightBlockBold = {
-      fg = colors.dark0;
-      bg = colors.bright_blue;
-      bold = true;
-    };
-    MasonHighlightSecondary = {fg = colors.bright_yellow;};
-    MasonHighlightBlockSecondary = {
-      fg = colors.dark0;
-      bg = colors.bright_yellow;
-    };
-    MasonHighlightBlockBoldSecondary = {
-      fg = colors.dark0;
-      bg = colors.bright_yellow;
-      bold = true;
-    };
-    MasonHeader = {link = "MasonHighlightBlockBoldSecondary";};
-    MasonHeaderSecondary = {link = "MasonHighlightBlockBold";};
-    MasonMuted = {fg = colors.light4;};
-    MasonMutedBlock = {
-      fg = colors.dark0;
-      bg = colors.light4;
-    };
-    MasonMutedBlockBold = {
-      fg = colors.dark0;
-      bg = colors.light4;
-      bold = true;
-    };
-    LspInlayHint = {link = "comment";};
-    CarbonFile = {link = "StyleFg1";};
-    CarbonExe = {link = "StyleYellow";};
-    CarbonSymlink = {link = "StyleAqua";};
-    CarbonBrokenSymlink = {link = "StyleRed";};
-    CarbonIndicator = {link = "StyleGray";};
-    CarbonDanger = {link = "StyleRed";};
-    CarbonPending = {link = "StyleYellow";};
-    NoiceCursor = {link = "TermCursor";};
-    NotifyDEBUGBorder = {link = "StyleBlue";};
-    NotifyDEBUGIcon = {link = "StyleBlue";};
-    NotifyDEBUGTitle = {link = "StyleBlue";};
-    NotifyERRORBorder = {link = "StyleRed";};
-    NotifyERRORIcon = {link = "StyleRed";};
-    NotifyERRORTitle = {link = "StyleRed";};
-    NotifyINFOBorder = {link = "StyleAqua";};
-    NotifyINFOIcon = {link = "StyleAqua";};
-    NotifyINFOTitle = {link = "StyleAqua";};
-    NotifyTRACEBorder = {link = "StyleGreen";};
-    NotifyTRACEIcon = {link = "StyleGreen";};
-    NotifyTRACETitle = {link = "StyleGreen";};
-    NotifyWARNBorder = {link = "StyleYellow";};
-    NotifyWARNIcon = {link = "StyleYellow";};
-    NotifyWARNTitle = {link = "StyleYellow";};
-    GitSignsCurrentLineBlame = {fg = colors.gray;};
-    IlluminatedWordText = {link = "LspReferenceText";};
-    IlluminatedWordRead = {link = "LspReferenceRead";};
-    IlluminatedWordWrite = {link = "LspReferenceWrite";};
-    TSRainbowRed = {fg = colors.bright_red;};
-    TSRainbowOrange = {fg = colors.bright_orange;};
-    TSRainbowYellow = {fg = colors.bright_yellow;};
-    TSRainbowGreen = {fg = colors.bright_green;};
-    TSRainbowBlue = {fg = colors.bright_blue;};
-    TSRainbowViolet = {fg = colors.bright_purple;};
-    TSRainbowCyan = {fg = colors.bright_aqua;};
-    RainbowDelimiterRed = {fg = colors.faded_red;};
-    RainbowDelimiterOrange = {fg = colors.faded_orange;};
-    RainbowDelimiterYellow = {fg = colors.faded_aqua;};
-    RainbowDelimiterGreen = {fg = colors.light2;};
-    RainbowDelimiterBlue = {fg = colors.faded_green;};
-    RainbowDelimiterViolet = {fg = colors.faded_purple;};
-    RainbowDelimiterCyan = {fg = colors.faded_green;};
-    DapBreakpointSymbol = {
-      fg = colors.bright_red;
-      bg = colors.dark1;
-    };
-    DapStoppedSymbol = {
-      fg = colors.bright_green;
-      bg = colors.dark1;
-    };
-    DapUIBreakpointsCurrentLine = {link = "StyleYellow";};
-    DapUIBreakpointsDisabledLine = {link = "StyleGray";};
-    DapUIBreakpointsInfo = {link = "StyleAqua";};
-    DapUIBreakpointsLine = {link = "StyleYellow";};
-    DapUIBreakpointsPath = {link = "StyleBlue";};
-    DapUICurrentFrameName = {link = "StylePurple";};
-    DapUIDecoration = {link = "StylePurple";};
-    DapUIEndofBuffer = {link = "EndOfBuffer";};
-    DapUIFloatBorder = {link = "StyleAqua";};
-    DapUILineNumber = {link = "StyleYellow";};
-    DapUIModifiedValue = {link = "StyleRed";};
-    DapUIPlayPause = {
-      fg = colors.bright_green;
-      bg = colors.dark1;
-    };
-    DapUIRestart = {
-      fg = colors.bright_green;
-      bg = colors.dark1;
-    };
-    DapUIScope = {link = "StyleBlue";};
-    DapUISource = {link = "StyleFg1";};
-    DapUIStepBack = {
-      fg = colors.bright_blue;
-      bg = colors.dark1;
-    };
-    DapUIStepInto = {
-      fg = colors.bright_blue;
-      bg = colors.dark1;
-    };
-    DapUIStepOut = {
-      fg = colors.bright_blue;
-      bg = colors.dark1;
-    };
-    DapUIStepOver = {
-      fg = colors.bright_blue;
-      bg = colors.dark1;
-    };
-    DapUIStop = {
-      fg = colors.bright_red;
-      bg = colors.dark1;
-    };
-    TreesitterContext = {bg = colors.dark1;};
-    DapUIStoppedThread = {link = "StyleBlue";};
-    DapUIThread = {link = "StyleBlue";};
-    DapUIType = {link = "StyleOrange";};
-    DapUIUnavailable = {link = "StyleGray";};
-    DapUIWatchesEmpty = {link = "StyleGray";};
-    DapUIWatchesError = {link = "StyleRed";};
-    DapUIWatchesValue = {link = "StyleYellow";};
-    DapUIWinSelect = {link = "StyleYellow";};
-    NeogitDiffDelete = {link = "DiffDelete";};
-    NeogitDiffAdd = {link = "DiffAdd";};
-    NeogitHunkHeader = {link = "WinBar";};
-    NeogitHunkHeaderHighlight = {link = "WinBarNC";};
-    DiffviewStatusModified = {link = "StyleBlueBold";};
-    DiffviewFilePanelInsertions = {link = "StyleGreenBold";};
-    DiffviewFilePanelDeletions = {link = "StyleRedBold";};
-    "@comment" = {link = "Comment";};
-    "@none" = {
-      bg = "NONE";
-      fg = "NONE";
-    };
-    "@preproc" = {link = "PreProc";};
-    "@define" = {link = "Define";};
-    "@operator" = {link = "Operator";};
-    "@punctuation.delimiter" = {link = "Delimiter";};
-    "@punctuation.bracket" = {link = "Delimiter";};
-    "@punctuation.special" = {link = "Delimiter";};
-    "@string" = {link = "String";};
-    "@string.regex" = {link = "String";};
-    "@string.regexp" = {link = "String";};
-    "@string.escape" = {link = "SpecialChar";};
-    "@string.special" = {link = "SpecialChar";};
-    "@string.special.path" = {link = "Underlined";};
-    "@string.special.symbol" = {link = "Identifier";};
-    "@string.special.url" = {link = "Underlined";};
-    "@character" = {link = "Character";};
-    "@character.special" = {link = "SpecialChar";};
+    "@annotation" = {link = "PreProc";};
+    "@attribute" = {link = "PreProc";};
     "@boolean" = {link = "Boolean";};
-    "@number" = {link = "Number";};
-    "@number.float" = {link = "Float";};
-    "@float" = {link = "Float";};
+    "@character" = {link = "Character";};
+    "@character.printf" = {link = "SpecialChar";};
+    "@character.special" = {link = "SpecialChar";};
+    "@comment" = {link = "Comment";};
+    "@comment.error" = {
+      fg = colors.red1;
+    };
+    "@comment.hint" = {
+      fg = colors.hint;
+    };
+    "@comment.info" = {
+      fg = colors.blue2;
+    };
+    "@comment.note" = {
+      fg = colors.hint;
+    };
+    "@comment.todo" = {
+      fg = colors.blue;
+    };
+    "@comment.warning" = {
+      fg = colors.yellow;
+    };
+    "@constant" = {link = "Constant";};
+    "@constant.builtin" = {link = "Special";};
+    "@constant.macro" = {link = "Define";};
+    "@constructor" = {
+      fg = colors.magenta;
+    };
+    "@constructor.tsx" = {
+      fg = colors.blue1;
+    };
+    "@diff.delta" = {link = "DiffChange";};
+    "@diff.minus" = {link = "DiffDelete";};
+    "@diff.plus" = {link = "DiffAdd";};
     "@function" = {link = "Function";};
     "@function.builtin" = {link = "Special";};
-    "@function.call" = {link = "Function";};
+    "@function.call" = {link = "@function";};
     "@function.macro" = {link = "Macro";};
     "@function.method" = {link = "Function";};
-    "@method" = {link = "Function";};
-    "@method.call" = {link = "Function";};
-    "@constructor" = {link = "Special";};
-    "@parameter" = {link = "Identifier";};
-    "@keyword" = {link = "Keyword";};
+    "@function.method.call" = {link = "@function.method";};
+    "@keyword" = {
+      fg = colors.purple;
+      italic = true;
+    };
     "@keyword.conditional" = {link = "Conditional";};
+    "@keyword.coroutine" = {link = "@keyword";};
     "@keyword.debug" = {link = "Debug";};
     "@keyword.directive" = {link = "PreProc";};
     "@keyword.directive.define" = {link = "Define";};
     "@keyword.exception" = {link = "Exception";};
-    "@keyword.function" = {link = "Keyword";};
+    "@keyword.function" = {
+      fg = colors.magenta;
+    };
     "@keyword.import" = {link = "Include";};
-    "@keyword.operator" = {link = "StyleRed";};
+    "@keyword.operator" = {link = "@operator";};
     "@keyword.repeat" = {link = "Repeat";};
-    "@keyword.return" = {link = "Keyword";};
+    "@keyword.return" = {link = "@keyword";};
     "@keyword.storage" = {link = "StorageClass";};
-    "@conditional" = {link = "Conditional";};
-    "@repeat" = {link = "Repeat";};
-    "@debug" = {link = "Debug";};
-    "@label" = {link = "Label";};
-    "@include" = {link = "Include";};
-    "@exception" = {link = "Exception";};
-    "@type" = {link = "Type";};
-    "@type.builtin" = {link = "Type";};
-    "@type.definition" = {link = "Typedef";};
-    "@type.qualifier" = {link = "Type";};
-    "@storageclass" = {link = "StorageClass";};
-    "@attribute" = {link = "PreProc";};
-    "@field" = {link = "Identifier";};
-    "@property" = {link = "Identifier";};
-    "@variable" = {link = "StyleFg1";};
-    "@variable.builtin" = {link = "Special";};
-    "@variable.member" = {link = "Identifier";};
-    "@variable.parameter" = {link = "Identifier";};
-    "@constant" = {link = "Constant";};
-    "@shortcut" = {link = "Shortcut";};
-    "@constant.builtin" = {link = "Special";};
-    "@constant.macro" = {link = "Define";};
-    "@markup" = {link = "StyleFg1";};
-    "@markup.strong" = {bold = true;};
-    "@markup.italic" = {link = "@text.emphasis";};
-    "@markup.underline" = {underline = true;};
-    "@markup.strikethrough" = {strikethrough = true;};
-    "@markup.heading" = {link = "Title";};
-    "@markup.raw" = {link = "String";};
-    "@markup.math" = {link = "Special";};
-    "@markup.environment" = {link = "Macro";};
-    "@markup.environment.name" = {link = "Type";};
-    "@markup.link" = {link = "Underlined";};
-    "@markup.link.label" = {link = "SpecialChar";};
-    "@markup.list" = {link = "Delimiter";};
-    "@markup.list.checked" = {link = "StyleGreen";};
-    "@markup.list.unchecked" = {link = "StyleGray";};
-    "@comment.todo" = {link = "Todo";};
-    "@comment.note" = {link = "SpecialComment";};
-    "@comment.warning" = {link = "WarningMsg";};
-    "@comment.error" = {link = "ErrorMsg";};
-    "@diff.plus" = {link = "diffAdded";};
-    "@diff.minus" = {link = "diffRemoved";};
-    "@diff.delta" = {link = "diffChanged";};
-    "@module" = {link = "StyleFg1";};
-    "@namespace" = {link = "StyleFg1";};
-    "@symbol" = {link = "Identifier";};
-    "@text" = {link = "StyleFg1";};
-    "@text.strong" = {bold = true;};
-    "@text.emphasis" = {italic = true;};
-    "@text.underline" = {underline = true;};
-    "@text.strike" = {strikethrough = true;};
-    "@text.title" = {link = "Title";};
-    "@text.literal" = {link = "String";};
-    "@text.uri" = {link = "Underlined";};
-    "@text.math" = {link = "Special";};
-    "@text.environment" = {link = "Macro";};
-    "@text.environment.name" = {link = "Type";};
-    "@text.reference" = {link = "Constant";};
-    "@text.todo" = {link = "Todo";};
-    "@text.todo.checked" = {link = "StyleGreen";};
-    "@text.todo.unchecked" = {link = "StyleGray";};
-    "@text.note" = {link = "SpecialComment";};
-    "@text.note.comment" = {
-      fg = colors.bright_purple;
-      bold = true;
+    "@label" = {
+      fg = colors.blue;
     };
-    "@text.warning" = {link = "WarningMsg";};
-    "@text.danger" = {link = "ErrorMsg";};
-    "@text.danger.comment" = {
-      fg = colors.light0;
-      bg = colors.bright_red;
-      bold = true;
-    };
-    "@text.diff.add" = {link = "diffAdded";};
-    "@text.diff.delete" = {link = "diffRemoved";};
-    "@tag" = {link = "Tag";};
-    "@tag.attribute" = {link = "Identifier";};
-    "@tag.delimiter" = {link = "Delimiter";};
-    "@punctuation" = {link = "Delimiter";};
-    "@macro" = {link = "Macro";};
-    "@structure" = {link = "Structure";};
-    "@lsp.type.class" = {link = "@type";};
+    "@lsp.type.boolean" = {link = "@boolean";};
+    "@lsp.type.builtinType" = {link = "@type.builtin";};
     "@lsp.type.comment" = {link = "@comment";};
-    "@lsp.type.decorator" = {link = "@macro";};
+    "@lsp.type.decorator" = {link = "@attribute";};
+    "@lsp.type.deriveHelper" = {link = "@attribute";};
     "@lsp.type.enum" = {link = "@type";};
     "@lsp.type.enumMember" = {link = "@constant";};
-    "@lsp.type.function" = {link = "@function";};
-    "@lsp.type.interface" = {link = "@constructor";};
-    "@lsp.type.macro" = {link = "@macro";};
-    "@lsp.type.method" = {link = "@method";};
-    "@lsp.type.namespace" = {link = "@namespace";};
-    "@lsp.type.parameter" = {link = "@parameter";};
+    "@lsp.type.escapeSequence" = {link = "@string.escape";};
+    "@lsp.type.formatSpecifier" = {link = "@markup.list";};
+    "@lsp.type.generic" = {link = "@variable";};
+    "@lsp.type.interface" = {
+      fg = colors.blue2;
+    };
+    "@lsp.type.keyword" = {link = "@keyword";};
+    "@lsp.type.lifetime" = {link = "@keyword.storage";};
+    "@lsp.type.namespace" = {link = "@module";};
+    "@lsp.type.namespace.python" = {link = "@variable";};
+    "@lsp.type.number" = {link = "@number";};
+    "@lsp.type.operator" = {link = "@operator";};
+    "@lsp.type.parameter" = {link = "@variable.parameter";};
     "@lsp.type.property" = {link = "@property";};
-    "@lsp.type.struct" = {link = "@type";};
-    "@lsp.type.type" = {link = "@type";};
-    "@lsp.type.typeParameter" = {link = "@type.definition";};
-    "@lsp.type.variable" = {link = "@variable";};
+    "@lsp.type.selfKeyword" = {link = "@variable.builtin";};
+    "@lsp.type.selfTypeKeyword" = {link = "@variable.builtin";};
+    "@lsp.type.string" = {link = "@string";};
+    "@lsp.type.typeAlias" = {link = "@type.definition";};
+    "@lsp.type.unresolvedReference" = {
+      sp = colors.red1;
+      undercurl = true;
+    };
+    "@lsp.type.variable" = {};
+    "@lsp.typemod.class.defaultLibrary" = {link = "@type.builtin";};
+    "@lsp.typemod.enum.defaultLibrary" = {link = "@type.builtin";};
+    "@lsp.typemod.enumMember.defaultLibrary" = {link = "@constant.builtin";};
+    "@lsp.typemod.function.defaultLibrary" = {link = "@function.builtin";};
+    "@lsp.typemod.keyword.async" = {link = "@keyword.coroutine";};
+    "@lsp.typemod.keyword.injected" = {link = "@keyword";};
+    "@lsp.typemod.macro.defaultLibrary" = {link = "@function.builtin";};
+    "@lsp.typemod.method.defaultLibrary" = {link = "@function.builtin";};
+    "@lsp.typemod.operator.injected" = {link = "@operator";};
+    "@lsp.typemod.string.injected" = {link = "@string";};
+    "@lsp.typemod.struct.defaultLibrary" = {link = "@type.builtin";};
+    "@lsp.typemod.type.defaultLibrary" = {
+      fg = colors.border_highlight;
+    };
+    "@lsp.typemod.typeAlias.defaultLibrary" = {
+      fg = colors.border_highlight;
+    };
+    "@lsp.typemod.variable.callable" = {link = "@function";};
+    "@lsp.typemod.variable.defaultLibrary" = {link = "@variable.builtin";};
+    "@lsp.typemod.variable.injected" = {link = "@variable";};
+    "@lsp.typemod.variable.static" = {link = "@constant";};
+    "@markup" = {link = "@none";};
+    "@markup.emphasis" = {
+      italic = true;
+    };
+    "@markup.environment" = {link = "Macro";};
+    "@markup.environment.name" = {link = "Type";};
+    "@markup.heading" = {link = "Title";};
+    "@markup.heading.1.markdown" = {
+      bold = true;
+      fg = colors.blue;
+    };
+    "@markup.heading.2.markdown" = {
+      bold = true;
+      fg = colors.yellow;
+    };
+    "@markup.heading.3.markdown" = {
+      bold = true;
+      fg = colors.green;
+    };
+    "@markup.heading.4.markdown" = {
+      bold = true;
+      fg = colors.red;
+    };
+    "@markup.heading.5.markdown" = {
+      bold = true;
+      fg = colors.purple;
+    };
+    "@markup.heading.6.markdown" = {
+      bold = true;
+      fg = colors.blue;
+    };
+    "@markup.italic" = {
+      italic = true;
+    };
+    "@markup.link" = {
+      fg = colors.hint;
+    };
+    "@markup.link.label" = {link = "SpecialChar";};
+    "@markup.link.label.symbol" = {link = "Identifier";};
+    "@markup.link.url" = {link = "Underlined";};
+    "@markup.list" = {
+      fg = colors.blue5;
+    };
+    "@markup.list.checked" = {
+      fg = colors.green1;
+    };
+    "@markup.list.markdown" = {
+      bold = true;
+      fg = colors.orange;
+    };
+    "@markup.list.unchecked" = {
+      fg = colors.blue;
+    };
+    "@markup.math" = {link = "Special";};
+    "@markup.raw" = {link = "String";};
+    "@markup.raw.markdown_inline" = {
+      bg = colors.terminal_black;
+      fg = colors.blue;
+    };
+    "@markup.strikethrough" = {
+      strikethrough = true;
+    };
+    "@markup.strong" = {
+      bold = true;
+    };
+    "@markup.underline" = {
+      underline = true;
+    };
+    "@module" = {link = "Include";};
+    "@module.builtin" = {
+      fg = colors.red;
+    };
+    "@namespace.builtin" = {link = "@variable.builtin";};
+    "@none" = {};
+    "@number" = {link = "Number";};
+    "@number.float" = {link = "Float";};
+    "@operator" = {
+      fg = colors.blue5;
+    };
+    "@property" = {
+      fg = colors.green1;
+    };
+    "@punctuation.bracket" = {
+      fg = colors.fg_dark;
+    };
+    "@punctuation.delimiter" = {
+      fg = colors.blue5;
+    };
+    "@punctuation.special" = {
+      fg = colors.blue5;
+    };
+    "@string" = {link = "String";};
+    "@string.documentation" = {
+      fg = colors.yellow;
+    };
+    "@string.escape" = {
+      fg = colors.magenta;
+    };
+    "@string.regexp" = {
+      fg = colors.blue6;
+    };
+    "@tag" = {link = "Label";};
+    "@tag.attribute" = {link = "@property";};
+    "@tag.delimiter" = {link = "Delimiter";};
+    "@tag.delimiter.tsx" = {
+      fg = "#5d7ab8";
+    };
+    "@tag.javascript" = {
+      fg = colors.red;
+    };
+    "@tag.tsx" = {
+      fg = colors.red;
+    };
+    "@type" = {link = "Type";};
+    "@type.builtin" = {
+      fg = colors.border_highlight;
+    };
+    "@type.definition" = {link = "Typedef";};
+    "@type.qualifier" = {link = "@keyword";};
+    "@variable" = {
+      fg = colors.fg;
+    };
+    "@variable.builtin" = {
+      fg = colors.red;
+    };
+    "@variable.member" = {
+      fg = colors.green1;
+    };
+    "@variable.parameter" = {
+      fg = colors.yellow;
+    };
+    "@variable.parameter.builtin" = {
+      fg = "#dab484";
+    };
+    ALEErrorSign = {
+      fg = colors.red1;
+    };
+    ALEWarningSign = {
+      fg = colors.yellow;
+    };
+    AerialArrayIcon = {link = "LspKindArray";};
+    AerialBooleanIcon = {link = "LspKindBoolean";};
+    AerialClassIcon = {link = "LspKindClass";};
+    AerialColorIcon = {link = "LspKindColor";};
+    AerialConstantIcon = {link = "LspKindConstant";};
+    AerialConstructorIcon = {link = "LspKindConstructor";};
+    AerialEnumIcon = {link = "LspKindEnum";};
+    AerialEnumMemberIcon = {link = "LspKindEnumMember";};
+    AerialEventIcon = {link = "LspKindEvent";};
+    AerialFieldIcon = {link = "LspKindField";};
+    AerialFileIcon = {link = "LspKindFile";};
+    AerialFolderIcon = {link = "LspKindFolder";};
+    AerialFunctionIcon = {link = "LspKindFunction";};
+    AerialGuide = {
+      fg = colors.fg_gutter;
+    };
+    AerialInterfaceIcon = {link = "LspKindInterface";};
+    AerialKeyIcon = {link = "LspKindKey";};
+    AerialKeywordIcon = {link = "LspKindKeyword";};
+    AerialLine = {link = "LspInlayHint";};
+    AerialMethodIcon = {link = "LspKindMethod";};
+    AerialModuleIcon = {link = "LspKindModule";};
+    AerialNamespaceIcon = {link = "LspKindNamespace";};
+    AerialNormal = {
+      bg = "NONE";
+      fg = colors.fg;
+    };
+    AerialNullIcon = {link = "LspKindNull";};
+    AerialNumberIcon = {link = "LspKindNumber";};
+    AerialObjectIcon = {link = "LspKindObject";};
+    AerialOperatorIcon = {link = "LspKindOperator";};
+    AerialPropertyIcon = {link = "LspKindProperty";};
+    AerialReferenceIcon = {link = "LspKindReference";};
+    AerialSnippetIcon = {link = "LspKindSnippet";};
+    AerialStringIcon = {link = "LspKindString";};
+    AerialStructIcon = {link = "LspKindStruct";};
+    AerialTextIcon = {link = "LspKindText";};
+    AerialTypeParameterIcon = {link = "LspKindTypeParameter";};
+    AerialUnitIcon = {link = "LspKindUnit";};
+    AerialValueIcon = {link = "LspKindValue";};
+    AerialVariableIcon = {link = "LspKindVariable";};
+    AlphaButtons = {
+      fg = colors.cyan;
+    };
+    AlphaFooter = {
+      fg = colors.blue1;
+    };
+    AlphaHeader = {
+      fg = colors.blue;
+    };
+    AlphaHeaderLabel = {
+      fg = colors.orange;
+    };
+    AlphaShortcut = {
+      fg = colors.orange;
+    };
+    Bold = {
+      bold = true;
+      fg = colors.fg;
+    };
+    BufferAlternate = {
+      bg = colors.fg_gutter;
+      fg = colors.fg;
+    };
+    BufferAlternateERROR = {
+      bg = colors.fg_gutter;
+      fg = colors.red1;
+    };
+    BufferAlternateHINT = {
+      bg = colors.fg_gutter;
+      fg = colors.hint;
+    };
+    BufferAlternateINFO = {
+      bg = colors.fg_gutter;
+      fg = colors.blue2;
+    };
+    BufferAlternateIndex = {
+      bg = colors.fg_gutter;
+      fg = colors.blue2;
+    };
+    BufferAlternateMod = {
+      bg = colors.fg_gutter;
+      fg = colors.yellow;
+    };
+    BufferAlternateSign = {
+      bg = colors.fg_gutter;
+      fg = colors.blue2;
+    };
+    BufferAlternateTarget = {
+      bg = colors.fg_gutter;
+      fg = colors.red;
+    };
+    BufferAlternateWARN = {
+      bg = colors.fg_gutter;
+      fg = colors.yellow;
+    };
+    BufferCurrent = {
+      bg = colors.bg;
+      fg = colors.fg;
+    };
+    BufferCurrentERROR = {
+      bg = colors.bg;
+      fg = colors.red1;
+    };
+    BufferCurrentHINT = {
+      bg = colors.bg;
+      fg = colors.hint;
+    };
+    BufferCurrentINFO = {
+      bg = colors.bg;
+      fg = colors.blue2;
+    };
+    BufferCurrentIndex = {
+      bg = colors.bg;
+      fg = colors.blue2;
+    };
+    BufferCurrentMod = {
+      bg = colors.bg;
+      fg = colors.yellow;
+    };
+    BufferCurrentSign = {
+      bg = colors.bg;
+      fg = colors.bg;
+    };
+    BufferCurrentTarget = {
+      bg = colors.bg;
+      fg = colors.red;
+    };
+    BufferCurrentWARN = {
+      bg = colors.bg;
+      fg = colors.yellow;
+    };
+    BufferInactive = {
+      bg = "#202331";
+      fg = "#616789";
+    };
+    BufferInactiveERROR = {
+      bg = "#202331";
+      fg = "#b44144";
+    };
+    BufferInactiveHINT = {
+      bg = "#202331";
+      fg = "#1a9c84";
+    };
+    BufferInactiveINFO = {
+      bg = "#202331";
+      fg = "#1099b4";
+    };
+    BufferInactiveIndex = {
+      bg = "#202331";
+      fg = colors.dark5;
+    };
+    BufferInactiveMod = {
+      bg = "#202331";
+      fg = "#b8915b";
+    };
+    BufferInactiveSign = {
+      bg = "#202331";
+      fg = colors.bg;
+    };
+    BufferInactiveTarget = {
+      bg = "#202331";
+      fg = colors.red;
+    };
+    BufferInactiveWARN = {
+      bg = "#202331";
+      fg = "#b8915b";
+    };
+    BufferLineBufferSelected = {
+      fg = colors.blue;
+    };
+    BufferLineFill = {
+      bg = colors.bg;
+    };
+    BufferLineIndicatorSelected = {
+      fg = colors.git_change;
+    };
+    BufferOffset = {
+      bg = colors.bg_dark;
+      fg = colors.dark5;
+    };
+    BufferTabpageFill = {
+      bg = "#262a3c";
+      fg = colors.dark5;
+    };
+    BufferTabpages = {
+      bg = colors.bg_dark;
+      fg = "NONE";
+    };
+    BufferVisible = {
+      bg = colors.bg_dark;
+      fg = colors.fg;
+    };
+    BufferVisibleERROR = {
+      bg = colors.bg_dark;
+      fg = colors.red1;
+    };
+    BufferVisibleHINT = {
+      bg = colors.bg_dark;
+      fg = colors.hint;
+    };
+    BufferVisibleINFO = {
+      bg = colors.bg_dark;
+      fg = colors.blue2;
+    };
+    BufferVisibleIndex = {
+      bg = colors.bg_dark;
+      fg = colors.blue2;
+    };
+    BufferVisibleMod = {
+      bg = colors.bg_dark;
+      fg = colors.yellow;
+    };
+    BufferVisibleSign = {
+      bg = colors.bg_dark;
+      fg = colors.blue2;
+    };
+    BufferVisibleTarget = {
+      bg = colors.bg_dark;
+      fg = colors.red;
+    };
+    BufferVisibleWARN = {
+      bg = colors.bg_dark;
+      fg = colors.yellow;
+    };
+    Character = {
+      fg = colors.green;
+    };
+    CmpDocumentation = {
+      bg = colors.bg_dark;
+      fg = colors.fg;
+    };
+    CmpDocumentationBorder = {
+      bg = colors.bg_dark;
+      fg = colors.border_highlight;
+    };
+    CmpGhostText = {
+      fg = colors.terminal_black;
+    };
+    CmpItemAbbr = {
+      bg = "NONE";
+      fg = colors.fg;
+    };
+    CmpItemAbbrDeprecated = {
+      bg = "NONE";
+      fg = colors.fg_gutter;
+      strikethrough = true;
+    };
+    CmpItemAbbrMatch = {
+      bg = "NONE";
+      fg = colors.blue1;
+    };
+    CmpItemAbbrMatchFuzzy = {
+      bg = "NONE";
+      fg = colors.blue1;
+    };
+    CmpItemKindArray = {link = "LspKindArray";};
+    CmpItemKindBoolean = {link = "LspKindBoolean";};
+    CmpItemKindClass = {link = "LspKindClass";};
+    CmpItemKindCodeium = {
+      bg = "NONE";
+      fg = colors.hint;
+    };
+    CmpItemKindColor = {link = "LspKindColor";};
+    CmpItemKindConstant = {link = "LspKindConstant";};
+    CmpItemKindConstructor = {link = "LspKindConstructor";};
+    CmpItemKindCopilot = {
+      bg = "NONE";
+      fg = colors.hint;
+    };
+    CmpItemKindDefault = {
+      bg = "NONE";
+      fg = colors.fg_dark;
+    };
+    CmpItemKindEnum = {link = "LspKindEnum";};
+    CmpItemKindEnumMember = {link = "LspKindEnumMember";};
+    CmpItemKindEvent = {link = "LspKindEvent";};
+    CmpItemKindField = {link = "LspKindField";};
+    CmpItemKindFile = {link = "LspKindFile";};
+    CmpItemKindFolder = {link = "LspKindFolder";};
+    CmpItemKindFunction = {link = "LspKindFunction";};
+    CmpItemKindInterface = {link = "LspKindInterface";};
+    CmpItemKindKey = {link = "LspKindKey";};
+    CmpItemKindKeyword = {link = "LspKindKeyword";};
+    CmpItemKindMethod = {link = "LspKindMethod";};
+    CmpItemKindModule = {link = "LspKindModule";};
+    CmpItemKindNamespace = {link = "LspKindNamespace";};
+    CmpItemKindNull = {link = "LspKindNull";};
+    CmpItemKindNumber = {link = "LspKindNumber";};
+    CmpItemKindObject = {link = "LspKindObject";};
+    CmpItemKindOperator = {link = "LspKindOperator";};
+    CmpItemKindPackage = {link = "LspKindPackage";};
+    CmpItemKindProperty = {link = "LspKindProperty";};
+    CmpItemKindReference = {link = "LspKindReference";};
+    CmpItemKindSnippet = {link = "LspKindSnippet";};
+    CmpItemKindString = {link = "LspKindString";};
+    CmpItemKindStruct = {link = "LspKindStruct";};
+    CmpItemKindSupermaven = {
+      bg = "NONE";
+      fg = colors.hint;
+    };
+    CmpItemKindTabNine = {
+      bg = "NONE";
+      fg = colors.hint;
+    };
+    CmpItemKindText = {link = "LspKindText";};
+    CmpItemKindTypeParameter = {link = "LspKindTypeParameter";};
+    CmpItemKindUnit = {link = "LspKindUnit";};
+    CmpItemKindValue = {link = "LspKindValue";};
+    CmpItemKindVariable = {link = "LspKindVariable";};
+    CmpItemMenu = {
+      bg = "NONE";
+      fg = colors.comment;
+    };
+    CodeBlock = {
+      bg = colors.bg_dark;
+    };
+    ColorColumn = {
+      bg = colors.bg;
+    };
+    Comment = {
+      fg = colors.comment;
+      italic = true;
+    };
+    Conceal = {
+      fg = colors.dark5;
+    };
+    Constant = {
+      fg = colors.orange;
+    };
+    CurSearch = {link = "IncSearch";};
+    Cursor = {
+      bg = colors.fg;
+      fg = colors.bg;
+    };
+    CursorColumn = {
+      bg = colors.bg_highlight;
+    };
+    CursorIM = {
+      bg = colors.fg;
+      fg = colors.bg;
+    };
+    CursorLine = {
+      bg = colors.bg_highlight;
+    };
+    CursorLineNr = {
+      bold = true;
+      fg = colors.orange;
+    };
+    DapStoppedLine = {
+      bg = "#2e2a2d";
+    };
+    DashboardDesc = {
+      fg = colors.cyan;
+    };
+    DashboardFiles = {
+      fg = colors.blue;
+    };
+    DashboardFooter = {
+      fg = colors.blue1;
+    };
+    DashboardHeader = {
+      fg = colors.blue;
+    };
+    DashboardIcon = {
+      bold = true;
+      fg = colors.cyan;
+    };
+    DashboardKey = {
+      fg = colors.orange;
+    };
+    DashboardMruIcon = {
+      fg = colors.purple;
+    };
+    DashboardMruTitle = {
+      fg = colors.cyan;
+    };
+    DashboardProjectIcon = {
+      fg = colors.yellow;
+    };
+    DashboardProjectTitle = {
+      fg = colors.cyan;
+    };
+    DashboardProjectTitleIcon = {
+      fg = colors.orange;
+    };
+    DashboardShortCut = {
+      fg = colors.cyan;
+    };
+    DashboardShortCutIcon = {
+      fg = colors.magenta;
+    };
+    Debug = {
+      fg = colors.orange;
+    };
+    DefinitionCount = {
+      fg = colors.purple;
+    };
+    DefinitionIcon = {
+      fg = colors.blue;
+    };
+    Delimiter = {link = "Special";};
+    DiagnosticError = {
+      fg = colors.red1;
+    };
+    DiagnosticHint = {
+      fg = colors.hint;
+    };
+    DiagnosticInfo = {
+      fg = colors.blue2;
+    };
+    DiagnosticInformation = {link = "DiagnosticInfo";};
+    DiagnosticUnderlineError = {
+      sp = colors.red1;
+      undercurl = true;
+    };
+    DiagnosticUnderlineHint = {
+      sp = colors.hint;
+      undercurl = true;
+    };
+    DiagnosticUnderlineInfo = {
+      sp = colors.blue2;
+      undercurl = true;
+    };
+    DiagnosticUnderlineWarn = {
+      sp = colors.yellow;
+      undercurl = true;
+    };
+    DiagnosticUnnecessary = {
+      fg = colors.terminal_black;
+    };
+    DiagnosticVirtualTextError = {
+      bg = "#2d202a";
+      fg = colors.red1;
+    };
+    DiagnosticVirtualTextHint = {
+      bg = "#1a2b32";
+      fg = colors.hint;
+    };
+    DiagnosticVirtualTextInfo = {
+      bg = "#192b38";
+      fg = colors.blue2;
+    };
+    DiagnosticVirtualTextWarn = {
+      bg = "#2e2a2d";
+      fg = colors.yellow;
+    };
+    DiagnosticWarn = {
+      fg = colors.yellow;
+    };
+    DiagnosticWarning = {link = "DiagnosticWarn";};
+    DiffAdd = {
+      bg = colors.git_add;
+    };
+    DiffChange = {
+      bg = colors.git_change;
+    };
+    DiffDelete = {
+      bg = colors.git_delete;
+    };
+    DiffText = {
+      bg = "#394b70";
+    };
+    Directory = {
+      fg = colors.blue;
+    };
+    EndOfBuffer = {
+      fg = colors.bg;
+    };
+    Error = {
+      fg = colors.red1;
+    };
+    ErrorMsg = {
+      fg = colors.red1;
+    };
+    FlashBackdrop = {
+      fg = colors.comment;
+    };
+    FlashLabel = {
+      bg = "#ff007c";
+      bold = true;
+      fg = colors.fg;
+    };
+    FloatBorder = {
+      bg = colors.bg_dark;
+      fg = colors.green1;
+    };
+    FloatTitle = {
+      bg = colors.bg_dark;
+      fg = colors.border_highlight;
+    };
+    FoldColumn = {
+      bg = colors.bg;
+      fg = colors.comment;
+    };
+    Folded = {
+      bg = colors.fg_gutter;
+      fg = colors.blue;
+    };
+    Foo = {
+      bg = "#ff007c";
+      fg = colors.fg;
+    };
+    Function = {
+      fg = colors.blue;
+    };
+    FzfLuaBorder = {
+      bg = colors.bg_dark;
+      fg = colors.border_highlight;
+    };
+    FzfLuaCursor = {link = "IncSearch";};
+    FzfLuaDirPart = {
+      fg = colors.fg_dark;
+    };
+    FzfLuaFilePart = {link = "FzfLuaFzfNormal";};
+
+    FzfLuaFzfCursorLine = {link = "Visual";};
+    FzfLuaFzfNormal = {
+      fg = colors.fg;
+    };
+    FzfLuaFzfPointer = {
+      fg = "#ff007c";
+    };
+    FzfLuaFzfSeparator = {
+      bg = colors.bg_dark;
+      fg = colors.orange;
+    };
+    FzfLuaHeaderBind = {link = "@punctuation.special";};
+    FzfLuaHeaderText = {link = "Title";};
+    FzfLuaNormal = {
+      bg = colors.bg_dark;
+      fg = colors.fg;
+    };
+    FzfLuaPath = {link = "Directory";};
+    FzfLuaPreviewTitle = {
+      bg = colors.bg_dark;
+      fg = colors.border_highlight;
+    };
+    FzfLuaTitle = {
+      bg = colors.bg_dark;
+      fg = colors.orange;
+    };
+    GitGutterAdd = {
+      fg = colors.git_add;
+    };
+    GitGutterAddLineNr = {
+      fg = colors.git_add;
+    };
+    GitGutterChange = {
+      fg = colors.git_change;
+    };
+    GitGutterChangeLineNr = {
+      fg = colors.git_change;
+    };
+    GitGutterDelete = {
+      fg = colors.git_delete;
+    };
+    GitGutterDeleteLineNr = {
+      fg = colors.git_delete;
+    };
+    GitSignsAdd = {
+      fg = colors.git_add;
+    };
+    GitSignsChange = {
+      fg = colors.git_change;
+    };
+    GitSignsDelete = {
+      fg = colors.git_delete;
+    };
+    GlyphPalette1 = {
+      fg = colors.red1;
+    };
+    GlyphPalette2 = {
+      fg = colors.green;
+    };
+    GlyphPalette3 = {
+      fg = colors.yellow;
+    };
+    GlyphPalette4 = {
+      fg = colors.blue;
+    };
+    GlyphPalette6 = {
+      fg = colors.green1;
+    };
+    GlyphPalette7 = {
+      fg = colors.fg;
+    };
+    GlyphPalette9 = {
+      fg = colors.red;
+    };
+    GrugFarHelpHeader = {
+      fg = colors.comment;
+    };
+    GrugFarHelpHeaderKey = {
+      fg = colors.cyan;
+    };
+    GrugFarInputLabel = {
+      fg = colors.blue1;
+    };
+    GrugFarInputPlaceholder = {
+      fg = colors.comment;
+    };
+    GrugFarResultsChangeIndicator = {
+      fg = colors.git_change;
+    };
+    GrugFarResultsHeader = {
+      fg = colors.orange;
+    };
+    GrugFarResultsLineColumn = {
+      fg = colors.comment;
+    };
+    GrugFarResultsLineNo = {
+      fg = colors.comment;
+    };
+    GrugFarResultsMatch = {
+      bg = colors.red;
+      fg = colors.black;
+    };
+    GrugFarResultsStats = {
+      fg = colors.blue;
+    };
+    Headline = {link = "Headline1";};
+    Headline1 = {
+      bg = "#1f2230";
+    };
+    Headline2 = {
+      bg = "#242229";
+    };
+    Headline3 = {
+      bg = "#212429";
+    };
+    Headline4 = {
+      bg = "#1a232c";
+    };
+    Headline5 = {
+      bg = "#222130";
+    };
+    Headline6 = {
+      bg = "#21202f";
+    };
+    HopNextKey = {
+      bold = true;
+      fg = "#ff007c";
+    };
+    HopNextKey1 = {
+      bold = true;
+      fg = colors.blue2;
+    };
+    HopNextKey2 = {
+      fg = "#127a90";
+    };
+    HopUnmatched = {
+      fg = colors.comment;
+    };
+    IblIndent = {
+      fg = colors.fg_gutter;
+      nocombine = true;
+    };
+    IblScope = {
+      fg = colors.blue1;
+      nocombine = true;
+    };
+    Identifier = {
+      fg = colors.magenta;
+    };
+    IlluminatedWordRead = {
+      bg = colors.fg_gutter;
+    };
+    IlluminatedWordText = {
+      bg = colors.fg_gutter;
+    };
+    IlluminatedWordWrite = {
+      bg = colors.fg_gutter;
+    };
+    IncSearch = {
+      bg = colors.orange;
+      fg = colors.black;
+    };
+    IndentBlanklineChar = {
+      fg = colors.fg_gutter;
+      nocombine = true;
+    };
+    IndentBlanklineContextChar = {
+      fg = colors.blue1;
+      nocombine = true;
+    };
+    IndentLine = {
+      fg = colors.fg_gutter;
+      nocombine = true;
+    };
+    IndentLineCurrent = {
+      fg = colors.blue1;
+      nocombine = true;
+    };
+    Italic = {
+      fg = colors.fg;
+      italic = true;
+    };
+    Keyword = {
+      fg = colors.cyan;
+      italic = true;
+    };
+    LazyProgressDone = {
+      bold = true;
+      fg = "#ff007c";
+    };
+    LazyProgressTodo = {
+      bold = true;
+      fg = colors.fg_gutter;
+    };
+    LeapBackdrop = {
+      fg = colors.comment;
+    };
+    LeapLabel = {
+      bold = true;
+      fg = "#ff007c";
+    };
+    LeapMatch = {
+      bg = "#ff007c";
+      bold = true;
+      fg = colors.fg;
+    };
+    LineNr = {
+      fg = colors.fg_gutter;
+    };
+    LineNrAbove = {
+      fg = colors.fg_gutter;
+    };
+    LineNrBelow = {
+      fg = colors.fg_gutter;
+    };
+    LspCodeLens = {
+      fg = colors.comment;
+    };
+    LspFloatWinBorder = {
+      fg = colors.border_highlight;
+    };
+    LspFloatWinNormal = {
+      bg = colors.bg_dark;
+    };
+    LspInfoBorder = {
+      bg = colors.bg_dark;
+      fg = colors.border_highlight;
+    };
+    LspInlayHint = {
+      bg = "#1d202d";
+      fg = colors.comment;
+    };
+    LspKindArray = {link = "@punctuation.bracket";};
+    LspKindBoolean = {link = "@boolean";};
+    LspKindClass = {link = "@type";};
+    LspKindColor = {link = "Special";};
+    LspKindConstant = {link = "@constant";};
+    LspKindConstructor = {link = "@constructor";};
+    LspKindEnum = {link = "@lsp.type.enum";};
+    LspKindEnumMember = {link = "@lsp.type.enumMember";};
+    LspKindEvent = {link = "Special";};
+    LspKindField = {link = "@variable.member";};
+    LspKindFile = {link = "Normal";};
+    LspKindFolder = {link = "Directory";};
+    LspKindFunction = {link = "@function";};
+    LspKindInterface = {link = "@lsp.type.interface";};
+    LspKindKey = {link = "@variable.member";};
+    LspKindKeyword = {link = "@lsp.type.keyword";};
+    LspKindMethod = {link = "@function.method";};
+    LspKindModule = {link = "@module";};
+    LspKindNamespace = {link = "@module";};
+    LspKindNull = {link = "@constant.builtin";};
+    LspKindNumber = {link = "@number";};
+    LspKindObject = {link = "@constant";};
+    LspKindOperator = {link = "@operator";};
+    LspKindPackage = {link = "@module";};
+    LspKindProperty = {link = "@property";};
+    LspKindReference = {link = "@markup.link";};
+    LspKindSnippet = {link = "Conceal";};
+    LspKindString = {link = "@string";};
+    LspKindStruct = {link = "@lsp.type.struct";};
+    LspKindText = {link = "@markup";};
+    LspKindTypeParameter = {link = "@lsp.type.typeParameter";};
+    LspKindUnit = {link = "@lsp.type.struct";};
+    LspKindValue = {link = "@string";};
+    LspKindVariable = {link = "@variable";};
+    LspReferenceRead = {
+      bg = colors.fg_gutter;
+    };
+    LspReferenceText = {
+      bg = colors.fg_gutter;
+    };
+    LspReferenceWrite = {
+      bg = colors.fg_gutter;
+    };
+    LspSagaBorderTitle = {
+      fg = colors.cyan;
+    };
+    LspSagaCodeActionBorder = {
+      fg = colors.blue;
+    };
+    LspSagaCodeActionContent = {
+      fg = colors.purple;
+    };
+    LspSagaCodeActionTitle = {
+      fg = colors.blue1;
+    };
+    LspSagaDefPreviewBorder = {
+      fg = colors.green;
+    };
+    LspSagaFinderSelection = {
+      fg = colors.bg_visual;
+    };
+    LspSagaHoverBorder = {
+      fg = colors.blue;
+    };
+    LspSagaRenameBorder = {
+      fg = colors.green;
+    };
+    LspSagaSignatureHelpBorder = {
+      fg = colors.red;
+    };
+    LspSignatureActiveParameter = {
+      bg = "#20253a";
+      bold = true;
+    };
+    MatchParen = {
+      bold = true;
+      fg = colors.orange;
+    };
+    MiniAnimateCursor = {
+      nocombine = true;
+      reverse = true;
+    };
+    MiniAnimateNormalFloat = {link = "NormalFloat";};
+    MiniClueBorder = {link = "FloatBorder";};
+    MiniClueDescGroup = {link = "DiagnosticFloatingWarn";};
+    MiniClueDescSingle = {link = "NormalFloat";};
+    MiniClueNextKey = {link = "DiagnosticFloatingHint";};
+    MiniClueNextKeyWithPostkeys = {link = "DiagnosticFloatingError";};
+    MiniClueSeparator = {link = "DiagnosticFloatingInfo";};
+    MiniClueTitle = {link = "FloatTitle";};
+    MiniCompletionActiveParameter = {
+      underline = true;
+    };
+    MiniCursorword = {
+      bg = colors.fg_gutter;
+    };
+    MiniCursorwordCurrent = {
+      bg = colors.fg_gutter;
+    };
+    MiniDepsChangeAdded = {link = "diffAdded";};
+    MiniDepsChangeRemoved = {link = "diffRemoved";};
+    MiniDepsHint = {link = "DiagnosticHint";};
+    MiniDepsInfo = {link = "DiagnosticInfo";};
+    MiniDepsMsgBreaking = {link = "DiagnosticWarn";};
+    MiniDepsPlaceholder = {link = "Comment";};
+    MiniDepsTitle = {link = "Title";};
+    MiniDepsTitleError = {
+      bg = colors.git_delete;
+      fg = colors.black;
+    };
+    MiniDepsTitleSame = {link = "Comment";};
+    MiniDepsTitleUpdate = {
+      bg = colors.git_add;
+      fg = colors.black;
+    };
+    MiniDiffOverAdd = {link = "DiffAdd";};
+    MiniDiffOverChange = {link = "DiffText";};
+    MiniDiffOverContext = {link = "DiffChange";};
+    MiniDiffOverDelete = {link = "DiffDelete";};
+    MiniDiffSignAdd = {
+      fg = colors.git_add;
+    };
+    MiniDiffSignChange = {
+      fg = colors.git_change;
+    };
+    MiniDiffSignDelete = {
+      fg = colors.git_delete;
+    };
+    MiniFilesBorder = {link = "FloatBorder";};
+    MiniFilesBorderModified = {link = "DiagnosticFloatingWarn";};
+    MiniFilesCursorLine = {link = "CursorLine";};
+    MiniFilesDirectory = {link = "Directory";};
+    MiniFilesFile = {
+      fg = colors.fg;
+    };
+    MiniFilesNormal = {link = "NormalFloat";};
+    MiniFilesTitle = {link = "FloatTitle";};
+    MiniFilesTitleFocused = {
+      bg = colors.bg_dark;
+      bold = true;
+      fg = colors.border_highlight;
+    };
+    MiniHipatternsFixme = {
+      bg = colors.red1;
+      bold = true;
+      fg = colors.black;
+    };
+    MiniHipatternsHack = {
+      bg = colors.yellow;
+      bold = true;
+      fg = colors.black;
+    };
+    MiniHipatternsNote = {
+      bg = colors.hint;
+      bold = true;
+      fg = colors.black;
+    };
+    MiniHipatternsTodo = {
+      bg = colors.blue2;
+      bold = true;
+      fg = colors.black;
+    };
+    MiniIconsAzure = {
+      fg = colors.blue2;
+    };
+    MiniIconsBlue = {
+      fg = colors.blue;
+    };
+    MiniIconsCyan = {
+      fg = colors.hint;
+    };
+    MiniIconsGreen = {
+      fg = colors.green;
+    };
+    MiniIconsGrey = {
+      fg = colors.fg;
+    };
+    MiniIconsOrange = {
+      fg = colors.orange;
+    };
+    MiniIconsPurple = {
+      fg = colors.purple;
+    };
+    MiniIconsRed = {
+      fg = colors.red;
+    };
+    MiniIconsYellow = {
+      fg = colors.yellow;
+    };
+    MiniIndentscopePrefix = {
+      nocombine = true;
+    };
+    MiniIndentscopeSymbol = {
+      fg = colors.blue1;
+      nocombine = true;
+    };
+    MiniJump = {
+      bg = "#ff007c";
+      fg = "#ffffff";
+    };
+    MiniJump2dDim = {link = "Comment";};
+    MiniJump2dSpot = {
+      bold = true;
+      fg = colors.fg;
+      nocombine = true;
+    };
+    MiniJump2dSpotAhead = {
+      bg = colors.bg_dark;
+      fg = colors.hint;
+      nocombine = true;
+    };
+    MiniJump2dSpotUnique = {
+      bold = true;
+      fg = colors.orange;
+      nocombine = true;
+    };
+    MiniMapNormal = {link = "NormalFloat";};
+    MiniMapSymbolCount = {link = "Special";};
+    MiniMapSymbolLine = {link = "Title";};
+    MiniMapSymbolView = {link = "Delimiter";};
+    MiniNotifyBorder = {link = "FloatBorder";};
+    MiniNotifyNormal = {link = "NormalFloat";};
+    MiniNotifyTitle = {link = "FloatTitle";};
+    MiniOperatorsExchangeFrom = {link = "IncSearch";};
+    MiniPickBorder = {link = "FloatBorder";};
+    MiniPickBorderBusy = {link = "DiagnosticFloatingWarn";};
+    MiniPickBorderText = {
+      bg = colors.bg_dark;
+      fg = colors.hint;
+    };
+    MiniPickHeader = {link = "DiagnosticFloatingHint";};
+    MiniPickIconDirectory = {link = "Directory";};
+    MiniPickIconFile = {link = "MiniPickNormal";};
+    MiniPickMatchCurrent = {link = "CursorLine";};
+    MiniPickMatchMarked = {link = "Visual";};
+    MiniPickMatchRanges = {link = "DiagnosticFloatingHint";};
+    MiniPickNormal = {link = "NormalFloat";};
+    MiniPickPreviewLine = {link = "CursorLine";};
+    MiniPickPreviewRegion = {link = "IncSearch";};
+    MiniPickPrompt = {
+      bg = colors.bg_dark;
+      fg = colors.blue2;
+    };
+    MiniStarterCurrent = {
+      nocombine = true;
+    };
+    MiniStarterFooter = {
+      fg = colors.yellow;
+      italic = true;
+    };
+    MiniStarterHeader = {
+      fg = colors.blue;
+    };
+    MiniStarterInactive = {
+      fg = colors.comment;
+      italic = true;
+    };
+    MiniStarterItem = {
+      bg = colors.bg;
+      fg = colors.fg;
+    };
+    MiniStarterItemBullet = {
+      fg = colors.border_highlight;
+    };
+    MiniStarterItemPrefix = {
+      fg = colors.yellow;
+    };
+    MiniStarterQuery = {
+      fg = colors.blue2;
+    };
+    MiniStarterSection = {
+      fg = colors.blue1;
+    };
+    MiniStatuslineDevinfo = {
+      bg = colors.fg_gutter;
+      fg = colors.fg_dark;
+    };
+    MiniStatuslineFileinfo = {
+      bg = colors.fg_gutter;
+      fg = colors.fg_dark;
+    };
+    MiniStatuslineFilename = {
+      bg = colors.bg_highlight;
+      fg = colors.fg_dark;
+    };
+    MiniStatuslineInactive = {
+      bg = colors.bg_dark;
+      fg = colors.blue;
+    };
+    MiniStatuslineModeCommand = {
+      bg = colors.yellow;
+      bold = true;
+      fg = colors.black;
+    };
+    MiniStatuslineModeInsert = {
+      bg = colors.green;
+      bold = true;
+      fg = colors.black;
+    };
+    MiniStatuslineModeNormal = {
+      bg = colors.blue;
+      bold = true;
+      fg = colors.black;
+    };
+    MiniStatuslineModeOther = {
+      bg = colors.hint;
+      bold = true;
+      fg = colors.black;
+    };
+    MiniStatuslineModeReplace = {
+      bg = colors.red;
+      bold = true;
+      fg = colors.black;
+    };
+    MiniStatuslineModeVisual = {
+      bg = colors.magenta;
+      bold = true;
+      fg = colors.black;
+    };
+    MiniSurround = {
+      bg = colors.orange;
+      fg = colors.black;
+    };
+    MiniTablineCurrent = {
+      bg = colors.fg_gutter;
+      fg = colors.fg;
+    };
+    MiniTablineFill = {
+      bg = colors.black;
+    };
+    MiniTablineHidden = {
+      bg = colors.bg_dark;
+      fg = colors.dark5;
+    };
+    MiniTablineModifiedCurrent = {
+      bg = colors.fg_gutter;
+      fg = colors.yellow;
+    };
+    MiniTablineModifiedHidden = {
+      bg = colors.bg_dark;
+      fg = "#a58354";
+    };
+    MiniTablineModifiedVisible = {
+      bg = colors.bg_dark;
+      fg = colors.yellow;
+    };
+    MiniTablineTabpagesection = {
+      bg = colors.fg_gutter;
+      fg = "NONE";
+    };
+    MiniTablineVisible = {
+      bg = colors.bg_dark;
+      fg = colors.fg;
+    };
+    MiniTestEmphasis = {
+      bold = true;
+    };
+    MiniTestFail = {
+      bold = true;
+      fg = colors.red;
+    };
+    MiniTestPass = {
+      bold = true;
+      fg = colors.green;
+    };
+    MiniTrailspace = {
+      bg = colors.red;
+    };
+    ModeMsg = {
+      bold = true;
+      fg = colors.fg_dark;
+    };
+    MoreMsg = {
+      fg = colors.blue;
+    };
+    MsgArea = {
+      fg = colors.fg_dark;
+    };
+    NavicIconsArray = {link = "LspKindArray";};
+    NavicIconsBoolean = {link = "LspKindBoolean";};
+    NavicIconsClass = {link = "LspKindClass";};
+    NavicIconsColor = {link = "LspKindColor";};
+    NavicIconsConstant = {link = "LspKindConstant";};
+    NavicIconsConstructor = {link = "LspKindConstructor";};
+    NavicIconsEnum = {link = "LspKindEnum";};
+    NavicIconsEnumMember = {link = "LspKindEnumMember";};
+    NavicIconsEvent = {link = "LspKindEvent";};
+    NavicIconsField = {link = "LspKindField";};
+    NavicIconsFile = {link = "LspKindFile";};
+    NavicIconsFolder = {link = "LspKindFolder";};
+    NavicIconsFunction = {link = "LspKindFunction";};
+    NavicIconsInterface = {link = "LspKindInterface";};
+    NavicIconsKey = {link = "LspKindKey";};
+    NavicIconsKeyword = {link = "LspKindKeyword";};
+    NavicIconsMethod = {link = "LspKindMethod";};
+    NavicIconsModule = {link = "LspKindModule";};
+    NavicIconsNamespace = {link = "LspKindNamespace";};
+    NavicIconsNull = {link = "LspKindNull";};
+    NavicIconsNumber = {link = "LspKindNumber";};
+    NavicIconsObject = {link = "LspKindObject";};
+    NavicIconsOperator = {link = "LspKindOperator";};
+    NavicIconsPackage = {link = "LspKindPackage";};
+    NavicIconsProperty = {link = "LspKindProperty";};
+    NavicIconsReference = {link = "LspKindReference";};
+    NavicIconsSnippet = {link = "LspKindSnippet";};
+    NavicIconsString = {link = "LspKindString";};
+    NavicIconsStruct = {link = "LspKindStruct";};
+    NavicIconsText = {link = "LspKindText";};
+    NavicIconsTypeParameter = {link = "LspKindTypeParameter";};
+    NavicIconsUnit = {link = "LspKindUnit";};
+    NavicIconsValue = {link = "LspKindValue";};
+    NavicIconsVariable = {link = "LspKindVariable";};
+    NavicSeparator = {
+      bg = "NONE";
+      fg = colors.fg;
+    };
+    NavicText = {
+      bg = "NONE";
+      fg = colors.fg;
+    };
+    NeoTreeDimText = {
+      fg = colors.fg_gutter;
+    };
+    NeoTreeFileName = {
+      fg = colors.fg_dark;
+    };
+    NeoTreeGitModified = {
+      fg = colors.orange;
+    };
+    NeoTreeGitStaged = {
+      fg = colors.green1;
+    };
+    NeoTreeGitUntracked = {
+      fg = colors.magenta;
+    };
+    NeoTreeNormal = {
+      bg = colors.bg_dark;
+      fg = colors.fg_dark;
+    };
+    NeoTreeNormalNC = {
+      bg = colors.bg_dark;
+      fg = colors.fg_dark;
+    };
+    NeoTreeTabActive = {
+      bg = colors.bg_dark;
+      bold = true;
+      fg = colors.blue;
+    };
+    NeoTreeTabInactive = {
+      bg = "#121218";
+      fg = colors.comment;
+    };
+    NeoTreeTabSeparatorActive = {
+      bg = colors.bg_dark;
+      fg = colors.blue;
+    };
+    NeoTreeTabSeparatorInactive = {
+      bg = "#121218";
+      fg = colors.bg;
+    };
+    NeogitBranch = {
+      fg = colors.magenta;
+    };
+    NeogitDiffAddHighlight = {
+      bg = "#20303b";
+      fg = colors.git_add;
+    };
+    NeogitDiffContextHighlight = {
+      bg = "#2b2f44";
+      fg = colors.fg_dark;
+    };
+    NeogitDiffDeleteHighlight = {
+      bg = "#37222c";
+      fg = colors.git_delete;
+    };
+    NeogitHunkHeader = {
+      bg = colors.bg_highlight;
+      fg = colors.fg;
+    };
+    NeogitHunkHeaderHighlight = {
+      bg = colors.fg_gutter;
+      fg = colors.blue;
+    };
+    NeogitRemote = {
+      fg = colors.purple;
+    };
+    NeotestAdapterName = {
+      bold = true;
+      fg = colors.purple;
+    };
+    NeotestBorder = {
+      fg = colors.blue;
+    };
+    NeotestDir = {
+      fg = colors.blue;
+    };
+    NeotestExpandMarker = {
+      fg = colors.fg_dark;
+    };
+    NeotestFailed = {
+      fg = colors.red;
+    };
+    NeotestFile = {
+      fg = colors.hint;
+    };
+    NeotestFocused = {
+      fg = colors.yellow;
+    };
+    NeotestIndent = {
+      fg = colors.fg_dark;
+    };
+    NeotestMarked = {
+      fg = colors.blue;
+    };
+    NeotestNamespace = {
+      fg = "#41a6b5";
+    };
+    NeotestPassed = {
+      fg = colors.green;
+    };
+    NeotestRunning = {
+      fg = colors.yellow;
+    };
+    NeotestSkipped = {
+      fg = colors.blue;
+    };
+    NeotestTarget = {
+      fg = colors.blue;
+    };
+    NeotestTest = {
+      fg = colors.fg_dark;
+    };
+    NeotestWinSelect = {
+      fg = colors.blue;
+    };
+    NoicePopupBorder = {
+      fg = colors.orange;
+    };
+    NoicePopupmenuBorder = {
+      fg = colors.orange;
+    };
+    NoiceCmdlinePopupBorder = {
+      fg = colors.orange;
+    };
+    NoiceCmdlineIcon = {
+      fg = colors.blue;
+    };
+    NoiceCmdlineIconInput = {
+      fg = colors.yellow;
+    };
+    NoiceCmdlineIconLua = {
+      fg = colors.blue1;
+    };
+    NoiceCmdlinePopupBorderInput = {
+      fg = colors.yellow;
+    };
+    NoiceCmdlinePopupBorderLua = {
+      fg = colors.blue1;
+    };
+    NoiceCmdlinePopupTitleInput = {
+      fg = colors.yellow;
+    };
+    NoiceCmdlinePopupTitleLua = {
+      fg = colors.blue1;
+    };
+    NoiceCompletionItemKindArray = {link = "LspKindArray";};
+    NoiceCompletionItemKindBoolean = {link = "LspKindBoolean";};
+    NoiceCompletionItemKindClass = {link = "LspKindClass";};
+    NoiceCompletionItemKindColor = {link = "LspKindColor";};
+    NoiceCompletionItemKindConstant = {link = "LspKindConstant";};
+    NoiceCompletionItemKindConstructor = {link = "LspKindConstructor";};
+    NoiceCompletionItemKindDefault = {
+      bg = "NONE";
+      fg = colors.fg_dark;
+    };
+    NoiceCompletionItemKindEnum = {link = "LspKindEnum";};
+    NoiceCompletionItemKindEnumMember = {link = "LspKindEnumMember";};
+    NoiceCompletionItemKindEvent = {link = "LspKindEvent";};
+    NoiceCompletionItemKindField = {link = "LspKindField";};
+    NoiceCompletionItemKindFile = {link = "LspKindFile";};
+    NoiceCompletionItemKindFolder = {link = "LspKindFolder";};
+    NoiceCompletionItemKindFunction = {link = "LspKindFunction";};
+    NoiceCompletionItemKindInterface = {link = "LspKindInterface";};
+    NoiceCompletionItemKindKey = {link = "LspKindKey";};
+    NoiceCompletionItemKindKeyword = {link = "LspKindKeyword";};
+    NoiceCompletionItemKindMethod = {link = "LspKindMethod";};
+    NoiceCompletionItemKindModule = {link = "LspKindModule";};
+    NoiceCompletionItemKindNamespace = {link = "LspKindNamespace";};
+    NoiceCompletionItemKindNull = {link = "LspKindNull";};
+    NoiceCompletionItemKindNumber = {link = "LspKindNumber";};
+    NoiceCompletionItemKindObject = {link = "LspKindObject";};
+    NoiceCompletionItemKindOperator = {link = "LspKindOperator";};
+    NoiceCompletionItemKindPackage = {link = "LspKindPackage";};
+    NoiceCompletionItemKindProperty = {link = "LspKindProperty";};
+    NoiceCompletionItemKindReference = {link = "LspKindReference";};
+    NoiceCompletionItemKindSnippet = {link = "LspKindSnippet";};
+    NoiceCompletionItemKindString = {link = "LspKindString";};
+    NoiceCompletionItemKindStruct = {link = "LspKindStruct";};
+    NoiceCompletionItemKindText = {link = "LspKindText";};
+    NoiceCompletionItemKindTypeParameter = {link = "LspKindTypeParameter";};
+    NoiceCompletionItemKindUnit = {link = "LspKindUnit";};
+    NoiceCompletionItemKindValue = {link = "LspKindValue";};
+    NoiceCompletionItemKindVariable = {link = "LspKindVariable";};
+    NonText = {
+      fg = colors.comment;
+    };
+    Normal = {
+      bg = colors.bg;
+      fg = colors.fg;
+    };
+    NormalFloat = {
+      bg = colors.bg_dark;
+      fg = colors.fg;
+    };
+    NormalNC = {
+      bg = colors.bg;
+      fg = colors.fg;
+    };
+    NormalSB = {
+      bg = colors.bg_dark;
+      fg = colors.fg_dark;
+    };
+    NotifyBackground = {
+      bg = colors.bg;
+      fg = colors.fg;
+    };
+    NotifyDEBUGBody = {
+      bg = colors.bg;
+      fg = colors.fg;
+    };
+    NotifyDEBUGBorder = {
+      bg = colors.bg;
+      fg = "#2c2f44";
+    };
+    NotifyDEBUGIcon = {
+      fg = colors.comment;
+    };
+    NotifyDEBUGTitle = {
+      fg = colors.comment;
+    };
+    NotifyERRORBody = {
+      bg = colors.bg;
+      fg = colors.fg;
+    };
+    NotifyERRORBorder = {
+      bg = colors.bg;
+      fg = "#542931";
+    };
+    NotifyERRORIcon = {
+      fg = colors.red1;
+    };
+    NotifyERRORTitle = {
+      fg = colors.red1;
+    };
+    NotifyINFOBody = {
+      bg = colors.bg;
+      fg = colors.fg;
+    };
+    NotifyINFOBorder = {
+      bg = colors.bg;
+      fg = "#164a5b";
+    };
+    NotifyINFOIcon = {
+      fg = colors.blue2;
+    };
+    NotifyINFOTitle = {
+      fg = colors.blue2;
+    };
+    NotifyTRACEBody = {
+      bg = colors.bg;
+      fg = colors.fg;
+    };
+    NotifyTRACEBorder = {
+      bg = colors.bg;
+      fg = "#41385b";
+    };
+    NotifyTRACEIcon = {
+      fg = colors.purple;
+    };
+    NotifyTRACETitle = {
+      fg = colors.purple;
+    };
+    NotifyWARNBody = {
+      bg = colors.bg;
+      fg = colors.fg;
+    };
+    NotifyWARNBorder = {
+      bg = colors.bg;
+      fg = "#55473a";
+    };
+    NotifyWARNIcon = {
+      fg = colors.yellow;
+    };
+    NotifyWARNTitle = {
+      fg = colors.yellow;
+    };
+    NvimTreeFolderIcon = {
+      bg = "NONE";
+      fg = colors.blue;
+    };
+    NvimTreeGitDeleted = {
+      fg = colors.git_delete;
+    };
+    NvimTreeGitDirty = {
+      fg = colors.git_change;
+    };
+    NvimTreeGitNew = {
+      fg = colors.git_add;
+    };
+    NvimTreeImageFile = {
+      fg = colors.fg_dark;
+    };
+    NvimTreeIndentMarker = {
+      fg = colors.fg_gutter;
+    };
+    NvimTreeNormal = {
+      bg = colors.bg_dark;
+      fg = colors.fg_dark;
+    };
+    NvimTreeNormalNC = {
+      bg = colors.bg_dark;
+      fg = colors.fg_dark;
+    };
+    NvimTreeOpenedFile = {
+      bg = colors.bg_highlight;
+    };
+    NvimTreeRootFolder = {
+      bold = true;
+      fg = colors.blue;
+    };
+    NvimTreeSpecialFile = {
+      fg = colors.purple;
+      underline = true;
+    };
+    NvimTreeSymlink = {
+      fg = colors.blue;
+    };
+    NvimTreeWinSeparator = {
+      bg = colors.bg_dark;
+      fg = colors.bg_dark;
+    };
+    OctoDetailsLabel = {
+      bold = true;
+      fg = colors.blue1;
+    };
+    OctoDetailsValue = {link = "@variable.member";};
+    OctoDirty = {
+      bold = true;
+      fg = colors.orange;
+    };
+    OctoIssueTitle = {
+      bold = true;
+      fg = colors.purple;
+    };
+    OctoStateChangesRequested = {link = "DiagnosticVirtualTextWarn";};
+    OctoStateClosed = {link = "DiagnosticVirtualTextError";};
+    OctoStateMerged = {
+      bg = "#2a283b";
+      fg = colors.magenta;
+    };
+    OctoStateOpen = {link = "DiagnosticVirtualTextHint";};
+    OctoStatePending = {link = "DiagnosticVirtualTextWarn";};
+    OctoStatusColumn = {
+      fg = colors.blue1;
+    };
+    Operator = {
+      fg = colors.blue5;
+    };
+    Pmenu = {
+      bg = colors.bg_dark;
+      fg = colors.fg;
+    };
+    PmenuMatch = {
+      bg = colors.bg_dark;
+      fg = colors.blue1;
+    };
+    PmenuMatchSel = {
+      bg = "#343a55";
+      fg = colors.blue1;
+    };
+    PmenuSbar = {
+      bg = "#1f1f29";
+    };
+    PmenuSel = {
+      bg = "#343a55";
+    };
+    PmenuThumb = {
+      bg = colors.fg_gutter;
+    };
+    PreProc = {
+      fg = colors.cyan;
+    };
+    Question = {
+      fg = colors.blue;
+    };
+    QuickFixLine = {
+      bg = colors.bg_visual;
+      bold = true;
+    };
+    RainbowDelimiterBlue = {
+      fg = colors.blue;
+    };
+    RainbowDelimiterCyan = {
+      fg = colors.cyan;
+    };
+    RainbowDelimiterGreen = {
+      fg = colors.green;
+    };
+    RainbowDelimiterOrange = {
+      fg = colors.orange;
+    };
+    RainbowDelimiterRed = {
+      fg = colors.red;
+    };
+    RainbowDelimiterViolet = {
+      fg = colors.purple;
+    };
+    RainbowDelimiterYellow = {
+      fg = colors.yellow;
+    };
+    ReferencesCount = {
+      fg = colors.purple;
+    };
+    ReferencesIcon = {
+      fg = colors.blue;
+    };
+    RenderMarkdownBullet = {
+      fg = colors.orange;
+    };
+    RenderMarkdownCode = {
+      bg = colors.bg_dark;
+    };
+    RenderMarkdownCodeInline = {link = "@markup.raw.markdown_inline";};
+    RenderMarkdownDash = {
+      fg = colors.orange;
+    };
+    RenderMarkdownH1Bg = {
+      bg = colors.bg;
+    };
+    RenderMarkdownH1Fg = {
+      bold = true;
+      fg = colors.blue;
+    };
+    RenderMarkdownH2Bg = {
+      bg = colors.bg;
+    };
+    RenderMarkdownH2Fg = {
+      bold = true;
+      fg = colors.yellow;
+    };
+    RenderMarkdownH3Bg = {
+      bg = colors.bg;
+    };
+    RenderMarkdownH3Fg = {
+      bold = true;
+      fg = colors.green;
+    };
+    RenderMarkdownH4Bg = {
+      bg = colors.bg;
+    };
+    RenderMarkdownH4Fg = {
+      bold = true;
+      fg = colors.blue0;
+    };
+    RenderMarkdownH5Bg = {
+      bg = colors.bg;
+    };
+    RenderMarkdownH5Fg = {
+      bold = true;
+      fg = colors.magenta;
+    };
+    RenderMarkdownH6Bg = {
+      bg = colors.bg;
+    };
+    RenderMarkdownH6Fg = {
+      bold = true;
+      fg = colors.purple;
+    };
+    RenderMarkdownTableHead = {
+      fg = colors.red;
+    };
+    RenderMarkdownTableRow = {
+      fg = colors.orange;
+    };
+    ScrollbarError = {
+      bg = "NONE";
+      fg = colors.red1;
+    };
+    ScrollbarErrorHandle = {
+      bg = colors.bg_highlight;
+      fg = colors.red1;
+    };
+    ScrollbarHandle = {
+      bg = colors.bg_highlight;
+      fg = "NONE";
+    };
+    ScrollbarHint = {
+      bg = "NONE";
+      fg = colors.hint;
+    };
+    ScrollbarHintHandle = {
+      bg = colors.bg_highlight;
+      fg = colors.hint;
+    };
+    ScrollbarInfo = {
+      bg = "NONE";
+      fg = colors.blue2;
+    };
+    ScrollbarInfoHandle = {
+      bg = colors.bg_highlight;
+      fg = colors.blue2;
+    };
+    ScrollbarMisc = {
+      bg = "NONE";
+      fg = colors.purple;
+    };
+    ScrollbarMiscHandle = {
+      bg = colors.bg_highlight;
+      fg = colors.purple;
+    };
+    ScrollbarSearch = {
+      bg = "NONE";
+      fg = colors.orange;
+    };
+    ScrollbarSearchHandle = {
+      bg = colors.bg_highlight;
+      fg = colors.orange;
+    };
+    ScrollbarWarn = {
+      bg = "NONE";
+      fg = colors.yellow;
+    };
+    ScrollbarWarnHandle = {
+      bg = colors.bg_highlight;
+      fg = colors.yellow;
+    };
+    Search = {
+      bg = colors.bg_search;
+      fg = colors.fg;
+    };
+    SignColumn = {
+      bg = colors.bg;
+      fg = colors.fg_gutter;
+    };
+    SignColumnSB = {
+      bg = colors.bg_dark;
+      fg = colors.fg_gutter;
+    };
+    Sneak = {
+      bg = colors.magenta;
+      fg = colors.bg_highlight;
+    };
+    SneakScope = {
+      bg = colors.bg_visual;
+    };
+    Special = {
+      fg = colors.blue1;
+    };
+    SpecialKey = {
+      fg = colors.comment;
+    };
+    SpellBad = {
+      sp = colors.red1;
+      undercurl = true;
+    };
+    SpellCap = {
+      sp = colors.yellow;
+      undercurl = true;
+    };
+    SpellLocal = {
+      sp = colors.blue2;
+      undercurl = true;
+    };
+    SpellRare = {
+      sp = colors.hint;
+      undercurl = true;
+    };
+    Statement = {
+      fg = colors.magenta;
+    };
+    StatusLine = {
+      bg = colors.bg_dark;
+      fg = colors.fg_dark;
+    };
+    StatusLineNC = {
+      bg = colors.bg_dark;
+      fg = colors.fg_gutter;
+    };
+    String = {
+      fg = colors.green;
+    };
+    Substitute = {
+      bg = colors.red;
+      fg = colors.black;
+    };
+    TabLine = {
+      bg = colors.bg_dark;
+      fg = colors.fg_gutter;
+    };
+    TabLineFill = {
+      bg = colors.black;
+    };
+    TabLineSel = {
+      bg = colors.blue;
+      fg = colors.black;
+    };
+    TargetWord = {
+      fg = colors.cyan;
+    };
+    TelescopeResultsComment = {
+      fg = colors.comment;
+    };
+    TelescopeNormal = {
+      bg = colors.bg_dark;
+      fg = colors.fg_dark;
+    };
+    TelescopeBorder = {
+      bg = colors.bg_dark;
+      fg = colors.bg_dark;
+    };
+    TelescopePromptBorder = {
+      bg = colors.prompt;
+      fg = colors.prompt;
+    };
+    TelescopePromptNormal = {
+      bg = colors.prompt;
+      fg = colors.fg;
+    };
+    TelescopePromptPrefix = {
+      bg = colors.prompt;
+      fg = colors.fg;
+    };
+    TelescopePromptTitle = {
+      bg = colors.prompt;
+      fg = colors.orange;
+    };
+    TelescopePreviewTitle = {
+      bg = colors.bg_dark;
+      fg = colors.orange;
+    };
+    TelescopeResultsTitle = {
+      bg = colors.bg_dark;
+      fg = colors.orange;
+    };
+    TelescopeSelection = {
+      bg = colors.bg_highlight;
+      fg = colors.orange;
+    };
+    Title = {
+      bold = true;
+      fg = colors.blue;
+    };
+    Todo = {
+      bg = colors.yellow;
+      fg = colors.bg;
+    };
+    TreesitterContext = {
+      bg = colors.orange;
+    };
+    TroubleCount = {
+      bg = colors.fg_gutter;
+      fg = colors.magenta;
+    };
+    TroubleNormal = {
+      bg = colors.bg_dark;
+      fg = colors.fg;
+    };
+    TroubleText = {
+      fg = colors.fg_dark;
+    };
+    Type = {
+      fg = colors.blue1;
+    };
+    Underlined = {
+      underline = true;
+    };
+    VertSplit = {
+      fg = colors.black;
+    };
+    VimwikiHR = {
+      bg = "NONE";
+      fg = colors.yellow;
+    };
+    VimwikiHeader1 = {
+      bg = "NONE";
+      bold = true;
+      fg = colors.blue;
+    };
+    VimwikiHeader2 = {
+      bg = "NONE";
+      bold = true;
+      fg = colors.yellow;
+    };
+    VimwikiHeader3 = {
+      bg = "NONE";
+      bold = true;
+      fg = colors.green;
+    };
+    VimwikiHeader4 = {
+      bg = "NONE";
+      bold = true;
+      fg = colors.hint;
+    };
+    VimwikiHeader5 = {
+      bg = "NONE";
+      bold = true;
+      fg = colors.magenta;
+    };
+    VimwikiHeader6 = {
+      bg = "NONE";
+      bold = true;
+      fg = colors.purple;
+    };
+    VimwikiHeaderChar = {
+      bg = "NONE";
+      fg = colors.yellow;
+    };
+    VimwikiLink = {
+      bg = "NONE";
+      fg = colors.blue;
+    };
+    VimwikiList = {
+      bg = "NONE";
+      fg = colors.orange;
+    };
+    VimwikiMarkers = {
+      bg = "NONE";
+      fg = colors.blue;
+    };
+    VimwikiTag = {
+      bg = "NONE";
+      fg = colors.green;
+    };
+    Visual = {
+      bg = colors.bg_visual;
+    };
+    VisualNOS = {
+      bg = colors.bg_visual;
+    };
+    WarningMsg = {
+      fg = colors.yellow;
+    };
+    WhichKey = {
+      fg = colors.cyan;
+    };
+    WhichKeyDesc = {
+      fg = colors.magenta;
+    };
+    WhichKeyGroup = {
+      fg = colors.blue;
+    };
+    WhichKeyNormal = {
+      bg = colors.bg_dark;
+    };
+    WhichKeySeparator = {
+      fg = colors.comment;
+    };
+    WhichKeySeperator = {
+      fg = colors.comment;
+    };
+    WhichKeyValue = {
+      fg = colors.dark5;
+    };
+    Whitespace = {
+      fg = colors.fg_gutter;
+    };
+    WildMenu = {
+      bg = colors.bg_visual;
+    };
+    WinBar = {link = "StatusLine";};
+    WinBarNC = {link = "StatusLineNC";};
+    WinSeparator = {
+      bold = true;
+      fg = colors.black;
+    };
+    YankyPut = {link = "Search";};
+    YankyYanked = {link = "IncSearch";};
+    debugBreakpoint = {
+      bg = colors.bg;
+      fg = colors.blue2;
+    };
+    debugPC = {
+      bg = colors.bg_dark;
+    };
+    diffAdded = {
+      fg = colors.git_add;
+    };
+    diffChanged = {
+      fg = colors.git_change;
+    };
+    diffFile = {
+      fg = colors.blue;
+    };
+    diffIndexLine = {
+      fg = colors.magenta;
+    };
+    diffLine = {
+      fg = colors.comment;
+    };
+    diffNewFile = {
+      fg = colors.orange;
+    };
+    diffOldFile = {
+      fg = colors.yellow;
+    };
+    diffRemoved = {
+      fg = colors.git_delete;
+    };
+    dosIniLabel = {link = "@property";};
+    healthError = {
+      fg = colors.red1;
+    };
+    healthSuccess = {
+      fg = colors.green1;
+    };
+    healthWarning = {
+      fg = colors.yellow;
+    };
+    helpCommand = {
+      bg = colors.terminal_black;
+      fg = colors.blue;
+    };
+    helpExample = {
+      fg = colors.comment;
+    };
+    htmlH1 = {
+      bold = true;
+      fg = colors.magenta;
+    };
+    htmlH2 = {
+      bold = true;
+      fg = colors.blue;
+    };
+    illuminatedCurWord = {
+      bg = colors.fg_gutter;
+    };
+    illuminatedWord = {
+      bg = colors.fg_gutter;
+    };
+    lCursor = {
+      bg = colors.fg;
+      fg = colors.bg;
+    };
+    qfFileName = {
+      fg = colors.blue;
+    };
+    qfLineNr = {
+      fg = colors.dark5;
+    };
   };
+  # Put theme here so that it is all in one place.
+  plugins.lualine = {
+    settings = {
+      options = {
+        theme = {
+          normal = {
+            a = {
+              bg = colors.blue;
+              fg = colors.bg;
+            };
+            b = {
+              bg = colors.lualine_b_bg;
+              fg = colors.lualine_b_fg;
+            };
+            c = {
+              bg = colors.bg;
+              fg = colors.cyan;
+            };
+          };
+          insert = {
+            a = {
+              bg = colors.yellow;
+              fg = colors.bg;
+            };
+            b = {
+              bg = colors.lualine_b_bg;
+              fg = colors.lualine_b_fg;
+            };
+            c = {
+              bg = colors.bg;
+              fg = colors.fg;
+            };
+          };
+          visual = {
+            a = {
+              bg = colors.green;
+              fg = colors.bg;
+            };
+            b = {
+              bg = colors.lualine_b_bg;
+              fg = colors.lualine_b_fg;
+            };
+            c = {
+              bg = colors.bg;
+              fg = colors.cyan;
+            };
+          };
+          replace = {
+            a = {
+              bg = colors.red;
+              fg = colors.bg;
+            };
+            b = {
+              bg = colors.lualine_b_bg;
+              fg = colors.lualine_b_fg;
+            };
+            c = {
+              bg = colors.bg;
+              fg = colors.cyan;
+            };
+          };
+          command = {
+            a = {
+              bg = colors.purple;
+              fg = colors.bg;
+            };
+            b = {
+              bg = colors.lualine_b_bg;
+              fg = colors.lualine_b_fg;
+            };
+            c = {
+              bg = colors.bg;
+              fg = colors.cyan;
+            };
+          };
+          inactive = {
+            a = {
+              bg = colors.cyan;
+              fg = colors.bg;
+            };
+            b = {
+              bg = colors.lualine_b_bg;
+              fg = colors.lualine_b_fg;
+            };
+            c = {
+              bg = colors.bg;
+              fg = colors.fg;
+            };
+          };
+        };
+      };
+    };
+  };
+
 }
