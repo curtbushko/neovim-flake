@@ -1,27 +1,27 @@
 _: let
-    # colors = import ../config/colors/tokyo-night-neon.nix {};
+  # colors = import ../config/colors/tokyo-night-neon.nix {};
   colors = import ../config/colors/rebel-scum.nix {};
 in {
   colorschemes = {
     base16 = {
       enable = true;
       colorscheme = {
-        base00 = colors.bg;
-        base01 = colors.red;
-        base02 = colors.green;
-        base03 = colors.yellow;
-        base04 = colors.blue;
-        base05 = colors.purple;
-        base06 = colors.cyan;
-        base07 = colors.fg;
-        base08 = colors.fg_dark;
-        base09 = colors.red1;
-        base0A = colors.green1;
-        base0B = colors.yellow;
-        base0C = colors.blue0;
-        base0D = colors.purple;
-        base0E = colors.teal;
-        base0F = colors.blue0;
+        base00 = colors.bg_dark;
+        base01 = colors.bg;
+        base02 = colors.dark3;
+        base03 = colors.fg_gutter;
+        base04 = colors.dark5;
+        base05 = colors.fg;
+        base06 = colors.fg_dark;
+        base07 = colors.fg_sidebar;
+        base08 = colors.red;
+        base09 = colors.orange;
+        base0A = colors.yellow;
+        base0B = colors.green1;
+        base0C = colors.blue5;
+        base0D = colors.blue;
+        base0E = colors.magenta;
+        base0F = colors.green;
       };
     };
   };
@@ -2373,5 +2373,4 @@ in {
       };
     };
   };
-
 }
