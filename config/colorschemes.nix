@@ -946,7 +946,7 @@ in {
       fg = colors.comment;
     };
     IblIndent = {
-      fg = colors.fg_gutter;
+      fg = colors.bg_highlight;
       nocombine = true;
     };
     IblScope = {
@@ -970,7 +970,7 @@ in {
       fg = colors.black;
     };
     IndentBlanklineChar = {
-      fg = colors.fg_gutter;
+      fg = colors.bg_highlight;
       nocombine = true;
     };
     IndentBlanklineContextChar = {
@@ -978,7 +978,7 @@ in {
       nocombine = true;
     };
     IndentLine = {
-      fg = colors.fg_gutter;
+      fg = colors.bg_highlight;
       nocombine = true;
     };
     IndentLineCurrent = {
