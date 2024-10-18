@@ -41,7 +41,7 @@ _: {
   green2 = "#71fcff";
   hint = "#ff6747";
   info = "#0efff1";
-  magenta = "#9575cd";
+  magenta = "#ff6747";
   magenta2 = "#6294df";
   none = "NONE";
   orange = "#ff5722";
