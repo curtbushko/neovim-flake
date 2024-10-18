@@ -29,7 +29,7 @@ _: {
   error = "#ff4934";
   fg = "#E2D9C5";
   fg_dark = "#dbe0cd";
-  fg_gutter = "#06101E";
+  fg_gutter = "#dbe0cd";
   fg_float = "#fff8d4";
   fg_sidebar = "#fff8e3";
   git_add = "#71fcff";

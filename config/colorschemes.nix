@@ -133,10 +133,10 @@ in {
     "@lsp.typemod.string.injected" = {link = "@string";};
     "@lsp.typemod.struct.defaultLibrary" = {link = "@type.builtin";};
     "@lsp.typemod.type.defaultLibrary" = {
-      fg = colors.border_highlight;
+      fg = colors.blue5;
     };
     "@lsp.typemod.typeAlias.defaultLibrary" = {
-      fg = colors.border_highlight;
+      fg = colors.blue5;
     };
     "@lsp.typemod.variable.callable" = {link = "@function";};
     "@lsp.typemod.variable.defaultLibrary" = {link = "@variable.builtin";};
@@ -255,9 +255,15 @@ in {
     "@tag.tsx" = {
       fg = colors.red;
     };
+    "@text.strike" = {
+      fg = colors.blue5;
+    };
+    "@text.underline" = {
+      fg = colors.blue5;
+    };
     "@type" = {link = "Type";};
     "@type.builtin" = {
-      fg = colors.border_highlight;
+      fg = colors.blue5;
     };
     "@type.definition" = {link = "Typedef";};
     "@type.qualifier" = {link = "@keyword";};
@@ -734,12 +740,15 @@ in {
     };
     DiagnosticWarning = {link = "DiagnosticWarn";};
     DiffAdd = {
+      fg = colors.bg;
       bg = colors.git_add;
     };
     DiffChange = {
+      fg = colors.bg;
       bg = colors.git_change;
     };
     DiffDelete = {
+      fg = colors.bg;
       bg = colors.git_delete;
     };
     DiffText = {
@@ -771,7 +780,7 @@ in {
     };
     FloatTitle = {
       bg = colors.bg_dark;
-      fg = colors.border_highlight;
+      fg = colors.orange;
     };
     FoldColumn = {
       bg = colors.bg;
@@ -1170,7 +1179,7 @@ in {
     MiniFilesTitleFocused = {
       bg = colors.bg_dark;
       bold = true;
-      fg = colors.border_highlight;
+      fg = colors.orange;
     };
     MiniHipatternsFixme = {
       bg = colors.red1;
@@ -1292,7 +1301,7 @@ in {
       fg = colors.fg;
     };
     MiniStarterItemBullet = {
-      fg = colors.border_highlight;
+      fg = colors.orange;
     };
     MiniStarterItemPrefix = {
       fg = colors.yellow;
