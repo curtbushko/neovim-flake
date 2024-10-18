@@ -2300,8 +2300,8 @@ in {
               fg = colors.bg;
             };
             b = {
-              bg = colors.lualine_b_bg;
-              fg = colors.lualine_b_fg;
+              bg = colors.statusline_b_bg;
+              fg = colors.statusline_b_fg;
             };
             c = {
               bg = colors.bg;
@@ -2314,8 +2314,8 @@ in {
               fg = colors.bg;
             };
             b = {
-              bg = colors.lualine_b_bg;
-              fg = colors.lualine_b_fg;
+              bg = colors.statusline_b_bg;
+              fg = colors.statusline_b_fg;
             };
             c = {
               bg = colors.bg;
@@ -2328,8 +2328,8 @@ in {
               fg = colors.bg;
             };
             b = {
-              bg = colors.lualine_b_bg;
-              fg = colors.lualine_b_fg;
+              bg = colors.statusline_b_bg;
+              fg = colors.statusline_b_fg;
             };
             c = {
               bg = colors.bg;
@@ -2342,8 +2342,8 @@ in {
               fg = colors.bg;
             };
             b = {
-              bg = colors.lualine_b_bg;
-              fg = colors.lualine_b_fg;
+              bg = colors.statusline_b_bg;
+              fg = colors.statusline_b_fg;
             };
             c = {
               bg = colors.bg;
@@ -2356,8 +2356,8 @@ in {
               fg = colors.bg;
             };
             b = {
-              bg = colors.lualine_b_bg;
-              fg = colors.lualine_b_fg;
+              bg = colors.statusline_b_bg;
+              fg = colors.statusline_b_fg;
             };
             c = {
               bg = colors.bg;
@@ -2370,8 +2370,8 @@ in {
               fg = colors.bg;
             };
             b = {
-              bg = colors.lualine_b_bg;
-              fg = colors.lualine_b_fg;
+              bg = colors.statusline_b_bg;
+              fg = colors.statusline_b_fg;
             };
             c = {
               bg = colors.bg;

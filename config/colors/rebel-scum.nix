@@ -55,7 +55,16 @@ _: {
   warning = "#ff7e6b";
   yellow = "#ffff9d";
 
-  # Make the 2nd section customizable per theme
-  lualine_b_bg = "#ff5722";
-  lualine_b_fg = "#031B26";
+  # These custom variables will be used by lualine, starship and waybar. Use the lualine
+  # way of describing the sections.
+  #  / a / b / c
+  # a = blue bg, black fg
+  statusline_a_bg = "#0eeaff";
+  statusline_a_fg = "#06101E";
+  # b = orange bg, black fg
+  statusline_b_bg = "#ff5722";
+  statusline_b_fg = "#031B26";
+  # c = invisible/black bg, cyan fg
+  statusline_c_bg = "#031B26";
+  statusline_c_fg = "#5feedf";
 }
