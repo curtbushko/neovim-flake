@@ -525,7 +525,7 @@ in {
       fg = colors.border_highlight;
     };
     CmpGhostText = {
-      fg = colors.terminal_black;
+      fg = colors.blue2;
     };
     CmpItemAbbr = {
       bg = "NONE";
@@ -717,7 +717,7 @@ in {
       undercurl = true;
     };
     DiagnosticUnnecessary = {
-      fg = colors.terminal_black;
+      fg = colors.blue2;
     };
     DiagnosticVirtualTextError = {
       bg = "#2d202a";
@@ -946,7 +946,7 @@ in {
       fg = colors.comment;
     };
     IblIndent = {
-      fg = colors.bg_highlight;
+      fg = colors.bg_visual;
       nocombine = true;
     };
     IblScope = {
@@ -970,7 +970,7 @@ in {
       fg = colors.black;
     };
     IndentBlanklineChar = {
-      fg = colors.bg_highlight;
+      fg = colors.bg_visual;
       nocombine = true;
     };
     IndentBlanklineContextChar = {
@@ -978,7 +978,7 @@ in {
       nocombine = true;
     };
     IndentLine = {
-      fg = colors.bg_highlight;
+      fg = colors.bg_visual;
       nocombine = true;
     };
     IndentLineCurrent = {
@@ -1098,7 +1098,7 @@ in {
       fg = colors.green;
     };
     LspSagaFinderSelection = {
-      fg = colors.bg_visual;
+      fg = colors.blue2;
     };
     LspSagaHoverBorder = {
       fg = colors.blue;
@@ -1989,7 +1989,7 @@ in {
     };
     Sneak = {
       bg = colors.magenta;
-      fg = colors.bg_highlight;
+      fg = colors.bg_visual;
     };
     SneakScope = {
       bg = colors.bg_visual;
