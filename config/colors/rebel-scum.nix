@@ -9,7 +9,7 @@ _: {
   bg_statusline = "#16161e";
   bg_visual = "#08435E";
   black = "#06101E";
-  blue = "#0eeaff";
+  blue = "#13becd";
   blue0 = "#71e8ff";
   blue1 = "#a6e6ff";
   blue2 = "#0eeaff";
@@ -26,7 +26,7 @@ _: {
   diff_change = "#a6e6ff";
   diff_delete = "#ff6a5e";
   diff_text = "#dbe0cd";
-  error = "#ff4934";
+  error = "#fd5e3a";
   fg = "#E2D9C5";
   fg_dark = "#dbe0cd";
   fg_gutter = "#dbe0cd";
@@ -47,7 +47,7 @@ _: {
   orange = "#ff5722";
   prompt = "#2d3149";
   purple = "#3babd6";
-  red = "#ff2d00";
+  red = "#fd5e3a";
   red1 = "#ff4934";
   teal = "#71fcff";
   terminal_black = "#06101E";
@@ -59,7 +59,8 @@ _: {
   # way of describing the sections.
   #  / a / b / c
   # a = blue bg, black fg
-  statusline_a_bg = "#0eeaff";
+
+  statusline_a_bg = "#13becd";
   statusline_a_fg = "#06101E";
   # b = orange bg, black fg
   statusline_b_bg = "#ff5722";
