@@ -2,6 +2,13 @@
   globals = {
     mapleader = " ";
   };
+
+  performance = {
+    byteCompileLua.enable = true;
+    byteCompileLua.configs = true;
+    byteCompileLua.nvimRuntime = true;
+    byteCompileLua.plugins = true;
+  };
   # Import all your configuration modules here
   imports = [
     # Basics
