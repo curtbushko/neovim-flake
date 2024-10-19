@@ -5,6 +5,10 @@
       indent.enable = true;
       disabledLanguages = [
         "ruby"
+        "ada"
+      ];
+      ignore_install = [
+        "ada"
       ];
     };
   };

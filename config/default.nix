@@ -8,6 +8,12 @@
     byteCompileLua.configs = true;
     byteCompileLua.nvimRuntime = true;
     byteCompileLua.plugins = true;
+    combinePlugins.enable = true;
+    combinePlugins.standalonePlugins = [
+      "nvim-treesitter"
+      "nvim-treesitter-textobjects"
+      "nvim-config"
+    ];
   };
   # Import all your configuration modules here
   imports = [

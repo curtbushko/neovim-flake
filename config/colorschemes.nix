@@ -2296,86 +2296,86 @@ in {
         theme = {
           normal = {
             a = {
-              bg = colors.blue;
-              fg = colors.bg;
+              bg = colors.statusline_a_bg;
+              fg = colors.statusline_a_fg;
             };
             b = {
               bg = colors.statusline_b_bg;
               fg = colors.statusline_b_fg;
             };
             c = {
-              bg = colors.bg;
-              fg = colors.cyan;
+              bg = colors.statusline_c_bg;
+              fg = colors.statusline_c_fg;
             };
           };
           insert = {
             a = {
-              bg = colors.yellow;
-              fg = colors.bg;
+              bg = colors.statusline_a_bg;
+              fg = colors.statusline_a_fg;
             };
             b = {
               bg = colors.statusline_b_bg;
               fg = colors.statusline_b_fg;
             };
             c = {
-              bg = colors.bg;
-              fg = colors.fg;
+              bg = colors.statusline_c_bg;
+              fg = colors.statusline_c_fg;
             };
           };
           visual = {
             a = {
-              bg = colors.green;
-              fg = colors.bg;
+              bg = colors.statusline_a_bg;
+              fg = colors.statusline_a_fg;
             };
             b = {
               bg = colors.statusline_b_bg;
               fg = colors.statusline_b_fg;
             };
             c = {
-              bg = colors.bg;
-              fg = colors.cyan;
+              bg = colors.statusline_c_bg;
+              fg = colors.statusline_c_fg;
             };
           };
           replace = {
             a = {
-              bg = colors.red;
-              fg = colors.bg;
+              bg = colors.statusline_a_bg;
+              fg = colors.statusline_a_fg;
             };
             b = {
               bg = colors.statusline_b_bg;
               fg = colors.statusline_b_fg;
             };
             c = {
-              bg = colors.bg;
-              fg = colors.cyan;
+              bg = colors.statusline_c_bg;
+              fg = colors.statusline_c_fg;
             };
           };
           command = {
             a = {
-              bg = colors.purple;
-              fg = colors.bg;
+              bg = colors.statusline_a_bg;
+              fg = colors.statusline_a_fg;
             };
             b = {
               bg = colors.statusline_b_bg;
               fg = colors.statusline_b_fg;
             };
             c = {
-              bg = colors.bg;
-              fg = colors.cyan;
+              bg = colors.statusline_c_bg;
+              fg = colors.statusline_c_fg;
             };
           };
           inactive = {
             a = {
-              bg = colors.cyan;
-              fg = colors.bg;
+              bg = colors.statusline_a_bg;
+              fg = colors.statusline_a_fg;
             };
             b = {
               bg = colors.statusline_b_bg;
               fg = colors.statusline_b_fg;
             };
             c = {
-              bg = colors.bg;
-              fg = colors.fg;
+              bg = colors.statusline_c_bg;
+              fg = colors.statusline_c_fg;
             };
           };
         };

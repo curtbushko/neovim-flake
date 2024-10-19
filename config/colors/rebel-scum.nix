@@ -9,17 +9,17 @@ _: {
   bg_statusline = "#16161e";
   bg_visual = "#08435E";
   black = "#06101E";
-  blue = "#13becd";
+  blue = "#66def9";
   blue0 = "#71e8ff";
-  blue1 = "#a6e6ff";
+  blue1 = "#13becd";
   blue2 = "#0eeaff";
   blue5 = "#71e8ff";
   blue6 = "#a6e6ff";
-  blue7 = "#394b70";
+  blue7 = "#008DA3";
   border = "#06101E";
   border_highlight = "#06101E";
   comment = "#dbe0cd";
-  cyan = "#5feedf";
+  cyan = "#0eeaff";
   dark3 = "#06364B";
   dark5 = "#08435E";
   diff_add = "#71fcff";
@@ -32,40 +32,40 @@ _: {
   fg_gutter = "#dbe0cd";
   fg_float = "#fff8d4";
   fg_sidebar = "#fff8e3";
-  git_add = "#71fcff";
+  git_add = "#71e8ff";
   git_change = "#a6e6ff";
   git_delete = "#ff6a5e";
   git_ignore = "#a6e6ff";
-  green = "#38ffc4";
-  green1 = "#0efff1";
+  green = "#35b5ff";
+  green1 = "#66def9";
   green2 = "#71fcff";
   hint = "#ff6747";
-  info = "#0efff1";
+  info = "#35b5ff";
   magenta = "#ff6747";
-  magenta2 = "#6294df";
+  magenta2 = "#35b5ff";
   none = "NONE";
   orange = "#ff5722";
   prompt = "#2d3149";
   purple = "#3babd6";
   red = "#fd5e3a";
   red1 = "#ff4934";
-  teal = "#71fcff";
+  teal = "#35b5ff";
   terminal_black = "#06101E";
   todo = "#ff6747";
   warning = "#ff7e6b";
-  yellow = "#ffff9d";
+  yellow = "#fd5e3a";
 
   # These custom variables will be used by lualine, starship and waybar. Use the lualine
   # way of describing the sections.
   #  / a / b / c
   # a = blue bg, black fg
 
-  statusline_a_bg = "#13becd";
+  statusline_a_bg = "#35b5ff";
   statusline_a_fg = "#06101E";
   # b = orange bg, black fg
-  statusline_b_bg = "#ff5722";
+  statusline_b_bg = "#fd5e3a";
   statusline_b_fg = "#031B26";
   # c = invisible/black bg, cyan fg
-  statusline_c_bg = "#031B26";
-  statusline_c_fg = "#5feedf";
+  statusline_c_bg = "#06101E";
+  statusline_c_fg = "#66def9";
 }
