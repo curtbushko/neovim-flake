@@ -2203,7 +2203,7 @@ in {
       fg = colors.dark5;
     };
     Whitespace = {
-      fg = colors.fg_gutter;
+      fg = colors.bg_highlight;
     };
     WildMenu = {
       bg = colors.bg_visual;
