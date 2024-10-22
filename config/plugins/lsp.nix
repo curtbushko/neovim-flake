@@ -74,7 +74,7 @@
         };
         "<leader>ca" = {
           action = "code_action";
-          desc = "code action";
+          desc = " code action";
         };
         # "<C-k>" = {
         #   action = "signature_help";
