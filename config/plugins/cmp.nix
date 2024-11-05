@@ -8,7 +8,7 @@
         performance = {
           debounce = 60;
           fetchingTimeout = 200;
-          maxViewEntries = 30;
+          maxViewEntries = 10;
         };
         snippet.expand = "function(args) require('luasnip').lsp_expand(args.body) end";
         formatting = {fields = ["abbr" "kind" "menu"];};
@@ -18,15 +18,15 @@
             keywordLength = 3;
           }
           {
-            name = "buffer";
+            name = "luasnip";
             keywordLength = 3;
+          }
+          {
+            name = "buffer";
+            keywordLength = 5;
           }
           {
             name = "path";
-            keywordLength = 3;
-          }
-          {
-            name = "luasnip";
             keywordLength = 3;
           }
         ];
@@ -55,7 +55,6 @@
     cmp-buffer.enable = true;
     cmp-cmdline.enable = true;
     cmp-git.enable = true;
-    cmp-emoji.enable = true;
     cmp-nvim-lsp.enable = true;
     cmp-nvim-lsp-signature-help.enable = true; #shows function signature while typing
     cmp-path.enable = true;
