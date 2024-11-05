@@ -7,27 +7,27 @@
         experimental.ghost_text = true;
         performance = {
           debounce = 60;
-          fetchingTimeout = 200;
-          maxViewEntries = 10;
+          fetching_timeout = 200;
+          max_view_entries = 10;
         };
         snippet.expand = "function(args) require('luasnip').lsp_expand(args.body) end";
         formatting = {fields = ["abbr" "kind" "menu"];};
         sources = [
           {
             name = "nvim_lsp";
-            keywordLength = 3;
+            keyword_length = 3;
           }
           {
             name = "luasnip";
-            keywordLength = 3;
+            keyword_length = 3;
           }
           {
             name = "buffer";
-            keywordLength = 5;
+            keyword_length = 3;
           }
           {
             name = "path";
-            keywordLength = 3;
+            keyword_length = 3;
           }
         ];
         window = {
