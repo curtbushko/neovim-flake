@@ -2,6 +2,7 @@ _: let
   # colors = import ../config/colors/tokyo-night-neon.nix {};
   colors = import ../config/colors/rebel-scum.nix {};
 in {
+  plugins.transparent.enable = true;
   colorschemes = {
     base16 = {
       enable = true;
