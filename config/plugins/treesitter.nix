@@ -4,11 +4,16 @@
     settings = {
       indent.enable = true;
       disabledLanguages = [
-        "ruby"
         "ada"
+        "perl"
+        "python"
+        "ruby"
       ];
       ignore_install = [
         "ada"
+        "perl"
+        "python"
+        "ruby"
       ];
     };
   };
