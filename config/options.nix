@@ -2,6 +2,7 @@
   clipboard.register = "unnamedplus"; # Use system clipboard
   opts = {
     clipboard = "unnamedplus";
+    autoread = false;
     autowrite = true; # Enable auto write
     backup = false;
     breakindent = true; # Maintain indent when wrapping
