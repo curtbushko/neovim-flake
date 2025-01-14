@@ -14,12 +14,10 @@
         go = [
           "goimports"
           "gofmt"
-          "gofumpt"
         ];
       };
       formatters = {
         gofmt.command = lib.getExe' pkgs.go "gofmt";
-        gofumpt.command = lib.getExe' pkgs.go "gofumt";
         goimports.command = lib.getExe' pkgs.gotools "goimports";
       };
     };

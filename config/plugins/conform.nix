@@ -9,7 +9,7 @@
       formattersByFt = {
         "*" = [["codespell"]];
         "_" = [["trim_whitespace"]];
-        go = [["goimports" "golines" "gofmt" "gofumpt"]];
+        go = [["goimports" "gofmt" ]];
         javascript = [["prettierd"]];
         json = [["jq"]];
         lua = [["stylua"]];
