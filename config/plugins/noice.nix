@@ -35,4 +35,5 @@
       };
     };
   };
+  plugins.snacks.enable = true;
 }

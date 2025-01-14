@@ -77,14 +77,6 @@
           };
         }
         {
-          __unkeyed-1 = "<leader>a";
-          group = "avante";
-          icon = {
-            icon = "󱚞 ";
-            color = "yellow";
-          };
-        }
-        {
           __unkeyed-1 = "<leader>b";
           group = "buffers";
           icon = {

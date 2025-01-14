@@ -27,7 +27,6 @@
     ./colorschemes.nix
     # Plugins
     ./plugins/alpha.nix
-    ./plugins/avante.nix
     ./plugins/bufferline.nix
     ./plugins/cmp.nix
     ./plugins/conform.nix
