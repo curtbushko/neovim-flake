@@ -1,6 +1,7 @@
 {
   plugins.lsp = {
     enable = true;
+    capabilities = "capabilities.workspace.didChangeWatchedFiles.dynamicRegistration = true";
     servers = {
       clangd.enable = true;
       html.enable = true;
