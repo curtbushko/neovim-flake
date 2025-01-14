@@ -2,30 +2,13 @@
   plugins.lsp = {
     enable = true;
     servers = {
-      gopls = {
-        enable = true;
-        filetypes = ["go"];
-        extraOptions = {
-          settings = {
-            experimentalPostfixCompletions = true;
-            analyses = {
-              unusedparams = true;
-              shadow = true;
-            };
-            staticcheck = true;
-          };
-          init_options = {
-            usePlaceholders = true;
-          };
-        };
-      };
       clangd.enable = true;
       html.enable = true;
       nixd.enable = true;
       pylsp.enable = true;
       pyright.enable = true;
       rust_analyzer = {
-        enable = true;
+        enable = false;
         installCargo = false;
         installRustc = false;
       };
