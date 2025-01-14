@@ -8,11 +8,11 @@
   };
 
   performance = {
-    byteCompileLua.enable = true;
-    byteCompileLua.configs = true;
-    byteCompileLua.nvimRuntime = true;
-    byteCompileLua.plugins = true;
-    combinePlugins.enable = true;
+    byteCompileLua.enable = false;
+    byteCompileLua.configs = false;
+    byteCompileLua.nvimRuntime = false;
+    byteCompileLua.plugins = false;
+    combinePlugins.enable = false;
     combinePlugins.standalonePlugins = [
       "nvim-treesitter"
       "nvim-treesitter-textobjects"
