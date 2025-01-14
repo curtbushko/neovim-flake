@@ -5,11 +5,6 @@
       autoEnableSources = true;
       settings = {
         experimental.ghost_text = true;
-        performance = {
-          debounce = 60;
-          fetching_timeout = 200;
-          max_view_entries = 10;
-        };
         snippet.expand = "function(args) require('luasnip').lsp_expand(args.body) end";
         formatting = {fields = ["abbr" "kind" "menu"];};
         sources = [
