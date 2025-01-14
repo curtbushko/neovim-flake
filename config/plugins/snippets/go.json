@@ -148,10 +148,10 @@
         "prefix": "dfs",
         "body": "type Node struct {\n\tValue    int\n\tChildren []*Node\n}\n\nfunc (n *Node) DepthFirstSearch(array []int) []int {\n\tarray = append(array, n.Value)\n\tfor _, child := range n.Children {\n\t\tarray = child.DepthFirstSearch(array)\n\t}\n}\n",
         "description": "An example of a depth-first search"
-    }
+    },
     "string keygen [go snippet]": {
         "prefix": "keygen",
-        "body": "func keygen(str string) string {\n  str = regexp.MustCompile(`[^a-zA-Z0-9 ]+`).ReplaceAllString(str, "")\n  s := []rune(str)\n  sort.Slice(s, func(i int, j int) bool { return s[i] < s[j] })\n return string(s)\n}"
+         "body": "func keygen(str string) string {\n  str = regexp.MustCompile(`[^a-zA-Z0-9 ]+`).ReplaceAllString(str, \"\")\n  s := []rune(str)\n  sort.Slice(s, func(i int, j int) bool { return s[i] < s[j] })\n return string(s)\n}",
         "description": "Created a sorted key from a string"
     }
 }
