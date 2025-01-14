@@ -3,8 +3,10 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-    nixvim.url = "github:nix-community/nixvim";
+    nixpkgs-unstable.url = "github:nixos/nixpkgs/nixpkgs-unstable";
     flake-parts.url = "github:hercules-ci/flake-parts";
+    neovim-nightly-overlay.url = "github:nix-community/neovim-nightly-overlay";
+    nixvim.url = "github:nix-community/nixvim";
   };
 
   outputs = {
@@ -33,6 +35,7 @@
           # You can use `extraSpecialArgs` to pass additional arguments to your module files
           extraSpecialArgs = {
             # inherit (inputs) foo;
+            package = inputs.neovim-nightly-overlay.packages.${system}.default;
           };
         };
         nvim = nixvim'.makeNixvimWithModule nixvimModule;
