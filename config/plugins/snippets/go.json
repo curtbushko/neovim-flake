@@ -24,6 +24,17 @@
         "body": "func Test$1(t *testing.T) {\n\tcases := []struct {\n\t\tname string\n\t\tactual\t string\n\t\texpected string\n\t\t$4\n\t}{\n\t\t{\n\t\t\tname: \"\",\n\t\t\tactual: \"\",\n\t\t\texpected: \"\",\n\t\t\n\t\t},\n\t}\n\tfor _, c := range cases {\n\t\tt.Run(c.name, func(t *testing.T) {\n\t\t\tgot := <function>(c.actual)\n\t\t\tif c.expected != got {\n\t\t\t\tt.Errorf(\"expected %v, got %v\", c.expected, got)\n\t\t\t}\n\t\t})\n\t}\n}",
         "description": "snippet for table driven test"
     },
+    "extended table driven test [go snippet]": {
+        "prefix": "testtable",
+        "body": "func Test$1(t *testing.T) {\n\tcases := []struct {\n\t\tname string\n\t\tactual\t string\n\t\texpected string\n\t\t$4\n\t}{\n\t\t{\n\t\t\tname: \"\",\n\t\t\tactual: \"\",\n\t\t\texpected: \"\",\n\t\t\n\t\t},\n\t}\n\tfor _, c := range cases {\n\t\tt.Run(c.name, func(t *testing.T) {\n\t\t\tgot := <function>(c.actual)\n\t\t\tif c.expected != got {\n\t\t\t\tt.Errorf(\"expected %v, got %v\", c.expected, got)\n\t\t\t}\n\t\t})\n\t}\n}",
+        "description": "snippet for table driven test"
+    },
+    "test func [go snippet]": {
+        "prefix": "testfunc",
+        "body": "func Test$1(t *testing.T) {\n\n}",
+        "description": "snippet for simple test function"
+    },
+
     "single linked list [go snippet]": {
         "prefix": "linkedlist",
         "body": "type element struct {\n\tname string\n\tnext *element\n}\n\ntype list struct {\n\tname string\n\thead *element\n}",
