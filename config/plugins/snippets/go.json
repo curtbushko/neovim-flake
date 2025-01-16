@@ -34,7 +34,6 @@
         "body": "func Test$1(t *testing.T) {\n\n}",
         "description": "snippet for simple test function"
     },
-
     "single linked list [go snippet]": {
         "prefix": "linkedlist",
         "body": "type element struct {\n\tname string\n\tnext *element\n}\n\ntype list struct {\n\tname string\n\thead *element\n}",
@@ -139,6 +138,11 @@
         "prefix": "gofunc",
         "body": "go func() {\n\t$1\n}()\n",
         "description": "simple anonymized go func"
+    },
+    "simple no allocation channel [go snippet]": {
+        "prefix": "makechan",
+        "body": "ch := make(chan struct{})\n",
+        "description": "simple no allocation channel (do close(ch) to signal)"
     },
     "hash algorithm [go snippet]": {
         "prefix": "hashxx",
