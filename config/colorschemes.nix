@@ -411,7 +411,7 @@ in {
     };
     BufferCurrentSign = {
       bg = colors.bg;
-      fg = colors.bg;
+      fg = colors.blue1;
     };
     BufferCurrentTarget = {
       bg = colors.bg;
@@ -2204,7 +2204,7 @@ in {
       fg = colors.dark5;
     };
     Whitespace = {
-      fg = colors.bg_highlight;
+      fg = colors.fg_float;
     };
     WildMenu = {
       bg = colors.bg_visual;
