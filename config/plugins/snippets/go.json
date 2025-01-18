@@ -41,12 +41,12 @@
     },
     "extended table driven test [go snippet]": {
         "prefix": "tdd",
-        "body": "func Test$1(t *testing.T) {\n\tcases := []struct {\n\t\tname string\n\t\tactual\t string\n\t\texpected string\n\t\t$4\n\t}{\n\t\t{\n\t\t\tname: \"\",\n\t\t\tactual: \"\",\n\t\t\texpected: \"\",\n\t\t\n\t\t},\n\t}\n\tfor _, c := range cases {\n\t\tt.Run(c.name, func(t *testing.T) {\n\t\t\tgot := <function>(c.actual)\n\t\t\tif c.expected != got {\n\t\t\t\tt.Errorf(\"expected %v, got %v\", c.expected, got)\n\t\t\t}\n\t\t})\n\t}\n}",
+        "body": "func Test$1(t *testing.T) {\n\tcases := []struct {\n\t\tname string\n\t\tactual\t string\n\t\twant string\n\t\t$4\n\t}{\n\t\t{\n\t\t\tname: \"\",\n\t\t\tactual: \"\",\n\t\t\twant: \"\",\n\t\t\n\t\t},\n\t}\n\tfor _, c := range cases {\n\t\tt.Run(c.name, func(t *testing.T) {\n\t\t\tgot := <function>(c.actual)\n\t\t\tif got != c.want {\n\t\t\t\tt.Errorf(\"got %v, want %v\", got, c.want)\n\t\t\t}\n\t\t})\n\t}\n}",
         "description": "snippet for table driven test"
     },
     "extended table driven test [go snippet]": {
         "prefix": "testtable",
-        "body": "func Test$1(t *testing.T) {\n\tcases := []struct {\n\t\tname string\n\t\tactual\t string\n\t\texpected string\n\t\t$4\n\t}{\n\t\t{\n\t\t\tname: \"\",\n\t\t\tactual: \"\",\n\t\t\texpected: \"\",\n\t\t\n\t\t},\n\t}\n\tfor _, c := range cases {\n\t\tt.Run(c.name, func(t *testing.T) {\n\t\t\tgot := <function>(c.actual)\n\t\t\tif c.expected != got {\n\t\t\t\tt.Errorf(\"expected %v, got %v\", c.expected, got)\n\t\t\t}\n\t\t})\n\t}\n}",
+        "body": "func Test$1(t *testing.T) {\n\tcases := []struct {\n\t\tname string\n\t\tactual\t string\n\t\twant string\n\t\t$4\n\t}{\n\t\t{\n\t\t\tname: \"\",\n\t\t\tactual: \"\",\n\t\t\twant: \"\",\n\t\t\n\t\t},\n\t}\n\tfor _, c := range cases {\n\t\tt.Run(c.name, func(t *testing.T) {\n\t\t\tgot := <function>(c.actual)\n\t\t\tif got != c.want {\n\t\t\t\tt.Errorf(\"got %v, want %v\", got, c.want)\n\t\t\t}\n\t\t})\n\t}\n}",
         "description": "snippet for table driven test"
     },
     "func test [go snippet]": {
@@ -151,7 +151,7 @@
     },
     "for i := 0 loop [go snippet]": {
         "prefix": "fori",
-        "body": "for i := 0; i < len($1); i++ { \n\t\n}\n",
+        "body": "for i := 0; i < len($1); i++ {\n\t\n}\n",
         "description": "simple for loop with initializing i"
     },
     "simple go func [go snippet]": {

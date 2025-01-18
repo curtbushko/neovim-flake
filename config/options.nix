@@ -17,7 +17,7 @@
     incsearch = true;
     laststatus = 3; # No status line
     list = true; # Show some invisible characters (tabs...
-    #listchars = "tab:» ,space: ,extends:→,precedes:←,nbsp:␣,trail:•";
+    listchars = "tab:» ,space: ,extends:→,precedes:←,nbsp:␣,trail:•";
     linebreak = true; # Don't cut words while wrapping
     mouse = "a"; # Enable mouse mode
     number = true; # Print line number

@@ -2204,7 +2204,7 @@ in {
       fg = colors.dark5;
     };
     Whitespace = {
-      fg = colors.fg_float;
+      fg = colors.dark5;
     };
     WildMenu = {
       bg = colors.bg_visual;
