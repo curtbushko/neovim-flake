@@ -4,15 +4,15 @@
         "body": "if err != nil {\n\treturn nil, err\n}",
         "description": "if err != nil statement"
     },
-    "t.Errorf(want,got) statement [go snippet]": {
-        "prefix": "testerr",
-        "body": "t.Errorf(\"wanted %v, got %v\", tc.want, got)",
-        "description": "simple t.Errorf want/got statement"
+    "t.Errorf(got, want) statement [go snippet]": {
+        "prefix": "testgot",
+        "body": "t.Errorf(\"got %q, wanted %q\", got, want)",
+        "description": "simple t.Errorf got want statement"
     },
-    "if c.want != got [go snippet]": {
+    "t.Errorf(want, got) statement [go snippet]": {
         "prefix": "testwant",
-        "body": "if c.want != got {\n\tt.Errorf(\"wanted %v, got %v\", c.want, go)\n}",
-        "description": "simple if c.want != got and t.Errorf want/got statement"
+        "body": "t.Errorf(\"wanted %q, got %q\", want, got)",
+        "description": "simple t.Errorf want got statement"
     },
     "t.Run(....), func(t *testing.T) [go snippet]": {
         "prefix": "testrun",
