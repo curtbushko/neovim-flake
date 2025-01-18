@@ -4,25 +4,30 @@
         "body": "if err != nil {\n\treturn nil, err\n}",
         "description": "if err != nil statement"
     },
-    "t.Errorf(got, want) statement [go snippet]": {
+    "if got t.Errorf(got, want) statement [go snippet]": {
         "prefix": "testgot",
-        "body": "t.Errorf(\"got %q, wanted %q\", got, want)",
-        "description": "simple t.Errorf got want statement"
+        "body": "if got != want{\n\tt.Errorf(\"got %q, wanted %q\", got, want)\n}",
+        "description": "simple if got want t.Errorf statement"
     },
-    "t.Errorf(want, got) statement [go snippet]": {
+    "if want t.Errorf(want, got) statement [go snippet]": {
         "prefix": "testwant",
-        "body": "t.Errorf(\"wanted %q, got %q\", want, got)",
-        "description": "simple t.Errorf want got statement"
+        "body": "if want != got\n\tt.Errorf(\"wanted %q, got %q\", want, got)\n}",
+        "description": "simple if want got t.Errorf statement"
+    },
+    "if got t.Errorf(got, want) statement [go snippet]": {
+        "prefix": "ifgot",
+        "body": "if got != want{\n\tt.Errorf(\"got %q, wanted %q\", got, want)\n}",
+        "description": "simple if got want t.Errorf statement"
+    },
+    "if want t.Errorf(want, got) statement [go snippet]": {
+        "prefix": "ifwant",
+        "body": "if want != got\n\tt.Errorf(\"wanted %q, got %q\", want, got)\n}",
+        "description": "simple if want got t.Errorf statement"
     },
     "t.Errorf(got, want) statement [go snippet]": {
-        "prefix": "ifgot",
-        "body": "t.Errorf(\"got %q, wanted %q\", got, want)",
+        "prefix": "terr",
+        "body": "t.Errorf(\"got %q, wanted %q\", got, want)\n}",
         "description": "simple t.Errorf got want statement"
-    },
-    "t.Errorf(want, got) statement [go snippet]": {
-        "prefix": "ifwant",
-        "body": "t.Errorf(\"wanted %q, got %q\", want, got)",
-        "description": "simple t.Errorf want got statement"
     },
     "t.Run(....), func(t *testing.T) [go snippet]": {
         "prefix": "testrun",
