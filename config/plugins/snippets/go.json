@@ -14,8 +14,23 @@
         "body": "t.Errorf(\"wanted %q, got %q\", want, got)",
         "description": "simple t.Errorf want got statement"
     },
+    "t.Errorf(got, want) statement [go snippet]": {
+        "prefix": "ifgot",
+        "body": "t.Errorf(\"got %q, wanted %q\", got, want)",
+        "description": "simple t.Errorf got want statement"
+    },
+    "t.Errorf(want, got) statement [go snippet]": {
+        "prefix": "ifwant",
+        "body": "t.Errorf(\"wanted %q, got %q\", want, got)",
+        "description": "simple t.Errorf want got statement"
+    },
     "t.Run(....), func(t *testing.T) [go snippet]": {
         "prefix": "testrun",
+        "body": "t.Run(\"$1\", func(t *testing.T) {\n\t$2\n})",
+        "description": "embedded test run in a test case"
+    },
+    "t.Run(....), func(t *testing.T) [go snippet]": {
+        "prefix": "trun",
         "body": "t.Run(\"$1\", func(t *testing.T) {\n\t$2\n})",
         "description": "embedded test run in a test case"
     },
@@ -29,8 +44,8 @@
         "body": "func Test$1(t *testing.T) {\n\tcases := []struct {\n\t\tname string\n\t\tactual\t string\n\t\texpected string\n\t\t$4\n\t}{\n\t\t{\n\t\t\tname: \"\",\n\t\t\tactual: \"\",\n\t\t\texpected: \"\",\n\t\t\n\t\t},\n\t}\n\tfor _, c := range cases {\n\t\tt.Run(c.name, func(t *testing.T) {\n\t\t\tgot := <function>(c.actual)\n\t\t\tif c.expected != got {\n\t\t\t\tt.Errorf(\"expected %v, got %v\", c.expected, got)\n\t\t\t}\n\t\t})\n\t}\n}",
         "description": "snippet for table driven test"
     },
-    "test func [go snippet]": {
-        "prefix": "testfunc",
+    "func test [go snippet]": {
+        "prefix": "functest",
         "body": "func Test$1(t *testing.T) {\n\n}",
         "description": "snippet for simple test function"
     },
