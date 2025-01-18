@@ -4,16 +4,18 @@
       enable = true;
       autoEnableSources = true;
       settings = {
+        completion.completeopt = "noinsert";
+        preselect = "cmp.PreselectMode.None";
         experimental.ghost_text = true;
         snippet.expand = "function(args) require('luasnip').lsp_expand(args.body) end";
         formatting = {fields = ["abbr" "kind" "menu"];};
         sources = [
           {
-            name = "nvim_lsp";
+            name = "luasnip";
             keyword_length = 3;
           }
           {
-            name = "luasnip";
+            name = "nvim_lsp";
             keyword_length = 3;
           }
           {
@@ -35,6 +37,9 @@
 
         mapping = {
           "<Tab>" = "cmp.mapping(cmp.mapping.select_next_item(), {'i', 's'})";
+          "<S-Tab>" = "cmp.mapping(cmp.mapping.select_prev_item(), {'i', 's'})";
+          "<Up>" = "cmp.mapping(cmp.mapping.select_prev_item(), {'i', 's'})";
+          "<Down>" = "cmp.mapping(cmp.mapping.select_next_item(), {'i', 's'})";
           "<C-n>" = "cmp.mapping.select_next_item()";
           "<C-e>" = "cmp.mapping.select_prev_item()";
           #"<ESC>" = "cmp.mapping.abort()";
