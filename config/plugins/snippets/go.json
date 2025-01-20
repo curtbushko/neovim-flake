@@ -21,7 +21,7 @@
     },
     "if want t.Errorf(want, got) statement [go snippet]": {
         "prefix": "ifwant",
-        "body": "if want != got\n\tt.Errorf(\"wanted %q, got %q\", want, got)\n}",
+        "body": "if want != got{\n\tt.Errorf(\"wanted %q, got %q\", want, got)\n}",
         "description": "simple if want got t.Errorf statement"
     },
     "t.Errorf(got, want) statement [go snippet]": {
