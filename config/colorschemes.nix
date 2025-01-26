@@ -361,7 +361,7 @@ in {
       bg = colors.fg_gutter;
       fg = colors.hint;
     };
-    BufferAlternateINFO = {
+    nBufferAlternateINFO = {
       bg = colors.fg_gutter;
       fg = colors.blue2;
     };
@@ -458,20 +458,55 @@ in {
       fg = "#b8915b";
     };
     BufferLineBufferSelected = {
-      fg = colors.blue;
+      bg = colors.blue;
+      fg = colors.bg;
+    };
+    BufferLineMiniIconsAzureSelected = {
+      bg = colors.blue;
+      fg = colors.bg;
+    };
+    BufferLineTabSelected = {
+      bg = colors.bg;
+      fg = colors.bg;
     };
     BufferLineFill = {
       bg = colors.bg;
+      fg = colors.fg;
     };
     BufferLineIndicatorSelected = {
-      fg = colors.git_change;
+      bg = colors.blue;
+      fg = colors.blue;
+    };
+    BufferLineSeparator = {
+      bg = colors.bg;
+      fg = colors.bg;
+    };
+    BufferLineOffsetSeparator = {
+      bg = colors.bg;
+      fg = colors.fg;
+    };
+    BufferLineSeparatorSelected = {
+      bg = colors.blue;
+      fg = colors.bg;
+    };
+    BufferLineSeparatorVisible = {
+      bg = colors.bg;
+      fg = colors.bg;
+    };
+    BufferLineTabSeparator = {
+      bg = colors.bg;
+      fg = colors.bg;
+    };
+    BufferLineTabSeparatorSelected = {
+      bg = colors.blue;
+      fg = colors.blue;
     };
     BufferOffset = {
       bg = colors.bg_dark;
       fg = colors.dark5;
     };
     BufferTabpageFill = {
-      bg = "#262a3c";
+      bg = colors.bg_dark;
       fg = colors.dark5;
     };
     BufferTabpages = {

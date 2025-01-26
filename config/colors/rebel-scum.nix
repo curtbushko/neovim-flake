@@ -59,7 +59,6 @@ _: {
   # way of describing the sections.
   #  / a / b / c
   # a = blue bg, black fg
-
   statusline_a_bg = "#35b5ff";
   statusline_a_fg = "#06101E";
   # b = orange bg, black fg
