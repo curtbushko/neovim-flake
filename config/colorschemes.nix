@@ -2076,6 +2076,10 @@ in {
       bg = colors.prompt;
       fg = colors.orange;
     };
+    TelescopePreviewLine = {
+      bg = colors.fg;
+      fg = colors.bg;
+    };
     TelescopePreviewTitle = {
       bg = colors.bg_dark;
       fg = colors.orange;
