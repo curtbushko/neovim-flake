@@ -24,33 +24,13 @@
     keymaps = {
       silent = true;
       lspBuf = {
-        gd = {
-          action = "definition";
-          desc = "goto definition";
-        };
-        gr = {
-          action = "references";
-          desc = "goto references";
-        };
         gD = {
           action = "declaration";
           desc = "goto declaration";
         };
-        gI = {
-          action = "implementation";
-          desc = "goto implementation";
-        };
-        gT = {
-          action = "type_definition";
-          desc = "type definition";
-        };
         K = {
           action = "hover";
           desc = "hover";
-        };
-        "<leader>cw" = {
-          action = "workspace_symbol";
-          desc = "workspace symbol";
         };
         "<leader>cr" = {
           action = "rename";
@@ -65,6 +45,48 @@
         #   desc = "Signature Help";
         # };
       };
+      extra = [
+        {
+          mode = "n";
+          key = "gd";
+          action.__raw = "require('telescope.builtin').lsp_definitions";
+          options = {
+            desc = "goto definition";
+          };
+        }
+        {
+          mode = "n";
+          key = "gr";
+          action.__raw = "require('telescope.builtin').lsp_references";
+          options = {
+            desc = "goto references";
+          };
+        }
+        {
+          mode = "n";
+          key = "gI";
+          action.__raw = "require('telescope.builtin').lsp_implementations";
+          options = {
+            desc = "goto implementation";
+          };
+        }
+        {
+          mode = "n";
+          key = "gT";
+          action.__raw = "require('telescope.builtin').lsp_type_definitions";
+          options = {
+            desc = "type definition";
+          };
+        }
+        {
+          mode = "n";
+          key = "<leader>cw";
+          action.__raw = "require('telescope.builtin').lsp_dynamic_workspace_symbols";
+          options = {
+            desc = "workspace symbols";
+          };
+        }
+      ];
       diagnostic = {
         "<leader>cd" = {
           action = "open_float";
