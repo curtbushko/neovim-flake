@@ -2078,7 +2078,7 @@ in {
     };
     TelescopePreviewLine = {
       bg = colors.bg_highlight;
-      fg = colors.fg;
+      fg = colors.orange;
     };
     TelescopePreviewTitle = {
       bg = colors.bg_dark;
