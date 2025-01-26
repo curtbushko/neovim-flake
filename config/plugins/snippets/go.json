@@ -26,7 +26,7 @@
     },
     "t.Errorf(got, want) statement [go snippet]": {
         "prefix": "terr",
-        "body": "t.Errorf(\"got %q, wanted %q\", got, want)\n}",
+        "body": "t.Errorf(\"got %q, wanted %q\", got, want)\n",
         "description": "simple t.Errorf got want statement"
     },
     "t.Run(....), func(t *testing.T) [go snippet]": {
