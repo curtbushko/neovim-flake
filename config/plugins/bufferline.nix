@@ -42,6 +42,12 @@
     }
     {
       key = "<leader>bs";
+      action = "<CMD>BufferLineSortByDirectory<CR>";
+      options.desc = "Sort by directory";
+      mode = ["n"];
+    }
+    {
+      key = "<leader>bt";
       action = "<CMD>BufferLineSortByTabs<CR>";
       options.desc = "Sort by tabs";
       mode = ["n"];
