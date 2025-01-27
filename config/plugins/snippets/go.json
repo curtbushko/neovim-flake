@@ -149,6 +149,11 @@
         "body": "\/\/golang.org/x/exp/slices\nslice.Equal(a, b)",
         "description": "Compare slices (slice.Equal added in go 1.18)"
     },
+    "slice sort [go snippets]": {
+        "prefix": "slicesort",
+        "body": "a := []int{5, 3, 4, 7, 8, 9}\nsort.Slice(a, func(i, j int) bool {\n\treturn a[i] < a[j]\n})",
+        "description": "Sort a slice using an anonymous function (sort.Slice added in go 1.8)"
+    },
     "for i := 0 loop [go snippet]": {
         "prefix": "fori",
         "body": "for i := 0; i < len($1); i++ {\n\t\n}\n",
