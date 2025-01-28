@@ -45,7 +45,7 @@ _: {
   magenta2 = "#E6C1D3";
   none = "NONE";
   orange = "#E69875";
-  prompt = "#E69875";
+  prompt = "#374145";
   purple = "#D699B6";
   red = "#E67E80";
   red1 = "#E67E70";
