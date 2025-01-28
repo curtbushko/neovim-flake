@@ -1,6 +1,7 @@
 _: let
   # colors = import ../config/colors/tokyo-night-neon.nix {};
-  colors = import ../config/colors/rebel-scum.nix {};
+  #colors = import ../config/colors/rebel-scum.nix {};
+  colors = import ../config/colors/everforest.nix {};
 in {
   plugins.transparent.enable = true;
   colorschemes = {
@@ -457,49 +458,61 @@ in {
       bg = "#202331";
       fg = "#b8915b";
     };
-    BufferLineBufferSelected = {
-      bg = colors.blue;
-      fg = colors.bg;
+    BufferLineBackground = {
+      bg = colors.statusline_c_bg;
+      fg = colors.statusline_c_fg;
     };
-    BufferLineMiniIconsAzureSelected = {
-      bg = colors.blue;
-      fg = colors.bg;
+    BufferLineTab = {
+      bg = colors.statusline_c_bg;
+      fg = colors.statusline_c_fg;
+    };
+    BufferLineBufferSelected = {
+      bg = colors.statusline_b_bg;
+      fg = colors.statusline_b_fg;
+    };
+    BufferLineModifiedSelected = {
+      bg = colors.statusline_b_bg;
+      fg = colors.statusline_b_bg;
     };
     BufferLineTabSelected = {
-      bg = colors.bg;
-      fg = colors.bg;
+      bg = colors.statusline_b_bg;
+      fg = colors.statusline_b_bg;
     };
     BufferLineFill = {
-      bg = colors.bg;
-      fg = colors.fg;
+      bg = colors.statusline_c_bg;
+      fg = colors.statusline_c_bg;
     };
     BufferLineIndicatorSelected = {
-      bg = colors.blue;
-      fg = colors.blue;
+      bg = colors.statusline_b_bg;
+      fg = colors.statusline_b_bg;
     };
     BufferLineSeparator = {
-      bg = colors.bg;
-      fg = colors.bg;
+      bg = colors.statusline_c_bg;
+      fg = colors.statusline_c_bg;
     };
     BufferLineOffsetSeparator = {
-      bg = colors.bg;
-      fg = colors.fg;
+      bg = colors.statusline_c_bg;
+      fg = colors.statusline_c_bg;
     };
     BufferLineSeparatorSelected = {
-      bg = colors.blue;
-      fg = colors.bg;
+      bg = colors.statusline_b_bg;
+      fg = colors.statusline_c_bg;
     };
     BufferLineSeparatorVisible = {
-      bg = colors.bg;
-      fg = colors.bg;
+      bg = colors.statusline_c_bg;
+      fg = colors.statusline_c_bg;
+    };
+    BufferLineBufferVisible = {
+      bg = colors.statusline_c_bg;
+      fg = colors.statusline_c_fg;
     };
     BufferLineTabSeparator = {
-      bg = colors.bg;
-      fg = colors.bg;
+      bg = colors.statusline_c_bg;
+      fg = colors.statusline_c_bg;
     };
     BufferLineTabSeparatorSelected = {
-      bg = colors.blue;
-      fg = colors.blue;
+      bg = colors.statusline_b_bg;
+      fg = colors.statusline_b_fg;
     };
     BufferOffset = {
       bg = colors.bg_dark;
