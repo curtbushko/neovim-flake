@@ -1,7 +1,7 @@
 _: let
   # colors = import ../config/colors/tokyo-night-neon.nix {};
   #colors = import ../config/colors/rebel-scum.nix {};
-  colors = import ../config/colors/everforest.nix {};
+  colors = import ../config/colors/andromeda.nix {};
 in {
   plugins.transparent.enable = true;
   colorschemes = {
@@ -1695,7 +1695,6 @@ in {
       fg = colors.comment;
     };
     Normal = {
-      bg = colors.bg;
       fg = colors.fg;
     };
     NormalFloat = {
