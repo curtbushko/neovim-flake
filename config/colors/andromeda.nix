@@ -22,8 +22,8 @@ _: {
   border_highlight = "#181A1C";
   comment = "#5A5E7A";
   cyan = "#77D5F0";
-  dark3 = "#2B2D3A";
-  dark5 = "#333648";
+  dark3 = "#66676E";
+  dark5 = "#7C7C82";
   diff_add = "#A9DC76";
   diff_change = "#EDC763";
   diff_delete = "#FB617E";
