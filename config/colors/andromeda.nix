@@ -1,3 +1,5 @@
+# Borrowed from: https://github.com/sainnhe/sonokai
+# Andromeda theme colours
 _: {
   bg = "#181A1C";
   bg_dark = "#252630";
@@ -7,7 +9,7 @@ _: {
   bg_search = "#363A4E";
   bg_sidebar = "#181A1C";
   bg_statusline = "#6DCAE8";
-  bg_visual = "#55393D";
+  bg_visual = "#354157";
   black = "#181A1C";
   blue = "#6DCAE8";
   blue0 = "#77D5F0";
