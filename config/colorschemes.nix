@@ -1,7 +1,7 @@
 _: let
   # colors = import ../config/colors/tokyo-night-neon.nix {};
-  #colors = import ../config/colors/rebel-scum.nix {};
-  colors = import ../config/colors/andromeda.nix {};
+  colors = import ../config/colors/rebel-scum.nix {};
+  #colors = import ../config/colors/andromeda.nix {};
 in {
   plugins.transparent.enable = true;
   colorschemes = {
