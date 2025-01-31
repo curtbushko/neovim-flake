@@ -27,11 +27,11 @@ _: {
   diff_delete = "#db4b4b";
   diff_text = "#394b70";
   error = "#db4b4b";
-  fg = "#dfe9ff";
-  fg_dark = "#a9b1d6";
-  fg_float = "#c0caf5";
-  fg_gutter = "#3b4261";
-  fg_sidebar = "#a9b1d6";
+  fg = "#E2D9C5";
+  fg_dark = "#dbe0cd";
+  fg_gutter = "#dbe0cd";
+  fg_float = "#fff8d4";
+  fg_sidebar = "#fff8e3";
   git_add = "#9ece6a";
   git_change = "#FFEC6E";
   git_delete = "#db4b4b";
