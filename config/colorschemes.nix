@@ -470,13 +470,22 @@ in {
       bg = colors.statusline_b_bg;
       fg = colors.statusline_b_fg;
     };
+    BufferLineDuplicateSelected = {
+      bg = colors.statusline_b_bg;
+      fg = colors.statusline_b_fg;
+    };
+    BufferLineDuplicate = {
+      bg = colors.statusline_c_bg;
+      fg = colors.statusline_c_fg;
+    };
+
     BufferLineModifiedSelected = {
       bg = colors.statusline_b_bg;
       fg = colors.statusline_b_bg;
     };
     BufferLineTabSelected = {
       bg = colors.statusline_b_bg;
-      fg = colors.statusline_b_bg;
+      fg = colors.statusline_b_fg;
     };
     BufferLineFill = {
       bg = colors.statusline_c_bg;
