@@ -41,12 +41,12 @@ _: {
   green2 = "#9DC570";
   hint = "#e78a4e";
   info = "#a9b665";
-  magenta = "#bb9af7";
-  magenta2 = "#d3869b";
+  magenta = "#baa3e3";
+  magenta2 = "#ac90de";
   none = "NONE";
   orange = "#e78a4e";
   prompt = "#504945";
-  purple = "#9d7cd8";
+  purple = "#b096df";
   red = "#ea6962";
   red1 = "#ea6952";
   teal = "#89b482";
