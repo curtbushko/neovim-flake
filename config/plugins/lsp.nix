@@ -20,6 +20,7 @@
       marksman.enable = true;
       terraformls.enable = true;
       yamlls.enable = true;
+      zls.enable = true;
     };
     keymaps = {
       silent = true;
