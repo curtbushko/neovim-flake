@@ -20,6 +20,7 @@
     listchars = "tab:» ,space: ,extends:→,precedes:←,nbsp:␣,trail:•";
     linebreak = true; # Don't cut words while wrapping
     mouse = "a"; # Enable mouse mode
+    mousescroll = "ver:1,hor:6";
     number = true; # Print line number
     preserveindent = true; # Preserve indent structure as much as possible
     pumblend = 10; # Popup blend
