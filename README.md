@@ -1,4 +1,4 @@
-# Curt's Neovim Flake
+# Curts Neovim Flake
 
 [![Nix](https://img.shields.io/badge/Nix-5277C3.svg?&logo=NixOS&logoColor=white)](#)
 
