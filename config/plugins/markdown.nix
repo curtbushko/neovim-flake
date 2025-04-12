@@ -3,7 +3,7 @@
     enable = true;
     settings = {
       heading = {
-        icons = ["# " "󰲣 " "󰲥 " "󰲧 " "󰲩 " "󰲫 "];
+        icons = ["󰎦 " "󰎩 " "󰎬 " "󰎮 " "󰎰 " "󰎵 "];
         backgrounds = ["RenderMarkdownBg"];
         foregrounds = [
           "RenderMarkdownH1"
