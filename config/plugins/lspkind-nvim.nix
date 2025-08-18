@@ -1,23 +1,24 @@
 {
   plugins.lspkind = {
     enable = true;
-    cmp = {
-      enable = true;
-
-      menu = {
-        buffer = "[Buffer]";
-        calc = "[Calc]";
-        cmdline = "[Cmdline]";
-        codeium = "[Codeium]";
-        emoji = "[Emoji]";
-        git = "[Git]";
-        luasnip = "[Snippet]";
-        neorg = "[Neorg]";
-        nvim_lsp = "[LSP]";
-        nvim_lua = "[API]";
-        path = "[Path]";
-        spell = "[Spell]";
-        treesitter = "[TreeSitter]";
+    settings = {
+      cmp = {
+        enable = true;
+        menu = {
+          buffer = "[Buffer]";
+          calc = "[Calc]";
+          cmdline = "[Cmdline]";
+          codeium = "[Codeium]";
+          emoji = "[Emoji]";
+          git = "[Git]";
+          luasnip = "[Snippet]";
+          neorg = "[Neorg]";
+          nvim_lsp = "[LSP]";
+          nvim_lua = "[API]";
+          path = "[Path]";
+          spell = "[Spell]";
+          treesitter = "[TreeSitter]";
+        };
       };
     };
   };

@@ -67,6 +67,12 @@
       mode = ["n"];
     }
     {
+      action = "<cmd>Telescope find_files hidden=true<CR>";
+      key = "<leader>fF";
+      options.desc = "find files (hidden)";
+      mode = ["n"];
+    }
+    {
       action = "<cmd>Telescope find_files hidden=false<CR>";
       key = "<leader><space>";
       options.desc = "find files";
@@ -81,7 +87,7 @@
     {
       action = "<cmd>Telescope live_grep hidden=true no_ignore=true<CR>";
       key = "<leader>fG";
-      options.desc = "Grep (hidden)";
+      options.desc = "grep (hidden)";
       mode = ["n"];
     }
     {
