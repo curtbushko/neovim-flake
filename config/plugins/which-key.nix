@@ -102,7 +102,7 @@
         }
         {
           __unkeyed-1 = "<leader>e";
-          group = "explorer neotree (cwd)";
+          group = "explore Neotree";
           icon = {
             icon = "󰙅 ";
             color = "yellow";
