@@ -4,22 +4,22 @@
         "body": "if err != nil {\n\treturn nil, err\n}",
         "description": "if err != nil statement"
     },
-    "if got t.Errorf(got, want) statement [go snippet]": {
+    "if got t.Errorf(got, want) statement [go snippet](1)": {
         "prefix": "testgot",
         "body": "if got != want{\n\tt.Errorf(\"got %q, wanted %q\", got, want)\n}",
         "description": "simple if got want t.Errorf statement"
     },
-    "if want t.Errorf(want, got) statement [go snippet]": {
+    "if want t.Errorf(want, got) statement [go snippet](1)": {
         "prefix": "testwant",
         "body": "if want != got\n\tt.Errorf(\"wanted %q, got %q\", want, got)\n}",
         "description": "simple if want got t.Errorf statement"
     },
-    "if got t.Errorf(got, want) statement [go snippet]": {
+    "if got t.Errorf(got, want) statement [go snippet](2)": {
         "prefix": "ifgot",
         "body": "if got != want{\n\tt.Errorf(\"got %q, wanted %q\", got, want)\n}",
         "description": "simple if got want t.Errorf statement"
     },
-    "if want t.Errorf(want, got) statement [go snippet]": {
+    "if want t.Errorf(want, got) statement [go snippet](2)": {
         "prefix": "ifwant",
         "body": "if want != got{\n\tt.Errorf(\"wanted %q, got %q\", want, got)\n}",
         "description": "simple if want got t.Errorf statement"
@@ -39,7 +39,7 @@
         "body": "t.Run(\"$1\", func(t *testing.T) {\n\t$2\n})",
         "description": "embedded test run in a test case"
     },
-    "extended table driven test [go snippet]": {
+    "table driven test [go snippet]": {
         "prefix": "tdd",
         "body": "func Test$1(t *testing.T) {\n\tcases := []struct {\n\t\tname string\n\t\tactual\t string\n\t\twant string\n\t\t$4\n\t}{\n\t\t{\n\t\t\tname: \"\",\n\t\t\tactual: \"\",\n\t\t\twant: \"\",\n\t\t\n\t\t},\n\t}\n\tfor _, c := range cases {\n\t\tt.Run(c.name, func(t *testing.T) {\n\t\t\tgot := <function>(c.actual)\n\t\t\tif got != c.want {\n\t\t\t\tt.Errorf(\"got %v, want %v\", got, c.want)\n\t\t\t}\n\t\t})\n\t}\n}",
         "description": "snippet for table driven test"
@@ -153,6 +153,11 @@
         "prefix": "slicesort",
         "body": "a := []int{5, 3, 4, 7, 8, 9}\nsort.Slice(a, func(i, j int) bool {\n\treturn a[i] < a[j]\n})",
         "description": "Sort a slice using an anonymous function (sort.Slice added in go 1.8)"
+    },
+    "interface guard [go snippet]": {
+        "prefix": "interfaceguard",
+        "body": "type SomeType Struct{}\nvar _ SomeInterface = (*SomeType)(nil)",
+        "description": "interface guard to check that struct satisfies interface"
     },
     "for i := 0 loop [go snippet]": {
         "prefix": "fori",
