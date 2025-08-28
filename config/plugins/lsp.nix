@@ -13,7 +13,9 @@
         installCargo = false;
         installRustc = false;
       };
-      cmake.enable = true;
+      # 2025-08-27 - turn off cmake lsp because something broken in python
+      # https://github.com/NixOS/nixpkgs/pull/437306
+      cmake.enable = false;
       bashls.enable = true;
       lua_ls.enable = true;
       nil_ls.enable = true;
