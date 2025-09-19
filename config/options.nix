@@ -7,7 +7,7 @@
     backup = false;
     breakindent = true; # Maintain indent when wrapping
     completeopt = ["menu" "menuone" "noselect"];
-    conceallevel = 1; # Hide * markup for bold and italic
+    conceallevel = 0; # Hide * markup for bold and italic
     confirm = true; # Confirm to save changes before exiting modified buffer
     copyindent = true;
     cursorline = true; # Enable highlighting of the current line
@@ -25,7 +25,7 @@
     preserveindent = true; # Preserve indent structure as much as possible
     pumblend = 10; # Popup blend
     pumheight = 10; # Maximum number of entries in a popup
-    relativenumber = true; # Relative line numbers
+    relativenumber = false; # Relative line numbers
     scrolloff = 8; # Lines of context
     sidescrolloff = 8; # Columns of context
     #signcolumn = "yes"; # Always show sign column
@@ -46,7 +46,7 @@
     undolevels = 10000;
     updatetime = 50; # Save swap file and trigger CursorHold
     winminwidth = 5; # Minimum window width
-    wrap = false; # Disable line wrap
+    wrap = true; # Disable line wrap
     writebackup = false; # Disable making a backup before overwriting a file
   };
 }

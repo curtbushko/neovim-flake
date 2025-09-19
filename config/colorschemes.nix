@@ -886,7 +886,7 @@ in {
     FzfLuaPath = {link = "Directory";};
     FzfLuaPreviewTitle = {
       bg = colors.bg_dark;
-      fg = colors.border_highlight;
+      fg = colors.orange;
     };
     FzfLuaTitle = {
       bg = colors.bg_dark;
@@ -2146,6 +2146,10 @@ in {
       fg = colors.orange;
     };
     TelescopeSelection = {
+      bg = colors.bg_highlight;
+      fg = colors.orange;
+    };
+    TSUnderline = {
       bg = colors.bg_highlight;
       fg = colors.orange;
     };

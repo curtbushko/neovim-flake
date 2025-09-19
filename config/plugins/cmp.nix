@@ -19,6 +19,9 @@
             keyword_length = 3;
           }
           {
+            name = "nvim_lsp_signature_help";
+          }
+          {
             name = "buffer";
             keyword_length = 3;
           }
