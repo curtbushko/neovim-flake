@@ -1,8 +1,8 @@
 {
   plugins.neo-tree = {
     enable = true;
-    closeIfLastWindow = true;
-    extraOptions = {
+    settings = {
+      close_if_last_window = true;
       filesystem = {
         filtered_items = {
           visible = true;
@@ -11,8 +11,6 @@
           never_show = [ ".git" ];
         };
       };
-    };
-    settings = {
       window = {
         mappings = {
           "<space>" = "none";
