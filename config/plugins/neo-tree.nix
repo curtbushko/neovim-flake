@@ -12,9 +12,11 @@
         };
       };
     };
-    window = {
-      mappings = {
-        "<space>" = "none";
+    settings = {
+      window = {
+        mappings = {
+          "<space>" = "none";
+        };
       };
     };
   };
