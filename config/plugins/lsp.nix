@@ -5,7 +5,16 @@
     servers = {
       clangd.enable = true;
       html.enable = true;
-      nixd.enable = true;
+      nixd = {
+        enable = true;
+        settings = {
+          nix = {
+            flake = {
+              autoArchive = true;
+            };
+          };
+        };
+      };
       pylsp.enable = true;
       pyright.enable = true;
       rust_analyzer = {
@@ -18,7 +27,17 @@
       cmake.enable = false;
       bashls.enable = true;
       lua_ls.enable = true;
-      nil_ls.enable = true;
+      nil_ls = {
+        enable = true;
+        settings = {
+          nix = {
+            flake = {
+              autoArchive = true;
+            };
+          };
+          formatting.command = [ "nixpkgs-fmt" ];
+        };
+      };
       marksman.enable = true;
       terraformls.enable = true;
       yamlls.enable = true;
