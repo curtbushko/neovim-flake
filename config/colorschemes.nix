@@ -75,6 +75,7 @@ in {
     "@function.method.call" = {link = "@function.method";};
     "@keyword" = {
       fg = colors.purple;
+      bg = colors.bg_dark;
       italic = true;
     };
     "@keyword.conditional" = {link = "Conditional";};
@@ -148,6 +149,7 @@ in {
     "@markup" = {link = "@none";};
     "@markup.emphasis" = {
       italic = true;
+      bg = colors.bg_dark;
     };
     "@markup.environment" = {link = "Macro";};
     "@markup.environment.name" = {link = "Type";};
@@ -178,6 +180,7 @@ in {
     };
     "@markup.italic" = {
       italic = true;
+      bg = colors.bg_dark;
     };
     "@markup.link" = {
       fg = colors.hint;
@@ -669,6 +672,7 @@ in {
     };
     Comment = {
       fg = colors.comment;
+      bg = colors.bg_dark;
       italic = true;
     };
     Conceal = {
