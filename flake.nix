@@ -2,14 +2,16 @@
   description = "Curt Bushko neovim flake";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-    nixpkgs-unstable.url = "github:nixos/nixpkgs/nixpkgs-unstable";
+    nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
     flake-parts.url = "github:hercules-ci/flake-parts";
-    neovim-nightly-overlay = { 
+    neovim-nightly-overlay = {
       url = "github:nix-community/neovim-nightly-overlay";
-      inputs.nixpkgs.follows = "nixpkgs-unstable";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
-    nixvim.url = "github:nix-community/nixvim";
+    nixvim = {
+      url = "github:nix-community/nixvim";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = {
@@ -36,12 +38,12 @@
           inherit pkgs;
           module = {
               imports = [ ./config ]; # import the module directly
-              package = inputs.neovim-nightly-overlay.packages.${system}.default;
+              # package = inputs.neovim-nightly-overlay.packages.${system}.default;
           };
           # You can use `extraSpecialArgs` to pass additional arguments to your module files
           extraSpecialArgs = {
             # inherit (inputs) foo;
-            package = inputs.neovim-nightly-overlay.packages.${system}.default;
+            # package = inputs.neovim-nightly-overlay.packages.${system}.default;
           };
         };
         nvim = nixvim'.makeNixvimWithModule nixvimModule;

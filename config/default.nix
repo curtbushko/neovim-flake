@@ -15,7 +15,6 @@
     combinePlugins.enable = false;
     combinePlugins.standalonePlugins = [
       "nvim-treesitter"
-      "nvim-treesitter-textobjects"
       "nvim-config"
     ];
   };
