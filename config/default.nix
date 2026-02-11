@@ -49,5 +49,6 @@
     ./plugins/which-key.nix
     ./plugins/yanky.nix
     ./plugins/zig.nix
+    ./plugins/99.nix
   ];
 }

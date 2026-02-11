@@ -12,6 +12,10 @@
       url = "github:nix-community/nixvim";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    plugin-99 = {
+      url = "github:ThePrimeagen/99";
+      flake = false;
+    };
   };
 
   outputs = {
@@ -42,8 +46,7 @@
           };
           # You can use `extraSpecialArgs` to pass additional arguments to your module files
           extraSpecialArgs = {
-            # inherit (inputs) foo;
-            # package = inputs.neovim-nightly-overlay.packages.${system}.default;
+            inherit inputs;
           };
         };
         nvim = nixvim'.makeNixvimWithModule nixvimModule;

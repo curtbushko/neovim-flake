@@ -151,12 +151,29 @@
         "type": "github"
       }
     },
+    "plugin-99": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1770739338,
+        "narHash": "sha256-ZfaDC6je7UodCRcpDMGzWsEPaL7qYyOyNftRawr4Qss=",
+        "owner": "ThePrimeagen",
+        "repo": "99",
+        "rev": "96f3682ea890a3f2037aafa253c92d0dd3b82161",
+        "type": "github"
+      },
+      "original": {
+        "owner": "ThePrimeagen",
+        "repo": "99",
+        "type": "github"
+      }
+    },
     "root": {
       "inputs": {
         "flake-parts": "flake-parts",
         "neovim-nightly-overlay": "neovim-nightly-overlay",
         "nixpkgs": "nixpkgs",
-        "nixvim": "nixvim"
+        "nixvim": "nixvim",
+        "plugin-99": "plugin-99"
       }
     },
     "systems": {

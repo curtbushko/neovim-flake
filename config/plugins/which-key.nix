@@ -153,6 +153,14 @@
             color = "orange";
           };
         }
+        {
+          __unkeyed-1 = "<leader>a";
+          group = "99";
+          icon = {
+            icon = "󱚝 ";
+            color = "orange";
+          };
+        }
       ];
     };
   };
