@@ -839,7 +839,7 @@ in {
     };
     FloatBorder = {
       bg = colors.bg_dark;
-      fg = colors.green1;
+      fg = colors.bg_dark;
     };
     FloatTitle = {
       bg = colors.bg_dark;

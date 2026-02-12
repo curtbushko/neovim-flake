@@ -21,7 +21,7 @@ in {
     };
     NinetyNineBorder = {
       bg = colors.bg_dark;
-      fg = colors.purple;
+      fg = colors.bg_dark;
     };
     NinetyNineTitle = {
       bg = colors.bg_dark;
