@@ -14,6 +14,10 @@
           "RenderMarkdownH6"
         ];
       };
+      code = {
+        conceal_delimiters = false;
+        border = "none";
+      };
       checkbox = {
         unchecked = {highlight = "RenderMarkdownTodo";};
         checked = {highlight = "RenderMarkdownTodo";};
