@@ -1,6 +1,4 @@
-{pkgs, inputs, ...}: let
-  colors = import ../../config/colors/gruvbox-material.nix {};
-in {
+{pkgs, inputs, ...}: {
   extraPlugins = [
     (pkgs.vimUtils.buildVimPlugin {
       name = "99";
@@ -13,42 +11,6 @@ in {
       provider = require("99.providers").ClaudeCodeProvider,
     })
   '';
-
-  highlight = {
-    NinetyNineNormal = {
-      bg = colors.bg_dark;
-      fg = colors.fg;
-    };
-    NinetyNineBorder = {
-      bg = colors.bg_dark;
-      fg = colors.bg_dark;
-    };
-    NinetyNineTitle = {
-      bg = colors.bg_dark;
-      fg = colors.purple;
-      bold = true;
-    };
-    NinetyNinePrompt = {
-      bg = colors.bg_dark;
-      fg = colors.fg;
-    };
-    NinetyNineInfo = {
-      fg = colors.blue2;
-    };
-    NinetyNineWarning = {
-      fg = colors.yellow;
-    };
-    NinetyNineError = {
-      fg = colors.red1;
-    };
-    NinetyNineSuccess = {
-      fg = colors.green1;
-    };
-    NinetyNineStatus = {
-      bg = colors.bg_dark;
-      fg = colors.purple;
-    };
-  };
 
   keymaps = [
     {
