@@ -9,6 +9,7 @@
         show_close_icon = false;
         modified_icon = "";
         separator_style = "slope";
+        themable = true;
       };
     };
   };
