@@ -5,6 +5,13 @@
     servers = {
       clangd.enable = true;
       html.enable = true;
+      jsonls = {
+        enable = true;
+        settings.json = {
+          schemas = [];
+          validate.enable = false;
+        };
+      };
       nixd = {
         enable = true;
         settings = {
@@ -40,7 +47,14 @@
       };
       marksman.enable = true;
       terraformls.enable = true;
-      yamlls.enable = true;
+      yamlls = {
+        enable = true;
+        settings.yaml = {
+          schemaStore.enable = false;
+          validate = false;
+          completion = true;
+        };
+      };
       zls.enable = true;
     };
     keymaps = {
