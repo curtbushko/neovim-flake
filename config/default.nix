@@ -43,7 +43,7 @@
     ./plugins/neo-tree.nix
     ./plugins/noice.nix
     ./plugins/telescope.nix
-    #./plugins/rainbow-delimiters.nix
+    ./plugins/rainbow-delimiters.nix
     ./plugins/treesitter.nix
     ./plugins/trouble.nix
     ./plugins/which-key.nix

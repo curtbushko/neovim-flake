@@ -3,6 +3,8 @@
     (pkgs.vimUtils.buildVimPlugin {
       name = "99";
       src = inputs.plugin-99;
+      # Upstream bug: lsp.lua imports 99.editor.treesitter which doesn't exist
+      nvimSkipModules = ["99.editor.lsp"];
     })
   ];
 
