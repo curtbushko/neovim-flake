@@ -68,5 +68,62 @@
       action = ">gv";
       mode = ["v"];
     }
+
+    # System clipboard operations with Super key (macOS-like)
+    # Super+C to copy in visual mode
+    {
+      key = "<D-c>";
+      action = "\"+y";
+      mode = ["v"];
+      options = {
+        noremap = true;
+        silent = true;
+        desc = "Copy to system clipboard";
+      };
+    }
+    # Super+V to paste in normal mode
+    {
+      key = "<D-v>";
+      action = "\"+p";
+      mode = ["n"];
+      options = {
+        noremap = true;
+        silent = true;
+        desc = "Paste from system clipboard";
+      };
+    }
+    # Super+V to paste in visual mode
+    {
+      key = "<D-v>";
+      action = "\"+p";
+      mode = ["v"];
+      options = {
+        noremap = true;
+        silent = true;
+        desc = "Paste from system clipboard";
+      };
+    }
+    # Super+V to paste in insert mode
+    {
+      key = "<D-v>";
+      action = "<C-r>+";
+      mode = ["i"];
+      options = {
+        noremap = true;
+        silent = true;
+        desc = "Paste from system clipboard";
+      };
+    }
+    # Super+X to cut in visual mode
+    {
+      key = "<D-x>";
+      action = "\"+x";
+      mode = ["v"];
+      options = {
+        noremap = true;
+        silent = true;
+        desc = "Cut to system clipboard";
+      };
+    }
   ];
 }
