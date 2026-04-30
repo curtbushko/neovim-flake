@@ -16,6 +16,10 @@
         };
         sorting_strategy = "ascending";
         winblend = 0;
+        borderchars = ["─" "│" "─" "│" "┌" "┐" "┘" "└"];
+        results_title = false;
+        prompt_title = false;
+        preview_title = false;
       };
       mappings = {
         i = {
@@ -58,6 +62,18 @@
       action = "<cmd>Telescope buffers sort_mru=true sort_lastused=true<CR>";
       key = "<leader>fb";
       options.desc = "find buffers";
+      mode = ["n"];
+    }
+    {
+      action = "<cmd>Telescope file_browser<CR>";
+      key = "<leader>e";
+      options.desc = "file explorer";
+      mode = ["n"];
+    }
+    {
+      action = "<cmd>Telescope file_browser<CR>";
+      key = "<leader>fe";
+      options.desc = "file explorer";
       mode = ["n"];
     }
     {

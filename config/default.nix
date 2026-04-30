@@ -40,7 +40,6 @@
     ./plugins/lualine.nix
     ./plugins/markdown.nix
     ./plugins/mini.nix
-    ./plugins/neo-tree.nix
     ./plugins/noice.nix
     ./plugins/telescope.nix
     ./plugins/rainbow-delimiters.nix
@@ -49,6 +48,7 @@
     ./plugins/which-key.nix
     ./plugins/yanky.nix
     ./plugins/zig.nix
+    ./plugins/wayfinder.nix
     ./plugins/99.nix
   ];
 }

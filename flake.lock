@@ -167,13 +167,30 @@
         "type": "github"
       }
     },
+    "plugin-wayfinder": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1777501924,
+        "narHash": "sha256-sfENsrfSks2M59mHiGeyI0DID523fk0nXu7YN7ABAJs=",
+        "owner": "error311",
+        "repo": "wayfinder.nvim",
+        "rev": "2f96f63868ef0ae98f2c08ef7ca78d0096deb89b",
+        "type": "github"
+      },
+      "original": {
+        "owner": "error311",
+        "repo": "wayfinder.nvim",
+        "type": "github"
+      }
+    },
     "root": {
       "inputs": {
         "flake-parts": "flake-parts",
         "neovim-nightly-overlay": "neovim-nightly-overlay",
         "nixpkgs": "nixpkgs",
         "nixvim": "nixvim",
-        "plugin-99": "plugin-99"
+        "plugin-99": "plugin-99",
+        "plugin-wayfinder": "plugin-wayfinder"
       }
     },
     "systems": {

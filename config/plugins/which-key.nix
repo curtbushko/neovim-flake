@@ -50,7 +50,6 @@
             color = "yellow";
           };
         }
-
         {
           __unkeyed-1 = "<leader>m";
           group = "marks (buffer)";
@@ -102,7 +101,7 @@
         }
         {
           __unkeyed-1 = "<leader>e";
-          group = "explore Neotree";
+          group = "file explorer";
           icon = {
             icon = "󰙅 ";
             color = "yellow";
@@ -117,10 +116,42 @@
           };
         }
         {
+          __unkeyed-1 = "<leader>fb";
+          group = "find buffers";
+          icon = {
+            icon = "";
+            color = "yellow";
+          };
+        }
+        {
+          __unkeyed-1 = "<leader>fe";
+          group = "file explorer";
+          icon = {
+            icon = "󰙅 ";
+            color = "yellow";
+          };
+        }
+        {
+          __unkeyed-1 = "<leader>fg";
+          group = "grep";
+          icon = {
+            icon = "󰑑 ";
+            color = "yellow";
+          };
+        }
+        {
+          __unkeyed-1 = "<leader>fG";
+          group = "grep (hidden)";
+          icon = {
+            icon = "󰑑 ";
+            color = "yellow";
+          };
+        }
+
+        {
           __unkeyed-1 = "<leader>g";
           group = "git";
         }
-
         {
           __unkeyed-1 = "<leader>h";
           group = "harpoon";
@@ -161,6 +192,39 @@
             color = "orange";
           };
         }
+        {
+          __unkeyed-1 = "<leader>w";
+          group = "wayfinder";
+          icon = {
+            icon = " ";
+            color = "orange";
+          };
+        }
+        {
+          __unkeyed-1 = "<leader>wt";
+          group = "trail";
+          icon = {
+            icon = "󰆋 ";
+            color = "blue";
+          };
+        }
+        {
+          __unkeyed-1 = "<leader>wtn";
+          group = "next trail";
+          icon = {
+            icon = " ";
+            color = "blue";
+          };
+        }
+        {
+          __unkeyed-1 = "<leader>wtp";
+          group = "previous trail";
+          icon = {
+            icon = " ";
+            color = "blue";
+          };
+        }
+
       ];
     };
   };

@@ -16,6 +16,10 @@
       url = "github:ThePrimeagen/99";
       flake = false;
     };
+    plugin-wayfinder = {
+      url = "github:error311/wayfinder.nvim";
+      flake = false;
+    };
   };
 
   outputs = {
