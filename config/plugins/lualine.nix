@@ -17,7 +17,13 @@ _: {
       sections = {
         lualine_a = ["mode"];
         lualine_b = ["branch"];
-        lualine_c = ["filename"]; # add your center compoentnts here in place of this comment
+        lualine_c = [
+          {
+            __unkeyed-1 = "filename";
+            path = 1; # 0 = just filename, 1 = relative path, 2 = absolute path, 3 = absolute with tilde
+            shorting_target = 40; # Leaves 40 spaces in the window for other components
+          }
+        ];
         lualine_x = [];
         lualine_y = ["progress"];
         lualine_z = ["location"];
