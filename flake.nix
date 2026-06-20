@@ -54,6 +54,9 @@
           };
         };
         nvim = nixvim'.makeNixvimWithModule nixvimModule;
+        make-wrapper = pkgs.writeShellScriptBin "make" ''
+          exec ${pkgs.go-task}/bin/task "$@"
+        '';
       in {
         checks = {
           # Run `nix flake check .` to verify that your config is not broken
@@ -63,6 +66,48 @@
         packages = {
           # Lets you run `nix run .` to start nixvim
           default = nvim;
+        };
+
+        devShells.default = pkgs.mkShell {
+          packages = [
+            pkgs.git
+            pkgs.nixd
+            pkgs.alejandra
+            pkgs.go-task
+            make-wrapper
+          ];
+
+          shellHook = ''
+            # Auto-pull if on main branch
+            if [ "$(git rev-parse --abbrev-ref HEAD 2>/dev/null)" = "main" ]; then
+              echo "On main branch, pulling latest changes..."
+              git pull --quiet || true
+            fi
+
+            echo "✓ Neovim development environment loaded"
+            echo ""
+            echo "Quick start:"
+            echo "  task --list              - Show all available tasks"
+            echo "  task run                 - Test neovim with current config"
+            echo "  task check               - Verify config is not broken"
+            echo "  task build               - Build neovim package"
+            echo ""
+            echo "Common tasks:"
+            echo "  task update              - Update flake inputs"
+            echo "  task fmt                 - Format nix files"
+            echo "  task gc                  - Garbage collect (5+ days old)"
+            echo "  task repair              - Repair nix-store if needed"
+            echo ""
+            echo "Development:"
+            echo "  Edit config in ./config/ directory"
+            echo "  Add plugins in flake.nix inputs"
+            echo ""
+            echo "Tools available:"
+            echo "  - Task: $(task --version)"
+            echo "  - Git: $(git --version | head -n1)"
+            echo "  - Nix: $(nix --version)"
+            echo "  - Alejandra: Nix formatter"
+          '';
         };
       };
     };
