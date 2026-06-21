@@ -4,3 +4,4 @@ lang-tests
 .ccls-cache
 .claude
 .trash/
+.tmp/

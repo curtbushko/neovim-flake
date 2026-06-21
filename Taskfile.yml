@@ -1,0 +1,54 @@
+version: '3'
+
+vars:
+  DATELOG:
+    sh: date -u '+[%Y-%m-%dT%H:%M:%SZ]'
+
+tasks:
+  default:
+    desc: Run the flake locally (default task)
+    cmds:
+      - task: run
+
+  run:
+    desc: Run the flake locally
+    cmds:
+      - echo "{{.DATELOG}} Running neovim flake"
+      - nix run .
+
+  update:
+    desc: Update all of your packages
+    cmds:
+      - nix --extra-experimental-features 'nix-command flakes' flake update
+
+  repair:
+    desc: Use this when you start getting weird 'file not found' errors from nix-store
+    cmds:
+      - sudo nix-store --repair --verify --check-contents
+
+  gc:
+    desc: Garbage collect nix files that are older than 5 days
+    cmds:
+      - echo "{{.DATELOG}} Garbage collecting nix files older than 5 days"
+      - sudo nix-collect-garbage --delete-older-than 5d
+
+  clean:
+    desc: Alias for gc
+    cmds:
+      - task: gc
+
+  fmt:
+    desc: Format nix files
+    cmds:
+      - echo "{{.DATELOG}} Formatting nix files"
+      - alejandra --quiet .
+
+  check:
+    desc: Verify config is not broken
+    cmds:
+      - nix flake check
+
+  build:
+    desc: Build neovim package
+    cmds:
+      - nix build

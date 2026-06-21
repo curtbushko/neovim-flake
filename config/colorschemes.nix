@@ -6,9 +6,8 @@ _: {
     local flair_style = vim.fn.expand("~/.config/flair/style.lua")
     if vim.fn.filereadable(flair_style) == 1 then
       dofile(flair_style)
-    else
-      vim.notify("Flair style.lua not found at " .. flair_style, vim.log.levels.WARN)
     end
+    -- Silently skip if flair style.lua doesn't exist
   '';
 
   # Disable base16 - flair provides the colorscheme

@@ -11,6 +11,7 @@
   extraConfigLua = ''
     require("99").setup({
       provider = require("99.providers").ClaudeCodeProvider,
+      tmp_dir = "./.tmp/99",
     })
   '';
 
