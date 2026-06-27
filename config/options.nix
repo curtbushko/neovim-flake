@@ -44,7 +44,7 @@
     timeoutlen = 300;
     undofile = true;
     undolevels = 10000;
-    updatetime = 50; # Save swap file and trigger CursorHold
+    updatetime = 3000; # Save swap file and trigger CursorHold (default: 4000)
     winminwidth = 5; # Minimum window width
     wrap = true; # Disable line wrap
     writebackup = false; # Disable making a backup before overwriting a file

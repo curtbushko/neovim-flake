@@ -2,6 +2,7 @@
   plugins.render-markdown = {
     enable = true;
     settings = {
+      debounce = 100; # Add 100ms debounce to reduce rendering frequency
       heading = {
         icons = ["󰎦 " "󰎩 " "󰎬 " "󰎮 " "󰎰 " "󰎵 "];
         backgrounds = ["RenderMarkdownBg"];
