@@ -45,7 +45,7 @@
           formatting.command = [ "nixpkgs-fmt" ];
         };
       };
-      marksman.enable = true;
+      marksman.enable = false;
       terraformls.enable = true;
       yamlls = {
         enable = true;
