@@ -81,12 +81,6 @@
           ];
 
           shellHook = ''
-            # Auto-pull if on main branch
-            if [ "$(git rev-parse --abbrev-ref HEAD 2>/dev/null)" = "main" ]; then
-              echo "On main branch, pulling latest changes..."
-              git pull --quiet || true
-            fi
-
             echo "✓ Neovim development environment loaded"
             echo ""
             echo "Quick start:"
