@@ -92,6 +92,38 @@
           };
         }
         {
+          __unkeyed-1 = "<leader>cg";
+          group = "go";
+          icon = {
+            icon = "󰟓 ";
+            color = "cyan";
+          };
+        }
+        {
+          __unkeyed-1 = "<leader>cgt";
+          group = "tags";
+          icon = {
+            icon = "󰓹 ";
+            color = "cyan";
+          };
+        }
+        {
+          __unkeyed-1 = "<leader>cz";
+          group = "zig";
+          icon = {
+            icon = " ";
+            color = "orange";
+          };
+        }
+        {
+          __unkeyed-1 = "<leader>ct";
+          group = "test";
+          icon = {
+            icon = "󰙨 ";
+            color = "green";
+          };
+        }
+        {
           __unkeyed-1 = "<leader>D";
           group = "devdocs";
           icon = {
@@ -151,6 +183,10 @@
         {
           __unkeyed-1 = "<leader>g";
           group = "git";
+          icon = {
+            icon = "󰊢 ";
+            color = "orange";
+          };
         }
         {
           __unkeyed-1 = "<leader>h";
@@ -228,4 +264,29 @@
       ];
     };
   };
+
+  extraConfigLua = ''
+    vim.schedule(function()
+      require('which-key').add({
+        -- Go subcommands
+        { "<leader>cgs",  icon = { icon = "󰘦 ", color = "cyan" } },
+        { "<leader>cgi",  icon = { icon = "󱁤 ", color = "cyan" } },
+        { "<leader>cgta", icon = { icon = "󰐒 ", color = "cyan" } },
+        { "<leader>cgtr", icon = { icon = "󰗊 ", color = "cyan" } },
+        { "<leader>cgb",  icon = { icon = "󰗗 ", color = "cyan" } },
+        { "<leader>cgr",  icon = { icon = "󰐊 ", color = "cyan" } },
+        { "<leader>cgh",  icon = { icon = "󰛨 ", color = "cyan" } },
+        -- Zig subcommands
+        { "<leader>czb",  icon = { icon = "󰗗 ", color = "orange" } },
+        { "<leader>czt",  icon = { icon = "󰙨 ", color = "orange" } },
+        { "<leader>czr",  icon = { icon = "󰐊 ", color = "orange" } },
+        { "<leader>czh",  icon = { icon = "󰛨 ", color = "orange" } },
+        -- Test subcommands
+        { "<leader>ctt",  icon = { icon = "󰙨 ", color = "green" } },
+        { "<leader>ctf",  icon = { icon = "󰈙 ", color = "green" } },
+        { "<leader>cts",  icon = { icon = "󰰐 ", color = "green" } },
+        { "<leader>cto",  icon = { icon = "󰆍 ", color = "green" } },
+      })
+    end)
+  '';
 }

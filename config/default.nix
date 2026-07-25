@@ -39,6 +39,7 @@
     ./plugins/lspkind-nvim.nix
     ./plugins/lualine.nix
     ./plugins/markdown.nix
+    ./plugins/neotest.nix
     ./plugins/mini.nix
     ./plugins/noice.nix
     ./plugins/telescope.nix
