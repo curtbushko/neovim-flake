@@ -2,7 +2,10 @@
   plugins.treesitter = {
     enable = true;
     settings = {
-      indent.enable = true;
+      indent = {
+        enable = true;
+        disable = ["markdown" "markdown_inline"];
+      };
       disabledLanguages = [
         "ada"
         "perl"

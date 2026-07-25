@@ -61,7 +61,7 @@
     cmp-nvim-lsp.enable = true;
     cmp-nvim-lsp-signature-help.enable = true; #shows function signature while typing
     cmp-path.enable = true;
-    cmp-treesitter.enable = true;
+    cmp-treesitter.enable = false;
     cmp_luasnip.enable = true;
 
     nvim-snippets.enable = true;
@@ -147,6 +147,16 @@
         { name = 'cmp_git' }, -- You can specify the `cmp_git` source if you were installed it.
         }, {
         { name = 'buffer' },
+        })
+    })
+
+    -- Markdown: no treesitter completions, no ghost text (performance)
+    cmp.setup.filetype('markdown', {
+        experimental = { ghost_text = false },
+        sources = cmp.config.sources({
+            { name = 'luasnip', keyword_length = 3 },
+            { name = 'buffer', keyword_length = 3 },
+            { name = 'path', keyword_length = 3 },
         })
     })
 

@@ -6,10 +6,7 @@
         char = "│";
         tab_char = "│";
       };
-      scope = {
-        enabled = true;
-        show_start = true;
-      };
+      scope.enabled = false;
       exclude = {
         buftypes = ["terminal" "nofile"];
         filetypes = [

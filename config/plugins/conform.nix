@@ -7,16 +7,15 @@
         timeoutMs = 500;
       };
       formattersByFt = {
-        "*" = [["codespell"]];
         "_" = [["trim_whitespace"]];
-        go = [["goimports" "gofmt" ]];
+        go = [["codespell"] ["goimports" "gofmt"]];
         javascript = [["prettierd"]];
         json = [["jq"]];
-        lua = [["stylua"]];
+        lua = [["codespell"] ["stylua"]];
         markdown = [["prettierd"]];
-        nix = [["alejandra"]];
+        nix = [["codespell"] ["alejandra"]];
         python = [["isort" "black"]];
-        sh = [["shfmt"]];
+        sh = [["codespell"] ["shfmt"]];
         terraform = [["terraform_fmt"]];
         typescript = [["prettierd"]];
         yaml = [["prettierd"]];

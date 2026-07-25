@@ -1,4 +1,12 @@
 {
+  autoCmd = [
+    {
+      event = "FileType";
+      pattern = "markdown";
+      command = "setlocal nowrap textwidth=80";
+    }
+  ];
+
   clipboard.register = "unnamedplus"; # Use system clipboard
   opts = {
     clipboard = "unnamedplus";

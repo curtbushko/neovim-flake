@@ -3,6 +3,8 @@
     enable = true;
     settings = {
       debounce = 100; # Add 100ms debounce to reduce rendering frequency
+      render_modes = ["n" "c" "t"]; # Skip insert/visual — no re-render while typing
+      anti_conceal.enabled = true;
       heading = {
         icons = ["󰎦 " "󰎩 " "󰎬 " "󰎮 " "󰎰 " "󰎵 "];
         backgrounds = ["RenderMarkdownBg"];

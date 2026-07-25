@@ -22,8 +22,8 @@
           };
         };
       };
-      pylsp.enable = true;
-      pyright.enable = true;
+      pylsp.enable = false;
+      pyright.enable = false;
       rust_analyzer = {
         enable = false;
         installCargo = false;
@@ -34,17 +34,7 @@
       cmake.enable = false;
       bashls.enable = true;
       lua_ls.enable = true;
-      nil_ls = {
-        enable = true;
-        settings = {
-          nix = {
-            flake = {
-              autoArchive = true;
-            };
-          };
-          formatting.command = [ "nixpkgs-fmt" ];
-        };
-      };
+      nil_ls.enable = false;
       marksman.enable = false;
       terraformls.enable = true;
       yamlls = {

@@ -7,7 +7,6 @@
       surround = {};
       icons = {};
       comment = {};
-      animate = {};
     };
   };
 }
