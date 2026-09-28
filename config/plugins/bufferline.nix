@@ -10,6 +10,10 @@
         modified_icon = "";
         separator_style = ["" ""];
         themable = true;
+        indicator = {
+          style = "icon";
+          icon = "▎";
+        };
       };
     };
   };

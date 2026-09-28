@@ -151,19 +151,19 @@
         "type": "github"
       }
     },
-    "plugin-99": {
+    "plugin-herdr-context": {
       "flake": false,
       "locked": {
-        "lastModified": 1781229584,
-        "narHash": "sha256-iilpiG81kHIv7Y0qvPzZOanNA0lsPotlB18cvtmTy0o=",
-        "owner": "ThePrimeagen",
-        "repo": "99",
-        "rev": "c17422457027c913c76c75a921fca1e623d2678e",
+        "lastModified": 1789605470,
+        "narHash": "sha256-jC9uasWEfO4AhnCOGa1GlA/FvhLO1l9VpEpLaozuU3A=",
+        "owner": "makyinmars",
+        "repo": "herdr-context.nvim",
+        "rev": "2e99ef05c52e1a8ee71b630612a0f8ac18a9638e",
         "type": "github"
       },
       "original": {
-        "owner": "ThePrimeagen",
-        "repo": "99",
+        "owner": "makyinmars",
+        "repo": "herdr-context.nvim",
         "type": "github"
       }
     },
@@ -189,7 +189,7 @@
         "neovim-nightly-overlay": "neovim-nightly-overlay",
         "nixpkgs": "nixpkgs",
         "nixvim": "nixvim",
-        "plugin-99": "plugin-99",
+        "plugin-herdr-context": "plugin-herdr-context",
         "plugin-wayfinder": "plugin-wayfinder"
       }
     },

@@ -4,7 +4,7 @@
     loaded_ruby_provider = 0; # Ruby
     loaded_perl_provider = 0; # Perl
     loaded_python_provider = 0; # Python 2
-    loaded_python3_provider = 0; # Python 3 
+    loaded_python3_provider = 0; # Python 3
   };
 
   performance = {
@@ -33,6 +33,7 @@
     ./plugins/flash.nix
     ./plugins/gitsigns.nix
     ./plugins/go.nix
+    ./plugins/herdr-context.nix
     ./plugins/indent-blankline.nix
     ./plugins/lsp_lines.nix
     ./plugins/lsp.nix
@@ -50,6 +51,5 @@
     ./plugins/yanky.nix
     ./plugins/zig.nix
     ./plugins/wayfinder.nix
-    ./plugins/99.nix
   ];
 }

@@ -12,12 +12,12 @@
       url = "github:nix-community/nixvim";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    plugin-99 = {
-      url = "github:ThePrimeagen/99";
-      flake = false;
-    };
     plugin-wayfinder = {
       url = "github:error311/wayfinder.nvim";
+      flake = false;
+    };
+    plugin-herdr-context = {
+      url = "github:makyinmars/herdr-context.nvim";
       flake = false;
     };
   };
@@ -35,10 +35,7 @@
         "aarch64-darwin"
       ];
 
-      perSystem = {
-        system,
-        ...
-      } @ args: let
+      perSystem = {system, ...} @ args: let
         pkgs = import inputs.nixpkgs {
           inherit system;
           config.allowUnfree = true;
@@ -48,8 +45,8 @@
         nixvimModule = {
           inherit pkgs;
           module = {
-              imports = [ ./config ]; # import the module directly
-              # package = inputs.neovim-nightly-overlay.packages.${system}.default;
+            imports = [./config]; # import the module directly
+            # package = inputs.neovim-nightly-overlay.packages.${system}.default;
           };
           # You can use `extraSpecialArgs` to pass additional arguments to your module files
           extraSpecialArgs = {

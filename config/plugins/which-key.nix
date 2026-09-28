@@ -222,10 +222,10 @@
         }
         {
           __unkeyed-1 = "<leader>a";
-          group = "99";
+          group = "herdr context";
           icon = {
-            icon = "󱚝 ";
-            color = "orange";
+            icon = "󰳆 ";
+            color = "cyan";
           };
         }
         {
@@ -260,7 +260,6 @@
             color = "blue";
           };
         }
-
       ];
     };
   };
