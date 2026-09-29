@@ -16,8 +16,8 @@
       url = "github:error311/wayfinder.nvim";
       flake = false;
     };
-    plugin-herdr-context = {
-      url = "github:makyinmars/herdr-context.nvim";
+    plugin-herdr-nvim = {
+      url = "github:ChmaraX/herdr-nvim";
       flake = false;
     };
   };

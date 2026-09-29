@@ -222,7 +222,7 @@
         }
         {
           __unkeyed-1 = "<leader>a";
-          group = "herdr context";
+          group = "herdr";
           icon = {
             icon = "󰳆 ";
             color = "cyan";

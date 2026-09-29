@@ -33,7 +33,7 @@
     ./plugins/flash.nix
     ./plugins/gitsigns.nix
     ./plugins/go.nix
-    ./plugins/herdr-context.nix
+    ./plugins/herdr-nvim.nix
     ./plugins/indent-blankline.nix
     ./plugins/lsp_lines.nix
     ./plugins/lsp.nix
