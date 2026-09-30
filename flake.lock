@@ -152,17 +152,21 @@
       }
     },
     "plugin-herdr-nvim": {
-      "flake": false,
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
       "locked": {
-        "lastModified": 1790596713,
-        "narHash": "sha256-BdZygw+OdfNlcEmb6v6ic9HV8ImxU3bDCq+28qu8Er0=",
-        "owner": "ChmaraX",
+        "lastModified": 1790787772,
+        "narHash": "sha256-FFNkLtZwoi+0TN/VmSzVF960ibV8rKbmFWcf5hiRflE=",
+        "owner": "curtbushko",
         "repo": "herdr-nvim",
-        "rev": "5e849b5377fd409d2fd4be159c9c9fa36c251f7a",
+        "rev": "3cfc7bbf80bd9ea10647cee4229d2bab6d2b8fe7",
         "type": "github"
       },
       "original": {
-        "owner": "ChmaraX",
+        "owner": "curtbushko",
         "repo": "herdr-nvim",
         "type": "github"
       }

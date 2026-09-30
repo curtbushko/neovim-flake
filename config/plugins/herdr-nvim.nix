@@ -1,13 +1,9 @@
 {
   pkgs,
-  inputs,
   ...
 }: {
   extraPlugins = [
-    (pkgs.vimUtils.buildVimPlugin {
-      name = "herdr-nvim";
-      src = inputs.plugin-herdr-nvim;
-    })
+    pkgs.vimPlugins.herdr-nvim
   ];
 
   extraConfigLua = ''

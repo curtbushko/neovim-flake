@@ -8,11 +8,15 @@
   };
 
   performance = {
+    # Disable build-time Lua byte compilation; Neovim loads Lua source instead.
+    # The configs/runtime/plugins switches only apply when enable is true.
     byteCompileLua.enable = false;
     byteCompileLua.configs = false;
     byteCompileLua.nvimRuntime = false;
     byteCompileLua.plugins = false;
+    # Keep plugins separate rather than merging them into one runtime pack.
     combinePlugins.enable = false;
+    # These exclusions only take effect if plugin combining is enabled.
     combinePlugins.standalonePlugins = [
       "nvim-treesitter"
       "nvim-config"

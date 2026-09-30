@@ -17,8 +17,8 @@
       flake = false;
     };
     plugin-herdr-nvim = {
-      url = "github:ChmaraX/herdr-nvim";
-      flake = false;
+      url = "github:curtbushko/herdr-nvim";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 
@@ -38,6 +38,7 @@
       perSystem = {system, ...} @ args: let
         pkgs = import inputs.nixpkgs {
           inherit system;
+          overlays = [inputs.plugin-herdr-nvim.overlays.default];
           config.allowUnfree = true;
         };
         nixvimLib = nixvim.lib.${system};
