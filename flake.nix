@@ -16,10 +16,6 @@
       url = "github:error311/wayfinder.nvim";
       flake = false;
     };
-    plugin-herdr-nvim = {
-      url = "github:curtbushko/herdr-nvim";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
   };
 
   outputs = {
@@ -38,7 +34,6 @@
       perSystem = {system, ...} @ args: let
         pkgs = import inputs.nixpkgs {
           inherit system;
-          overlays = [inputs.plugin-herdr-nvim.overlays.default];
           config.allowUnfree = true;
         };
         nixvimLib = nixvim.lib.${system};

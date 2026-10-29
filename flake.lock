@@ -151,26 +151,6 @@
         "type": "github"
       }
     },
-    "plugin-herdr-nvim": {
-      "inputs": {
-        "nixpkgs": [
-          "nixpkgs"
-        ]
-      },
-      "locked": {
-        "lastModified": 1790787772,
-        "narHash": "sha256-FFNkLtZwoi+0TN/VmSzVF960ibV8rKbmFWcf5hiRflE=",
-        "owner": "curtbushko",
-        "repo": "herdr-nvim",
-        "rev": "3cfc7bbf80bd9ea10647cee4229d2bab6d2b8fe7",
-        "type": "github"
-      },
-      "original": {
-        "owner": "curtbushko",
-        "repo": "herdr-nvim",
-        "type": "github"
-      }
-    },
     "plugin-wayfinder": {
       "flake": false,
       "locked": {
@@ -193,7 +173,6 @@
         "neovim-nightly-overlay": "neovim-nightly-overlay",
         "nixpkgs": "nixpkgs",
         "nixvim": "nixvim",
-        "plugin-herdr-nvim": "plugin-herdr-nvim",
         "plugin-wayfinder": "plugin-wayfinder"
       }
     },

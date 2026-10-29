@@ -221,14 +221,6 @@
           };
         }
         {
-          __unkeyed-1 = "<leader>a";
-          group = "herdr";
-          icon = {
-            icon = "󰳆 ";
-            color = "cyan";
-          };
-        }
-        {
           __unkeyed-1 = "<leader>w";
           group = "wayfinder";
           icon = {

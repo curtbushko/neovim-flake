@@ -20,6 +20,7 @@
     copyindent = true;
     cursorline = true; # Enable highlighting of the current line
     expandtab = true; # Use spaces instead of tabs
+    fillchars = "eob: "; # Hide end-of-buffer tildes
     ignorecase = true; # Case insensitive search
     inccommand = "nosplit"; # preview incremental substitute
     incsearch = false;
