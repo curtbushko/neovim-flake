@@ -8,6 +8,7 @@
     luaConfig.post = "end";
     settings = {
       legacy_commands = false;
+      link.style = "markdown";
       workspaces = [
         {
           name = "kb";
@@ -25,6 +26,10 @@
       note.template = "new_note.md";
       callbacks.post_setup.__raw = ''
         function()
+          local link_titles = (function()
+            ${builtins.readFile ./obsidian-link-title.lua}
+          end)()
+          link_titles.setup()
           -- The built-in command prompts for an ID/path rather than a title.
           require("obsidian.actions").new = function(title, callback)
             local function create(value)
