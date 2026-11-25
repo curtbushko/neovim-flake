@@ -12,6 +12,10 @@
       url = "github:nix-community/nixvim";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    plugin-calendar = {
+      url = "github:wsdjeg/calendar.nvim";
+      flake = false;
+    };
     plugin-wayfinder = {
       url = "github:error311/wayfinder.nvim";
       flake = false;

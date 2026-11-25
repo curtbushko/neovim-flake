@@ -176,6 +176,7 @@
     cmp.setup.filetype('markdown', {
         experimental = { ghost_text = false },
         sources = cmp.config.sources({
+            { name = 'nvim_lsp', keyword_length = 1 },
             { name = 'luasnip', keyword_length = 3 },
             { name = 'buffer', keyword_length = 3 },
             { name = 'path', keyword_length = 3 },

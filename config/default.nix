@@ -31,6 +31,7 @@
     # Plugins
     ./plugins/alpha.nix
     ./plugins/bufferline.nix
+    ./plugins/calendar.nix
     ./plugins/cmp.nix
     ./plugins/conform.nix
     ./plugins/comment.nix
@@ -46,6 +47,7 @@
     ./plugins/neotest.nix
     ./plugins/mini.nix
     ./plugins/noice.nix
+    ./plugins/obsidian.nix
     ./plugins/telescope.nix
     ./plugins/rainbow-delimiters.nix
     ./plugins/treesitter.nix

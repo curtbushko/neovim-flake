@@ -3,7 +3,7 @@
     {
       event = "FileType";
       pattern = "markdown";
-      command = "setlocal nowrap textwidth=80";
+      command = "setlocal wrap textwidth=0 wrapmargin=0 formatoptions-=t formatoptions-=c formatoptions-=a";
     }
   ];
 
@@ -49,13 +49,14 @@
     swapfile = false; # Disable use of swapfile for the buffer
     tabstop = 2; # Number of spaces tabs count for
     termguicolors = true; # True color support
-    textwidth = 120;
+    textwidth = 0; # Never insert line breaks based on text width
+    wrapmargin = 0; # Never insert line breaks based on window width
     timeoutlen = 300;
     undofile = true;
     undolevels = 10000;
     updatetime = 3000; # Save swap file and trigger CursorHold (default: 4000)
     winminwidth = 5; # Minimum window width
-    wrap = true; # Disable line wrap
+    wrap = true; # Visually wrap long lines without changing their contents
     writebackup = false; # Disable making a backup before overwriting a file
   };
 }

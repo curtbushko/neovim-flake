@@ -197,6 +197,14 @@
           };
         }
         {
+          __unkeyed-1 = "<leader>o";
+          group = "obsidian";
+          icon = {
+            icon = "󰠮 ";
+            color = "purple";
+          };
+        }
+        {
           __unkeyed-1 = "<leader>t";
           group = "terminal (float)";
           icon = {

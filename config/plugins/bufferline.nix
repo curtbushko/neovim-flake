@@ -4,6 +4,11 @@
     settings = {
       options = {
         always_show_bufferline = true;
+        name_formatter.__raw = ''
+          function(buffer)
+            return require("markdown_buffer_title").format(buffer)
+          end
+        '';
         show_buffer_icons = false;
         show_buffer_close_icons = false;
         show_close_icon = false;
@@ -17,6 +22,20 @@
       };
     };
   };
+  extraConfigLuaPre = ''
+    package.preload["markdown_buffer_title"] = function()
+      ${builtins.readFile ./markdown-buffer-title.lua}
+    end
+  '';
+
+  autoCmd = [
+    {
+      event = ["TextChanged" "TextChangedI" "BufWritePost"];
+      pattern = ["*.md" "*.markdown"];
+      command = "redrawtabline";
+    }
+  ];
+
   keymaps = [
     {
       key = "<leader>bb";

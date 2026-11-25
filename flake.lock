@@ -151,6 +151,22 @@
         "type": "github"
       }
     },
+    "plugin-calendar": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1793283867,
+        "narHash": "sha256-RBmyiIxegOOcW9SVZa8Vdx1zjQy1gxldw73+WcBj6ac=",
+        "owner": "wsdjeg",
+        "repo": "calendar.nvim",
+        "rev": "a1a41cf60171a77b288a8e84ae08c5d4a4e6da38",
+        "type": "github"
+      },
+      "original": {
+        "owner": "wsdjeg",
+        "repo": "calendar.nvim",
+        "type": "github"
+      }
+    },
     "plugin-wayfinder": {
       "flake": false,
       "locked": {
@@ -173,6 +189,7 @@
         "neovim-nightly-overlay": "neovim-nightly-overlay",
         "nixpkgs": "nixpkgs",
         "nixvim": "nixvim",
+        "plugin-calendar": "plugin-calendar",
         "plugin-wayfinder": "plugin-wayfinder"
       }
     },
