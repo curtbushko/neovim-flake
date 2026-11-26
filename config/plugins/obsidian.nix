@@ -9,6 +9,7 @@
     settings = {
       legacy_commands = false;
       link.style = "markdown";
+      frontmatter.sort = ["title" "date" "tags"];
       workspaces = [
         {
           name = "kb";
